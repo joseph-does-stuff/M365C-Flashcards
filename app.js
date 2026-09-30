@@ -3,7 +3,7 @@
    Progress: localStorage, exportable as a backup file. */
 (function () {
 'use strict';
-var VERSION = '1.1.0';
+var VERSION = '1.2.0';
 var KEY_PROG = 'm365c-progress', KEY_SET = 'm365c-settings', KEY_IMP = 'm365c-imported';
 var DAY = 86400000;
 var INTERVALS = [0, 1, 3, 7, 14, 30, 60]; // days, indexed by box 1..6
@@ -583,7 +583,20 @@ document.addEventListener('click', function (e) {
 });
 
 loadAll(false).then(route);
+/* updates: check for a new version on every launch and whenever the app comes back to the front */
 if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
-  try { navigator.serviceWorker.register('sw.js').catch(function () {}); } catch (e) {}
+  try {
+    var hadController = !!navigator.serviceWorker.controller, reloading = false;
+    navigator.serviceWorker.register('sw.js', {updateViaCache: 'none'}).then(function (reg) {
+      reg.update().catch(function () {});
+      document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible') reg.update().catch(function () {}); });
+    }).catch(function () {});
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (!hadController || reloading) { hadController = true; return; }
+      reloading = true;
+      if (S || LS) { toast('Update downloaded. It loads the next time you open the app.'); return; }
+      location.reload();
+    });
+  } catch (e) {}
 }
 })();

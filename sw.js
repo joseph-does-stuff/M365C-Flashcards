@@ -1,5 +1,5 @@
 /* M365C Study service worker: app files cache-first, question packs network-first. Bump CACHE when app files change. */
-var CACHE = 'm365c-study-v2';
+var CACHE = 'm365c-study-v3';
 var SHELL = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'icon-180.png', 'icon-192.png', 'icon-512.png',
   'stix-latin-400-normal.woff2', 'stix-latin-400-italic.woff2', 'stix-latin-600-normal.woff2', 'stix-latin-700-normal.woff2',
   'stix-greek-400-normal.woff2', 'stix-greek-400-italic.woff2', 'stix-greek-600-normal.woff2', 'stix-greek-700-normal.woff2',
