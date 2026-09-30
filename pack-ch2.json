@@ -1,0 +1,1134 @@
+{
+"id": "rudin-ch2",
+"title": "Rudin Ch 2: Basic Topology",
+"course": "M365C",
+"created": "2026-09-29",
+"version": 1,
+"items": [
+{
+"id": "c2-def-0",
+"type": "flashcard",
+"kind": "definition",
+"front": "Image, preimage, one-to-one, onto",
+"back": "$f(E)=\\{f(x): x∈E\\}$, $f^{−1}(G)=\\{x: f(x)∈G\\}$. Preimages commute with unions, intersections and complements; images only with unions.",
+"chapter": 2,
+"rudin": "2.1–2.2",
+"lecture": "L2.2",
+"status": "covered",
+"bartle": [
+"1.1.7, 1.1.9"
+]
+},
+{
+"id": "c2-def-1",
+"type": "flashcard",
+"kind": "definition",
+"front": "Countable, at most countable, uncountable",
+"back": "$A$ is countable if $A \\sim N$ (a bijection exists), at most countable if finite or countable, uncountable otherwise.",
+"chapter": 2,
+"rudin": "2.4",
+"lecture": "L2.2",
+"status": "covered",
+"bartle": [
+"1.3.1, 1.3.6"
+],
+"abbott": [
+"§1.5*"
+]
+},
+{
+"id": "c2-def-2",
+"type": "flashcard",
+"kind": "definition",
+"front": "Metric space",
+"back": "A set $X$ with $d:X×X→ℝ$ such that $d(p,q)&gt;0$ for $p≠q$, $d(p,p)=0$, $d(p,q)=d(q,p)$, and $d(p,q) ≤ d(p,r)+d(r,q)$.",
+"chapter": 2,
+"rudin": "2.15",
+"lecture": "L3.2",
+"status": "covered",
+"bartle": [
+"11.4.1"
+],
+"abbott": [
+"8.2.1"
+]
+},
+{
+"id": "c2-def-3",
+"type": "flashcard",
+"kind": "definition",
+"front": "Neighborhood $N_{r}(p)$",
+"back": "$\\{q : d(p,q)&lt;r\\}$, the open ball of radius $r&gt;0$.",
+"chapter": 2,
+"rudin": "2.18(a)",
+"lecture": "L3.2",
+"status": "covered",
+"bartle": [
+"11.4.3"
+],
+"abbott": [
+"8.2.6"
+]
+},
+{
+"id": "c2-def-4",
+"type": "flashcard",
+"kind": "definition",
+"front": "Limit point; isolated point",
+"back": "$p$ is a limit point of $E$ if every neighborhood of $p$ contains a point $q≠p$ of $E$. A point of $E$ that is not a limit point is isolated. The set of limit points is $E'$.",
+"chapter": 2,
+"rudin": "2.18(b,c)",
+"lecture": "L3.2, L4.1",
+"status": "covered",
+"bartle": [
+"4.1.1 (cluster point)"
+],
+"abbott": [
+"3.2.4, 3.2.6"
+]
+},
+{
+"id": "c2-def-5",
+"type": "flashcard",
+"kind": "definition",
+"front": "Closed; interior point; open",
+"back": "$E$ is closed if $E'⊂E$. $p$ is interior if some $N_{r}(p)⊂E$. $E$ is open if every point is interior.",
+"chapter": 2,
+"rudin": "2.18(d–f)",
+"lecture": "L4.1",
+"status": "covered",
+"bartle": [
+"11.1.2, 11.4.9"
+],
+"abbott": [
+"3.2.1, 3.2.7"
+]
+},
+{
+"id": "c2-def-6",
+"type": "flashcard",
+"kind": "definition",
+"front": "Perfect; bounded; dense",
+"back": "Perfect: closed with no isolated points ($E=E'$). Bounded: inside some ball. Dense in $X$: every point of $X$ is in $E$ or is a limit point of $E$.",
+"chapter": 2,
+"rudin": "2.18(h–j)",
+"lecture": "L4.2, L5.1",
+"status": "started",
+"abbott": [
+"3.4.1, 8.2.9"
+],
+"classNote": "Dense (L4.2) and bounded (L5.1) done; perfect not yet."
+},
+{
+"id": "c2-def-7",
+"type": "flashcard",
+"kind": "definition",
+"front": "Closure",
+"back": "$\\bar E = E ∪ E'$.",
+"chapter": 2,
+"rudin": "2.26",
+"lecture": "L4.1",
+"status": "covered",
+"bartle": [
+"11.1.7"
+],
+"abbott": [
+"3.2.11, 8.2.8"
+]
+},
+{
+"id": "c2-def-8",
+"type": "flashcard",
+"kind": "definition",
+"front": "Open relative to $Y$",
+"back": "$E⊂Y⊂X$ is open relative to $Y$ if each $p∈E$ has an $r$ with $N_{r}(p)∩Y ⊂ E$.",
+"chapter": 2,
+"rudin": "2.30",
+"lecture": "L4.2",
+"status": "covered"
+},
+{
+"id": "c2-def-9",
+"type": "flashcard",
+"kind": "definition",
+"front": "Open cover; compact",
+"back": "$K$ is compact if every open cover of $K$ has a finite subcover.",
+"chapter": 2,
+"rudin": "2.31–2.32",
+"lecture": "L4.2, L5.1",
+"status": "covered",
+"bartle": [
+"11.2.1, 11.2.2"
+],
+"abbott": [
+"3.3.6, 3.3.1 (sequential version)"
+]
+},
+{
+"id": "c2-def-10",
+"type": "flashcard",
+"kind": "definition",
+"front": "Separated; connected",
+"back": "$A,B$ are separated if $A∩\\bar B$ and $\\bar A ∩ B$ are empty. $E$ is connected if it is not a union of two nonempty separated sets.",
+"chapter": 2,
+"rudin": "2.45",
+"lecture": null,
+"status": "next",
+"abbott": [
+"3.4.4"
+]
+},
+{
+"id": "c2-thm-0",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Subsets of countable sets",
+"back": "Every infinite subset of a countable set is countable.",
+"chapter": 2,
+"rudin": "2.8",
+"lecture": "L3.1",
+"status": "covered",
+"bartle": [
+"1.3.9"
+],
+"abbott": [
+"§1.5*"
+]
+},
+{
+"id": "c2-thm-1",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Countable unions",
+"back": "A union of countably many countable sets is countable. Corollary: an at-most-countable union of at-most-countable sets is at most countable.",
+"chapter": 2,
+"rudin": "2.12",
+"lecture": "L3.1",
+"status": "covered",
+"bartle": [
+"1.3.12"
+],
+"abbott": [
+"§1.5*"
+],
+"note": "Quiz 2 problems 2 and 14 are both this theorem in disguise."
+},
+{
+"id": "c2-thm-2",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Finite products",
+"back": "If $A$ is countable, so is $A^{n}$. Corollary: $ℚ$ is countable.",
+"chapter": 2,
+"rudin": "2.13",
+"lecture": "L3.1",
+"status": "covered",
+"bartle": [
+"1.3.8, 1.3.11"
+],
+"abbott": [
+"§1.5*"
+]
+},
+{
+"id": "c2-thm-3",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Binary sequences are uncountable",
+"back": "The set of all sequences of 0s and 1s is uncountable (Cantor's diagonal process). Hence $ℝ$ is uncountable.",
+"chapter": 2,
+"rudin": "2.14",
+"lecture": "L3.1",
+"status": "covered",
+"bartle": [
+"1.3.13, 2.5.4, 2.5.5"
+],
+"abbott": [
+"§1.6*"
+]
+},
+{
+"id": "c2-thm-4",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Neighborhoods are open",
+"back": "Every $N_{r}(p)$ is an open set.",
+"chapter": 2,
+"rudin": "2.19",
+"lecture": "L4.1",
+"status": "covered",
+"abbott": [
+"3.2 (open intervals)"
+]
+},
+{
+"id": "c2-thm-5",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Limit points see infinitely many points",
+"back": "If $p$ is a limit point of $E$, every neighborhood of $p$ contains infinitely many points of $E$. Corollary: finite sets have no limit points.",
+"chapter": 2,
+"rudin": "2.20",
+"lecture": "L3.2, L4.1",
+"status": "covered",
+"bartle": [
+"4.1.2"
+],
+"abbott": [
+"3.2.5"
+]
+},
+{
+"id": "c2-thm-6",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Open ⟺ complement closed",
+"back": "$E$ is open iff $E^{c}$ is closed. Corollary: $F$ is closed iff $F^{c}$ is open.",
+"chapter": 2,
+"rudin": "2.23",
+"lecture": "L4.1",
+"status": "covered",
+"bartle": [
+"11.1.7"
+],
+"abbott": [
+"3.2.13"
+]
+},
+{
+"id": "c2-thm-7",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Unions and intersections",
+"back": "Any union of open sets is open; any intersection of closed sets is closed. Finite intersections of open sets are open; finite unions of closed sets are closed.",
+"chapter": 2,
+"rudin": "2.24",
+"lecture": "L4.1",
+"status": "covered",
+"bartle": [
+"11.1.4, 11.1.5"
+],
+"abbott": [
+"3.2.3, 3.2.14"
+],
+"note": "“Finite” matters: $∩(−1/n,1/n)=\\{0\\}$."
+},
+{
+"id": "c2-thm-8",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Closure facts",
+"back": "$\\bar E$ is closed; $E=\\bar E$ iff $E$ is closed; $\\bar E ⊂ F$ for every closed $F⊇E$.",
+"chapter": 2,
+"rudin": "2.27",
+"lecture": "L4.1",
+"status": "covered",
+"abbott": [
+"3.2.12"
+],
+"note": "Quiz 2 problem 10 uses the last one."
+},
+{
+"id": "c2-thm-9",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Sup lies in the closure",
+"back": "If $E⊂ℝ$ is nonempty and bounded above, $\\sup E∈\\bar E$. So $\\sup E∈E$ when $E$ is closed.",
+"chapter": 2,
+"rudin": "2.28",
+"lecture": "L4.2",
+"status": "covered"
+},
+{
+"id": "c2-thm-10",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Relative openness",
+"back": "$E$ is open relative to $Y$ iff $E=Y∩G$ for some open $G⊂X$.",
+"chapter": 2,
+"rudin": "2.30",
+"lecture": "L4.2",
+"status": "covered"
+},
+{
+"id": "c2-thm-11",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Compactness is intrinsic",
+"back": "For $K⊂Y⊂X$, $K$ is compact relative to $X$ iff compact relative to $Y$.",
+"chapter": 2,
+"rudin": "2.33",
+"lecture": null,
+"status": "next",
+"note": "Unlike openness, compactness does not depend on the ambient space."
+},
+{
+"id": "c2-thm-12",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Compact ⇒ closed; closed ⊂ compact ⇒ compact",
+"back": "Compact subsets of metric spaces are closed. Closed subsets of compact sets are compact.",
+"chapter": 2,
+"rudin": "2.34, 2.35",
+"lecture": "L5.1",
+"status": "covered",
+"bartle": [
+"11.2.4"
+],
+"abbott": [
+"§3.3"
+],
+"classNote": "Class proof of “compact ⇒ closed” covers $K$ by the open sets $\\{p : d(p,x)&gt;1/n\\}$."
+},
+{
+"id": "c2-thm-13",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Finite intersection property",
+"back": "If every finite subfamily of a family of compact sets has nonempty intersection, the whole family does. Corollary: nested nonempty compact sets have nonempty intersection.",
+"chapter": 2,
+"rudin": "2.36",
+"lecture": null,
+"status": "next",
+"abbott": [
+"3.3.5"
+]
+},
+{
+"id": "c2-thm-14",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Infinite subsets of compact sets",
+"back": "If $E$ is an infinite subset of compact $K$, then $E$ has a limit point in $K$.",
+"chapter": 2,
+"rudin": "2.37",
+"lecture": "L5.2",
+"status": "started",
+"bartle": [
+"11.2.6"
+],
+"abbott": [
+"3.3.4"
+],
+"classNote": "Stated as “$K⊂ℝ^{k}$ is compact iff every infinite subset has a limit point in $K$” (true in any metric space); not proved yet."
+},
+{
+"id": "c2-thm-15",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Nested intervals; $k$-cells are compact",
+"back": "Nested closed intervals (or $k$-cells) have nonempty intersection. Every $k$-cell is compact.",
+"chapter": 2,
+"rudin": "2.38–2.40",
+"lecture": "L5.1, L5.2",
+"status": "covered",
+"bartle": [
+"2.5.2, 2.5.3"
+],
+"abbott": [
+"§1.4*"
+],
+"classNote": "Nested intervals proved with $x=\\sup a_{n}$; the bisection proof that cells are compact was done for $k=1$."
+},
+{
+"id": "c2-thm-16",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Heine–Borel",
+"back": "For $E⊂ℝ^{k}$ these are equivalent: $E$ is closed and bounded; $E$ is compact; every infinite subset of $E$ has a limit point in $E$.",
+"chapter": 2,
+"rudin": "2.41",
+"lecture": "L5.2",
+"status": "covered",
+"bartle": [
+"11.2.5, 11.2.6"
+],
+"abbott": [
+"3.3.4, 3.3.8"
+],
+"classNote": "Class proof: a bounded set sits in some $N_{R}(x)$, which sits in a $k$-cell; closed subsets of compact sets are compact.",
+"note": "The first equivalence fails in general metric spaces."
+},
+{
+"id": "c2-thm-17",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Weierstrass",
+"back": "Every bounded infinite subset of $ℝ^{k}$ has a limit point in $ℝ^{k}$.",
+"chapter": 2,
+"rudin": "2.42",
+"lecture": "L5.2",
+"status": "covered",
+"bartle": [
+"3.4.8 (sequence form)"
+],
+"abbott": [
+"§2.5*"
+],
+"classNote": "Proved by putting the set inside a compact $k$-cell. Discrete-metric example shows it fails in general metric spaces."
+},
+{
+"id": "c2-thm-18",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Perfect sets are uncountable",
+"back": "A nonempty perfect set in $ℝ^{k}$ is uncountable. Corollary: every interval $[a,b]$ ($a&lt;b$) is uncountable.",
+"chapter": 2,
+"rudin": "2.43",
+"lecture": null,
+"status": "next",
+"abbott": [
+"3.4.3"
+]
+},
+{
+"id": "c2-thm-19",
+"type": "flashcard",
+"kind": "theorem",
+"front": "The Cantor set",
+"back": "Remove open middle thirds forever. The result is compact, nonempty, perfect (so uncountable), and contains no interval.",
+"chapter": 2,
+"rudin": "2.44",
+"lecture": null,
+"status": "next",
+"bartle": [
+"11.1.10"
+],
+"abbott": [
+"§3.1"
+]
+},
+{
+"id": "c2-thm-20",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Connected subsets of $ℝ$",
+"back": "$E⊂ℝ$ is connected iff whenever $x,y∈E$ and $x&lt;z&lt;y$, then $z∈E$ (i.e. $E$ is an interval).",
+"chapter": 2,
+"rudin": "2.47",
+"lecture": null,
+"status": "next",
+"bartle": [
+"2.5.1"
+],
+"abbott": [
+"3.4.6, 3.4.7"
+]
+},
+{
+"id": "c2-lec-0",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Equinumerable is an equivalence relation",
+"back": "$X\\sim Y$ if a bijection exists; $\\sim$ is reflexive, symmetric and transitive. Examples: $2N$ and $ℤ$ are countable.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L2.2",
+"status": "covered"
+},
+{
+"id": "c2-lec-1",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Injections and surjections transfer size",
+"back": "If $f:A→B$ is one-to-one and $B$ is finite (countable), then $A$ is finite with $\\#A≤\\#B$ (at most countable). If $f$ is onto and $A$ is finite (countable), so is $B$ (at most countable).",
+"chapter": 2,
+"rudin": "",
+"lecture": "L2.2, L3.1",
+"status": "covered",
+"note": "The onto case uses a right inverse $g$ with $f∘g=\\mathrm{id}$."
+},
+{
+"id": "c2-lec-2",
+"type": "flashcard",
+"kind": "lecture",
+"front": "$ℕ×ℕ$ is countable, two ways",
+"back": "$(n,m)↦2^{n}3^{m}$ is one-to-one (unique factorization). The Cantor pairing $f(n,m)=\\tfrac{(n+m−2)(n+m−1)}{2}+n$ is a bijection onto $N$.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L3.1",
+"status": "covered"
+},
+{
+"id": "c2-lec-3",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Indexed unions and intersections",
+"back": "$\\bigcup_{α}E_{α}$ and $\\bigcap_{α}E_{α}$ over any index set. Example: $\\bigcup_{t∈(0,1]}(0,t)=(0,1)$ and $\\bigcap_{t∈(0,1]}(0,t)=∅$.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L3.1",
+"status": "covered"
+},
+{
+"id": "c2-lec-4",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Power set",
+"back": "$\\mathcal P(N)$ is in bijection with the binary sequences $2^{N}$ (indicator functions), so it is uncountable.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L3.1",
+"status": "covered"
+},
+{
+"id": "c2-lec-5",
+"type": "flashcard",
+"kind": "lecture",
+"front": "A zoo of metrics",
+"back": "Euclidean, Manhattan $d_{1}=Σ|x_{i}−y_{i}|$, sup $d_{∞}=\\max|x_{i}−y_{i}|$, Hamming distance on binary strings, edit distance on words, shortest-path distance on a graph, great-circle distance $\\arccos(p·q)$ on the sphere, and the discrete metric. Any subset inherits a restricted metric.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L3.2",
+"status": "covered"
+},
+{
+"id": "c2-lec-6",
+"type": "flashcard",
+"kind": "lecture",
+"front": "What neighborhoods look like",
+"back": "Open intervals in $ℝ$, open balls in $ℝ^{k}$, diamonds for the Manhattan metric, and for the discrete metric $N_{r}(x)=\\{x\\}$ if $r≤1$, the whole space if $r&gt;1$.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L3.2",
+"status": "covered"
+},
+{
+"id": "c2-lec-7",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Every point sorts three ways",
+"back": "For $E⊂X$ and $p∈X$, exactly one holds: $p$ is a limit point of $E$; $p$ is an isolated point of $E$; or $p$ is interior to $E^{c}$.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L4.1",
+"status": "covered"
+},
+{
+"id": "c2-lec-8",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Discrete spaces",
+"back": "In the discrete metric every subset is both open and closed, and no set has limit points.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L4.1",
+"status": "covered"
+},
+{
+"id": "c2-lec-9",
+"type": "flashcard",
+"kind": "lecture",
+"front": "$r$-neighborhoods and closed balls",
+"back": "$[E]_{r}=\\{x: d(x,y)&lt;r$ for some $y∈E\\}=\\bigcup_{y∈E}N_{r}(y)$ is open. $\\{q: d(q,p)&gt;r\\}$ is open, so the closed ball $\\{q: d(q,p)≤r\\}$ is closed.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L4.2",
+"status": "covered"
+},
+{
+"id": "c2-lec-10",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Four ways to say dense",
+"back": "For $E⊂X$ these are equivalent: every point is in $E$ or a limit point of $E$; $\\bar E=X$; every neighborhood meets $E$; every nonempty open set meets $E$. $ℚ$, the irrationals and the dyadic rationals $k/2^{n}$ are dense in $ℝ$.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L4.2",
+"status": "covered"
+},
+{
+"id": "c2-lec-11",
+"type": "flashcard",
+"kind": "lecture",
+"front": "$ℝ$ is uncountable, via nested intervals",
+"back": "If $R=\\{x_{1},x_{2},…\\}$, choose closed intervals $I_{1}⊃I_{2}⊃⋯$ of positive length with $x_{n}∉I_{n}$. Their intersection contains some $x$, but $x=x_{m}$ for some $m$ and $x_{m}∉I_{m}$.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L5.2",
+"status": "covered",
+"note": "A second proof besides Cantor's diagonal argument (2.14)."
+},
+{
+"id": "c2-lec-12",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Diameter of a $k$-cell",
+"back": "For $y,z$ in $[a_{1},b_{1}]×⋯×[a_{k},b_{k}]$: $|y−z|≤\\left(Σ(b_{i}−a_{i})^{2}\\right)^{1/2}$.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L5.2",
+"status": "covered",
+"note": "Used to shrink nested cells to a point."
+},
+{
+"id": "c2-lec-13",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Bolzano–Weierstrass needs $ℝ^{k}$",
+"back": "In an infinite set with the discrete metric, the whole space is infinite and bounded but has no limit points.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L5.2",
+"status": "covered"
+},
+{
+"id": "c2-lec-14",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Finite sets are compact; $ℤ$ and $ℝ$ are not",
+"back": "Pick one cover set per point. $\\{(−n,n)\\}$ covers $ℤ$ (and $ℝ$) with no finite subcover.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L5.1",
+"status": "covered"
+},
+{
+"id": "c2-lec-15",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Compact ⇒ bounded",
+"back": "Cover $K$ by the increasing balls $N_{n}(x)$; a finite subcover is a single ball.",
+"chapter": 2,
+"rudin": "",
+"lecture": "L5.1",
+"status": "covered",
+"note": "Rudin only gets this inside the proof of 2.41."
+},
+{
+"id": "c2-pf-0",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Neighborhoods are open.",
+"modelProof": "Take $q∈N_{r}(p)$ and set $h=r−d(p,q)&gt;0$. If $d(q,s)&lt;h$, then $d(p,s) ≤ d(p,q)+d(q,s) &lt; r$. So $N_{h}(q)⊂N_{r}(p)$.",
+"chapter": 2,
+"rudin": "2.19",
+"lecture": "L4.1",
+"status": "covered"
+},
+{
+"id": "c2-pf-1",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Open iff complement closed.",
+"modelProof": "($⇐$) Let $E^{c}$ be closed and $x∈E$. Then $x∉E^{c}$ and $x$ is not a limit point of $E^{c}$, so some neighborhood of $x$ misses $E^{c}$, i.e. lies in $E$. ($⇒$) If $x$ is a limit point of $E^{c}$, every neighborhood of $x$ meets $E^{c}$, so $x$ is not interior to $E$; since $E$ is open, $x∉E$, so $x∈E^{c}$.",
+"chapter": 2,
+"rudin": "2.23",
+"lecture": "L4.1",
+"status": "covered"
+},
+{
+"id": "c2-pf-2",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Compact sets are closed.",
+"modelProof": "Let $p∉K$. For each $q∈K$ take $V_{q}=N_{r}(p)$, $W_{q}=N_{r}(q)$ with $r&lt;d(p,q)/2$. Finitely many $W_{q_{i}}$ cover $K$; the intersection $V$ of the matching $V_{q_{i}}$ is a neighborhood of $p$ missing $K$. So $K^{c}$ is open.",
+"chapter": 2,
+"rudin": "2.34",
+"lecture": "L5.1",
+"status": "covered",
+"classNote": "Different cover in class; same idea."
+},
+{
+"id": "c2-pf-3",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Cantor's diagonal argument.",
+"modelProof": "Given any list $s_{1}, s_{2}, …$ of binary sequences, define $s$ by making its $n$th digit differ from the $n$th digit of $s_{n}$. Then $s≠s_{n}$ for all $n$, so no list contains every binary sequence.",
+"chapter": 2,
+"rudin": "2.14",
+"lecture": "L3.1",
+"status": "covered"
+},
+{
+"id": "c2-pf-4",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: $k$-cells are compact (bisection).",
+"modelProof": "If some open cover of a $k$-cell $I$ had no finite subcover, cut $I$ into $2^{k}$ subcells; one of them also has no finite subcover. Repeat to get nested cells $I_{n}$ with diameters $→0$. They share a point $x^{*}$, which lies in some open $G_{α}$ of the cover; for large $n$, $I_{n}⊂G_{α}$, a contradiction.",
+"chapter": 2,
+"rudin": "2.40",
+"lecture": "L5.2",
+"status": "covered",
+"classNote": "Done for $k=1$ (halving intervals)."
+},
+{
+"id": "c2-pf-5",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Outside the closure means inside the complement's interior.",
+"modelProof": "If $x∉\\bar E$ then $x∉E$ and $x$ is not a limit point of $E$, so some $N_{r}(x)$ contains no point of $E$ other than possibly $x$, hence none at all. So $N_{r}(x)⊂E^{c}$ (Quiz 2, problem 15).",
+"chapter": 2,
+"rudin": "2.26",
+"lecture": "L4.1 (remark), Quiz 2",
+"status": "covered"
+},
+{
+"id": "c2-pr-0",
+"type": "proof",
+"kind": "practice",
+"prompt": "Prove that the set of polynomials with integer coefficients is countable. Deduce that the algebraic numbers are countable.",
+"hint": "Sort polynomials by degree; each degree class looks like $ℤ^{n+1}$.",
+"modelProof": "Polynomials of degree $≤ n$ correspond to $ℤ^{n+1}$, countable by 2.13. The union over $n$ is countable by 2.12. Each nonzero polynomial has finitely many roots, so the algebraic numbers are a countable union of finite sets.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-pr-1",
+"type": "proof",
+"kind": "practice",
+"prompt": "Prove that $\\mathrm{int}(E)$ is open, and that $E$ is open iff $E=\\mathrm{int}(E)$.",
+"hint": "Use that neighborhoods are open (2.19).",
+"modelProof": "If $p$ is interior with $N_{r}(p)⊂E$, every $q∈N_{r}(p)$ has a smaller ball inside $N_{r}(p)⊂E$, so $q$ is interior too; thus $N_{r}(p)⊂\\mathrm{int}E$. The second statement is the definition of open.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-pr-2",
+"type": "proof",
+"kind": "practice",
+"prompt": "Show $d(x,y)=\\dfrac{|x−y|}{1+|x−y|}$ is a metric on $ℝ$.",
+"hint": "The function $φ(t)=t/(1+t)$ is increasing and satisfies $φ(a+b) ≤ φ(a)+φ(b)$ for $a,b≥0$.",
+"modelProof": "Positivity and symmetry are clear. Triangle: $d(x,z)=φ(|x−z|) ≤ φ(|x−y|+|y−z|) ≤ φ(|x−y|)+φ(|y−z|)$, using $\\frac{a+b}{1+a+b} = \\frac{a}{1+a+b}+\\frac{b}{1+a+b} ≤ \\frac{a}{1+a}+\\frac{b}{1+b}$.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-pr-3",
+"type": "proof",
+"kind": "practice",
+"prompt": "If $K$ is compact and $F$ is closed in a metric space, prove $K∩F$ is compact.",
+"hint": "2.34 and 2.35.",
+"modelProof": "$K∩F$ is an intersection of two closed sets (2.34), hence closed, and it sits inside compact $K$, so it is compact (2.35).",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-pr-4",
+"type": "proof",
+"kind": "practice",
+"prompt": "Let $E$ be the set of $x∈[0,1]$ whose decimal expansion uses only the digits 4 and 7. Show $E$ is uncountable and compact.",
+"hint": "Match $E$ with binary sequences; for compactness show $E^{c}$ is open or $E$ is closed.",
+"modelProof": "The map sending a 4/7 sequence to $x$ is a bijection onto $E$, and 4/7 sequences correspond to binary sequences, so $E$ is uncountable (2.14). $E$ is bounded; it is closed because $E=\\bigcap E_{n}$, where $E_{n}$ is the finite union of closed intervals of numbers whose first $n$ digits are 4s and 7s. Heine–Borel finishes it.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-pr-5",
+"type": "proof",
+"kind": "practice",
+"prompt": "Prove $\\overline{A∪B} = \\bar A ∪ \\bar B$, and show $\\overline{A∩B}$ can differ from $\\bar A ∩ \\bar B$.",
+"hint": "This is Quiz 2 problems 10–11. Redo them without looking.",
+"modelProof": "⊆: $\\bar A∪\\bar B$ is closed (finite union) and contains $A∪B$, so it contains the smallest closed superset. ⊇: $A⊂A∪B$ gives $\\bar A⊂\\overline{A∪B}$, same for $B$. Counterexample: $A=(0,1)$, $B=(1,2)$.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-pr-6",
+"type": "proof",
+"kind": "practice",
+"prompt": "From L4.2 (exercise): prove $O_{r}(p)=\\{q: d(q,p)&gt;r\\}$ is open, and deduce the closed ball is closed.",
+"hint": "Mirror the proof that neighborhoods are open.",
+"modelProof": "Let $d(q,p)&gt;r$ and $s=d(q,p)−r$. If $d(z,q)&lt;s$, then $d(z,p)≥d(q,p)−d(q,z)&gt;r$. So $N_{s}(q)⊂O_{r}(p)$. The closed ball is $O_{r}(p)^{c}$, closed by 2.23.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-pr-7",
+"type": "proof",
+"kind": "practice",
+"prompt": "From L3.2: prove the Hamming distance is a metric on $\\{0,1\\}^{n}$.",
+"hint": "For the triangle inequality, compare the sets of coordinates where strings differ.",
+"modelProof": "Nonnegativity, $d=0$ iff equal, and symmetry are clear. If $x_{i}≠z_{i}$ then $x_{i}≠y_{i}$ or $y_{i}≠z_{i}$, so the set where $x,z$ differ is inside the union of the other two sets, giving $d(x,z)≤d(x,y)+d(y,z)$.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-pr-8",
+"type": "proof",
+"kind": "practice",
+"prompt": "From L4.2: prove the irrationals are dense in $ℝ$.",
+"hint": "Use density of $ℚ$ on a shifted interval.",
+"modelProof": "Given $a&lt;b$, pick rational $p$ with $a−\\sqrt2&lt;p&lt;b−\\sqrt2$. Then $p+\\sqrt2∈(a,b)$ is irrational.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-pr-9",
+"type": "proof",
+"kind": "practice",
+"prompt": "From L5.2: in the nested-interval proof that $ℝ$ is uncountable, explain how to choose $I_{n+1}⊂I_{n}$ of positive length with $x_{n+1}∉I_{n+1}$.",
+"hint": "Split $I_{n}$ into three closed pieces.",
+"modelProof": "Cut $I_{n}=[a,b]$ into thirds $[a,a+h]$, $[a+h,a+2h]$, $[a+2h,b]$. The point $x_{n+1}$ can't lie in both the first and the last third (they're disjoint), so pick one of those that misses it.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-pr-10",
+"type": "proof",
+"kind": "practice",
+"prompt": "From L5.2: prove that every $y$ in $N_{R}(x)⊂ℝ^{k}$ satisfies $|y_{i}−x_{i}|≤R$ for each $i$, so $N_{R}(x)$ lies in a $k$-cell.",
+"hint": "One coordinate is at most the whole norm.",
+"modelProof": "$|y_{i}−x_{i}|^{2}≤Σ_{j}|y_{j}−x_{j}|^{2}=|y−x|^{2}&lt;R{}^{2}$. So $y∈Π[x_{i}−R,x_{i}+R]$.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-pr-11",
+"type": "proof",
+"kind": "practice",
+"prompt": "From L5.1: show $E=[0.1,1)$ is not compact using $V_{n}=(1/n,1−1/n)$, $n≥3$.",
+"hint": "The $V_{n}$ increase.",
+"modelProof": "They cover $E$ since each $x&lt;1$ lies in $V_{n}$ once $1/n&lt;\\min(x,1−x)$. A finite union equals the largest $V_{n_{k}}$, which misses $[1−1/n_{k},1)∩E$.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-tf-0",
+"type": "tf",
+"prompt": "Every closed and bounded subset of a metric space is compact.",
+"answer": false,
+"explanation": "Discrete metric on $ℕ$, or $\\{p∈ℚ:2&lt;p^{2}&lt;3\\}$ in $ℚ$. True in $ℝ^{k}$ (Heine–Borel).",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-tf-1",
+"type": "tf",
+"prompt": "$\\mathrm{int}(A∪B) = \\mathrm{int}A ∪ \\mathrm{int}B$.",
+"answer": false,
+"explanation": "$A=ℚ$, $B=ℝ∖ℚ$: both interiors are empty, but $\\mathrm{int}R=ℝ$. (⊇ always holds.)",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-tf-2",
+"type": "tf",
+"prompt": "For any set $E$ in a metric space, $E'$ is closed.",
+"answer": true,
+"explanation": "If $x$ is a limit point of $E'$, each $N_{r}(x)$ contains some $y∈E'$, $y≠x$; a smaller ball around $y$ inside $N_{r}(x)∖\\{x\\}$ contains a point of $E$. Same idea as Quiz 2 problem 9.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-tf-3",
+"type": "tf",
+"prompt": "The set of all sequences of natural numbers is countable.",
+"answer": false,
+"explanation": "It contains the sequences using only the digits 1 and 2, which are in bijection with binary sequences (2.14). Compare Quiz 2 problem 14: eventually constant sequences are countable.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-tf-4",
+"type": "tf",
+"prompt": "A subset of $ℝ$ with no limit points is finite.",
+"answer": false,
+"explanation": "$ℤ$ has no limit points.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-tf-5",
+"type": "tf",
+"prompt": "If $E⊂ℝ$ is compact and nonempty, then $\\sup E∈E$.",
+"answer": true,
+"explanation": "Compact sets are closed and bounded, and $\\sup E∈\\bar E=E$ (2.28).",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-tf-6",
+"type": "tf",
+"prompt": "Every nonempty perfect set contains an interval.",
+"answer": false,
+"explanation": "The Cantor set is perfect and contains no interval.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c2-tf-7",
+"type": "tf",
+"prompt": "The union of two connected subsets of $ℝ$ that intersect is connected.",
+"answer": true,
+"explanation": "Both are intervals sharing a point, so their union is an interval.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c2-fl-0",
+"type": "flaw",
+"claim": "Every closed and bounded subset of a metric space is compact.",
+"lines": [
+"Let $E$ be closed and bounded, say $E⊂N_{R}(p)$.",
+"Then $E$ is a closed subset of the bounded set $N_{R}(p)$, and closed subsets of compact sets are compact by 2.35.",
+"Hence by Heine–Borel $E$ is compact."
+],
+"bad": [
+1,
+2
+],
+"explanation": "$N_{R}(p)$ is bounded but not compact, so 2.35 doesn't apply, and Heine–Borel is a theorem about $ℝ^{k}$ only. The claim is false (discrete metric on $ℕ$).",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-fl-1",
+"type": "flaw",
+"claim": "Any union of closed sets is closed.",
+"lines": [
+"Let $F=\\bigcup F_{α}$ and let $p$ be a limit point of $F$.",
+"Then $p$ is a limit point of some $F_{α}$.",
+"Since $F_{α}$ is closed, $p∈F_{α}⊂F$."
+],
+"bad": [
+1
+],
+"explanation": "A limit point of the union need not be a limit point of any single piece. Each $\\{1/n\\}$ is closed, but 0 is a limit point of the union and of none of the pieces. For finitely many pieces the step can be repaired: if $p$ is not a limit point of any $F_{i}$, the minimum of the finitely many radii gives a ball missing $F$.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-fl-2",
+"type": "flaw",
+"claim": "$ℚ$ is uncountable.",
+"lines": [
+"List the rationals in $(0,1)$ as decimals $r_{1}, r_{2}, …$.",
+"Build $x$ whose $n$th digit differs from the $n$th digit of $r_{n}$.",
+"Then $x$ is not on the list, contradiction."
+],
+"bad": [
+2
+],
+"explanation": "The diagonal number $x$ need not be rational, so it doesn't have to be on the list. No contradiction.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-cx-0",
+"type": "counterexample",
+"name": "$(0,1)$ and the cover $\\{(1/n,1)\\}$",
+"details": "Open cover with no finite subcover, so $(0,1)$ is not compact.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-cx-1",
+"type": "counterexample",
+"name": "$\\{1/n : n∈ℕ\\}$",
+"details": "$E'=\\{0\\}$ and $(E')'=∅$ (Quiz 2 problem 8). Neither open nor closed; $E∪\\{0\\}$ is compact.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-cx-2",
+"type": "counterexample",
+"name": "$ℤ$",
+"details": "Closed, unbounded, not compact; every point is isolated, so it has no limit points.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-cx-3",
+"type": "counterexample",
+"name": "Discrete metric on $ℕ$",
+"details": "$d(p,q)=1$ for $p≠q$. $ℕ$ is closed and bounded but not compact: the cover by singletons has no finite subcover. Heine–Borel is special to $ℝ^{k}$.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-cx-4",
+"type": "counterexample",
+"name": "$\\{p∈ℚ : 2&lt;p^{2}&lt;3\\}$ inside $ℚ$",
+"details": "Closed and bounded in the metric space $ℚ$, but not compact.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-cx-5",
+"type": "counterexample",
+"name": "$\\bigcap(−1/n,1/n) = \\{0\\}$; $\\bigcup[1/n,1]=(0,1]$",
+"details": "Infinite intersections of open sets need not be open; infinite unions of closed sets need not be closed.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c2-cx-6",
+"type": "counterexample",
+"name": "The Cantor set",
+"details": "Perfect, uncountable, contains no interval, and has total length 0.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c2-cx-7",
+"type": "counterexample",
+"name": "$ℚ$ and the irrationals",
+"details": "Both dense, both have empty interior, but their union is $ℝ$. Shows $\\mathrm{int}(A∪B)$ can be larger than $\\mathrm{int}A∪\\mathrm{int}B$.",
+"chapter": 2,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+}
+]
+}

@@ -1,0 +1,757 @@
+{
+"id": "rudin-ch1",
+"title": "Rudin Ch 1: The Real and Complex Number Systems",
+"course": "M365C",
+"created": "2026-09-29",
+"version": 1,
+"items": [
+{
+"id": "c1-def-0",
+"type": "flashcard",
+"kind": "definition",
+"front": "Ordered set",
+"back": "A set with a relation $&lt;$ such that for any $x,y$ exactly one of $x&lt;y$, $x=y$, $y&lt;x$ holds (trichotomy), and $x&lt;y$, $y&lt;z$ imply $x&lt;z$.",
+"chapter": 1,
+"rudin": "1.5–1.6",
+"lecture": "L1.1, L1.2",
+"status": "covered",
+"bartle": [
+"2.1.5"
+],
+"abbott": [
+"8.6.5"
+]
+},
+{
+"id": "c1-def-1",
+"type": "flashcard",
+"kind": "definition",
+"front": "Upper bound; bounded above",
+"back": "$β$ is an upper bound of $E$ if $x ≤ β$ for every $x∈E$. $E$ is bounded above if it has one.",
+"chapter": 1,
+"rudin": "1.7",
+"lecture": "L1.2",
+"status": "covered",
+"bartle": [
+"2.3.1"
+]
+},
+{
+"id": "c1-def-2",
+"type": "flashcard",
+"kind": "definition",
+"front": "Supremum (least upper bound)",
+"back": "$α=\\sup E$ means (i) $α$ is an upper bound of $E$, and (ii) if $γ&lt;α$ then $γ$ is not an upper bound. The infimum is defined the same way with inequalities reversed.",
+"chapter": 1,
+"rudin": "1.8",
+"lecture": "L1.2, L2.1",
+"status": "covered",
+"bartle": [
+"2.3.2",
+"2.3.4 (ε-version)"
+]
+},
+{
+"id": "c1-def-3",
+"type": "flashcard",
+"kind": "definition",
+"front": "Least-upper-bound property",
+"back": "Every nonempty subset that is bounded above has a supremum in the set. $ℚ$ fails this; $ℝ$ has it.",
+"chapter": 1,
+"rudin": "1.10",
+"lecture": "L2.1",
+"status": "covered",
+"bartle": [
+"2.3.6"
+],
+"abbott": [
+"§1.3*"
+]
+},
+{
+"id": "c1-def-4",
+"type": "flashcard",
+"kind": "definition",
+"front": "Field; ordered field",
+"back": "A field has $+$ and $·$ satisfying the usual axioms. An ordered field also satisfies: $y&lt;z ⇒ x+y&lt;x+z$, and $x&gt;0, y&gt;0 ⇒ xy&gt;0$.",
+"chapter": 1,
+"rudin": "1.12, 1.17",
+"lecture": "L1.1, L1.2",
+"status": "covered",
+"bartle": [
+"2.1.1",
+"2.1.5"
+],
+"abbott": [
+"8.6.4"
+]
+},
+{
+"id": "c1-def-5",
+"type": "flashcard",
+"kind": "definition",
+"front": "Extended real numbers",
+"back": "$R ∪ \\{+∞, −∞\\}$ with $−∞&lt;x&lt;+∞$. Every subset has a sup and inf here; $\\sup ∅ = −∞$ by convention.",
+"chapter": 1,
+"rudin": "1.23",
+"lecture": "L2.2",
+"status": "covered"
+},
+{
+"id": "c1-def-6",
+"type": "flashcard",
+"kind": "definition",
+"front": "Complex numbers, conjugate, modulus",
+"back": "$z=a+bi$ with $i^{2}=−1$, $\\bar z = a−bi$, $|z| = (z\\bar z)^{1/2}$. $ℂ$ is a field but cannot be ordered.",
+"chapter": 1,
+"rudin": "1.24–1.32",
+"lecture": null,
+"status": "skipped",
+"classNote": "Only mentioned: $ℂ$ cannot be ordered (L1.2)."
+},
+{
+"id": "c1-def-7",
+"type": "flashcard",
+"kind": "definition",
+"front": "Euclidean space $ℝ^{k}$",
+"back": "Vectors $x=(x_{1},…,x_{k})$, inner product $x·y=Σ x_{i}y_{i}$, norm $|x|=(x·x)^{1/2}$.",
+"chapter": 1,
+"rudin": "1.36",
+"lecture": "L2.2",
+"status": "covered",
+"bartle": [
+"11.4.2 (Euclidean metric)"
+],
+"abbott": [
+"8.2.1"
+]
+},
+{
+"id": "c1-thm-0",
+"type": "flashcard",
+"kind": "theorem",
+"front": "$ℚ$ has gaps",
+"back": "No rational $p$ satisfies $p^{2}=2$. Worse, $\\{p∈ℚ: p&gt;0, p^{2}&lt;2\\}$ has no largest element and $\\{p∈ℚ:p&gt;0,p^{2}&gt;2\\}$ has no smallest.",
+"chapter": 1,
+"rudin": "1.1",
+"lecture": "L1.2, L2.1",
+"status": "covered",
+"bartle": [
+"2.1.4"
+],
+"abbott": [
+"§1.1*"
+],
+"classNote": "Class proved $\\sqrt2$ irrational with Euclid's lemma, and that $ℚ$ is not complete with a small-δ argument.",
+"note": "Motivates the whole book: $ℚ$ is an ordered field without the LUB property."
+},
+{
+"id": "c1-thm-1",
+"type": "flashcard",
+"kind": "theorem",
+"front": "LUB property gives GLB property",
+"back": "If $S$ has the least-upper-bound property and $B⊂S$ is nonempty and bounded below, then $\\inf B$ exists and equals $\\sup L$, where $L$ is the set of lower bounds of $B$.",
+"chapter": 1,
+"rudin": "1.11",
+"lecture": "L2.1",
+"status": "covered",
+"bartle": [
+"§2.3"
+],
+"abbott": [
+"§1.3*"
+],
+"classNote": "Class proof: reflect the set, $\\inf E = −\\sup(−E)$.",
+"note": "You never need a separate “completeness for infima” axiom."
+},
+{
+"id": "c1-thm-2",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Basic field and order facts",
+"back": "From the axioms: $0·x=0$; $(−x)y=−(xy)$; $x≠0 ⇒ x^{2}&gt;0$; $1&gt;0$; $0&lt;x&lt;y ⇒ 0&lt;1/y&lt;1/x$.",
+"chapter": 1,
+"rudin": "1.14–1.18",
+"lecture": "L1.2",
+"status": "covered",
+"bartle": [
+"2.1.2, 2.1.3, 2.1.7, 2.1.8"
+],
+"note": "Exam proofs occasionally ask you to derive one of these from the axioms."
+},
+{
+"id": "c1-thm-3",
+"type": "flashcard",
+"kind": "theorem",
+"front": "$ℝ$ exists",
+"back": "There is an ordered field with the least-upper-bound property containing $ℚ$ as a subfield. Rudin builds it from Dedekind cuts in the chapter appendix.",
+"chapter": 1,
+"rudin": "1.19",
+"lecture": "L2.1",
+"status": "covered",
+"abbott": [
+"8.6.1–8.6.3"
+],
+"classNote": "Stated only; the Dedekind-cut construction was not done."
+},
+{
+"id": "c1-thm-4",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Archimedean property",
+"back": "If $x&gt;0$ and $y∈ℝ$, there is a positive integer $n$ with $nx&gt;y$.",
+"chapter": 1,
+"rudin": "1.20(a)",
+"lecture": "L2.1",
+"status": "covered",
+"bartle": [
+"2.4.3, 2.4.5, 2.4.6"
+],
+"abbott": [
+"§1.4*"
+],
+"note": "The engine behind almost every “find $N$” argument."
+},
+{
+"id": "c1-thm-5",
+"type": "flashcard",
+"kind": "theorem",
+"front": "$ℚ$ is dense in $ℝ$",
+"back": "If $x&lt;y$ there is a rational $p$ with $x&lt;p&lt;y$.",
+"chapter": 1,
+"rudin": "1.20(b)",
+"lecture": "L2.1",
+"status": "covered",
+"bartle": [
+"2.4.8",
+"2.4.9 (irrationals too)"
+],
+"abbott": [
+"§1.4*"
+]
+},
+{
+"id": "c1-thm-6",
+"type": "flashcard",
+"kind": "theorem",
+"front": "$n$th roots",
+"back": "For $x&gt;0$ and integer $n&gt;0$ there is exactly one positive real $y$ with $y^{n}=x$. Corollary: $(ab)^{1/n}=a^{1/n}b^{1/n}$.",
+"chapter": 1,
+"rudin": "1.21",
+"lecture": "L2.1",
+"status": "covered",
+"bartle": [
+"2.4.7 (the case $\\sqrt 2$)"
+],
+"abbott": [
+"§1.4*"
+],
+"classNote": "Stated with the idea $x=\\sup\\{x&gt;0 : x^{n}&lt;a\\}$."
+},
+{
+"id": "c1-thm-7",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Properties of $|z|$",
+"back": "$|z|≥0$ with equality iff $z=0$; $|zw|=|z||w|$; $|\\mathrm{Re}\\,z| ≤ |z|$; $|z+w| ≤ |z|+|w|$.",
+"chapter": 1,
+"rudin": "1.33",
+"lecture": null,
+"status": "skipped",
+"bartle": [
+"2.2.2, 2.2.3 (real case)"
+]
+},
+{
+"id": "c1-thm-8",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Cauchy–Schwarz inequality",
+"back": "$|Σ a_{j}\\bar b_{j}|^{2} ≤ Σ|a_{j}|^{2} · Σ|b_{j}|^{2}$.",
+"chapter": 1,
+"rudin": "1.35",
+"lecture": "L2.2",
+"status": "covered",
+"classNote": "Real version in $ℝ^{k}$ only, proved with the quadratic $q(t)=|x−ty|^{2}$.",
+"note": "Gives $|x·y| ≤ |x||y|$ and then the triangle inequality in $ℝ^{k}$."
+},
+{
+"id": "c1-thm-9",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Norm in $ℝ^{k}$",
+"back": "$|x|≥0$ (zero iff $x=0$); $|αx|=|α||x|$; $|x·y| ≤ |x||y|$; $|x+y| ≤ |x|+|y|$; $|x−z| ≤ |x−y|+|y−z|$.",
+"chapter": 1,
+"rudin": "1.37",
+"lecture": "L2.2",
+"status": "covered",
+"bartle": [
+"11.4.2"
+],
+"abbott": [
+"8.2.1"
+],
+"note": "This makes $ℝ^{k}$ a metric space in Chapter 2."
+},
+{
+"id": "c1-lec-0",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Sets, subsets and De Morgan",
+"back": "$(A∪B)^{c}=A^{c}∩B^{c}$ and $(A∩B)^{c}=A^{c}∪B^{c}$. To prove $A=B$, prove $A⊂B$ and $B⊂A$.",
+"chapter": 1,
+"rudin": "",
+"lecture": "L1.1",
+"status": "covered"
+},
+{
+"id": "c1-lec-1",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Well-ordering and induction",
+"back": "Every nonempty subset of $ℕ$ has a least element (taken as an axiom). It implies induction: if $P(1)$ holds and $P(n)⇒P(n+1)$, then $P(n)$ holds for all $n$. Example: $1+r+⋯+r^{n}=\\dfrac{1−r^{n+1}}{1−r}$ for $r≠1$.",
+"chapter": 1,
+"rudin": "",
+"lecture": "L1.1",
+"status": "covered",
+"note": "Also shown: a $2^{n}×2^{n}$ board missing one square can be tiled by L-trominoes."
+},
+{
+"id": "c1-lec-2",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Relations and equivalence relations",
+"back": "A relation on $A×B$ is a subset $R⊂A×B$. An equivalence relation on $S$ is reflexive, symmetric and transitive; $[x]=\\{y : y\\,R\\,x\\}$ is the equivalence class of $x$.",
+"chapter": 1,
+"rudin": "",
+"lecture": "L1.1",
+"status": "covered",
+"note": "Examples from class: “divides” is reflexive and transitive but not symmetric; $&lt;$ on $ℤ$ is transitive."
+},
+{
+"id": "c1-lec-3",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Constructing $ℚ$",
+"back": "A fraction $m/n$ is the equivalence class of $(m,n)∈ℤ×(ℤ∖\\{0\\})$ under $(a,b)\\sim(m,n)$ ⟺ $an=bm$. Addition and multiplication are well defined on classes, and $a/b$ is positive iff $ab&gt;0$. With this, $ℚ$ is an ordered field.",
+"chapter": 1,
+"rudin": "",
+"lecture": "L1.1",
+"status": "covered",
+"note": "Rudin takes $ℚ$ as given; this is extra."
+},
+{
+"id": "c1-lec-4",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Lexicographic order on $ℤ×ℤ$",
+"back": "$(a,b)&lt;(p,q)$ iff $a&lt;p$, or $a=p$ and $b&lt;q$. It is an ordered set without the LUB property: $\\{(0,a): a∈ℤ\\}$ is bounded above by every $(1,b)$ but has no least upper bound.",
+"chapter": 1,
+"rudin": "",
+"lecture": "L1.2",
+"status": "covered"
+},
+{
+"id": "c1-lec-5",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Sups are unique; maxima are sups",
+"back": "A set has at most one supremum. If $E$ has a largest element, that element is $\\sup E$.",
+"chapter": 1,
+"rudin": "",
+"lecture": "L1.2",
+"status": "covered"
+},
+{
+"id": "c1-lec-6",
+"type": "flashcard",
+"kind": "lecture",
+"front": "$ℚ$ is not complete: the small-δ proof",
+"back": "If $x=\\sup\\{r∈ℚ: r&gt;0, r^{2}&lt;2\\}$ were rational: $x^{2}=2$ is impossible; if $x^{2}&lt;2$, then $x+δ$ with $δ=\\tfrac12\\min(x,\\tfrac{2−x^{2}}{3x})$ is still in the set; if $x^{2}&gt;2$, some $x−δ$ is a smaller upper bound.",
+"chapter": 1,
+"rudin": "",
+"lecture": "L2.1",
+"status": "covered",
+"note": "Compare Rudin's single formula in 1.1."
+},
+{
+"id": "c1-lec-7",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Sup facts and a warning",
+"back": "If $a≤β$ for all $a∈A$ then $\\sup A≤β$. But $a&lt;β$ for all $a$ does not give $\\sup A&lt;β$. If $C⊂D$ then $\\sup C≤\\sup D$.",
+"chapter": 1,
+"rudin": "",
+"lecture": "L2.1",
+"status": "covered"
+},
+{
+"id": "c1-lec-8",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Sup of unions and sums",
+"back": "$\\sup(A∪B)=\\max\\{\\sup A,\\sup B\\}$ and $\\sup(A+B)=\\sup A+\\sup B$ (worked in class with the ε-characterization).",
+"chapter": 1,
+"rudin": "",
+"lecture": "L2.2",
+"status": "covered"
+},
+{
+"id": "c1-lec-9",
+"type": "flashcard",
+"kind": "lecture",
+"front": "Which $ℝ^{k}$ are fields?",
+"back": "Only $k=1,2$ carry a field product ($ℝ^{2}≅C$). $ℝ^{4}$ gives the quaternions, which are not commutative.",
+"chapter": 1,
+"rudin": "",
+"lecture": "L2.2",
+"status": "covered"
+},
+{
+"id": "c1-pf-0",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: $ℚ$ has no largest element below $\\sqrt2$.",
+"modelProof": "Given rational $p&gt;0$, set $q = p − (p^{2}−2)/(p+2) = (2p+2)/(p+2)$. Then $q^{2}−2 = 2(p^{2}−2)/(p+2)^{2}$. So $q$ is rational, $q^{2}−2$ has the same sign as $p^{2}−2$, and $q&gt;p$ exactly when $p^{2}&lt;2$. Whatever $p$ you pick below $\\sqrt2$, $q$ is a bigger rational still below it.",
+"chapter": 1,
+"rudin": "1.1",
+"lecture": "L1.2, L2.1",
+"status": "covered"
+},
+{
+"id": "c1-pf-1",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Archimedean property from the LUB property.",
+"modelProof": "Suppose $nx ≤ y$ for every $n$. Then $A=\\{nx\\}$ is bounded above, so $α=\\sup A$ exists. Since $x&gt;0$, $α−x&lt;α$ is not an upper bound, so $α−x&lt;mx$ for some $m$. Then $α&lt;(m+1)x ∈ A$, contradicting that $α$ is an upper bound.",
+"chapter": 1,
+"rudin": "1.20(a)",
+"lecture": "L2.1",
+"status": "covered"
+},
+{
+"id": "c1-pf-2",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Density of $ℚ$.",
+"modelProof": "By Archimedes pick $n$ with $n(y−x)&gt;1$, and integers $m_{1}, m_{2}$ with $−m_{2}&lt;nx&lt;m_{1}$. Then some integer $m$ satisfies $m−1 ≤ nx &lt; m$. So $nx&lt;m ≤ nx+1&lt;ny$, and $p=m/n$ works.",
+"chapter": 1,
+"rudin": "1.20(b)",
+"lecture": "L2.1",
+"status": "covered",
+"classNote": "Class picks the smallest integer $m$ with $m/n&gt;x$ (well-ordering)."
+},
+{
+"id": "c1-pf-3",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Cauchy–Schwarz.",
+"modelProof": "Let $A=Σ|a_{j}|^{2}$, $B=Σ|b_{j}|^{2}$, $C=Σa_{j}\\bar b_{j}$. If $B=0$ it is trivial. Otherwise expand $0 ≤ Σ|Ba_{j}−Cb_{j}|^{2} = B(AB−|C|^{2})$ and divide by $B&gt;0$.",
+"chapter": 1,
+"rudin": "1.35",
+"lecture": "L2.2",
+"status": "covered",
+"classNote": "Class uses $q(t)=|x−ty|^{2}≥0$ at $t=x·y/y·y$ instead."
+},
+{
+"id": "c1-pf-4",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Two-step sup proof (quiz pattern).",
+"modelProof": "To show $\\sup E = s$: (1) prove $x ≤ s$ for all $x∈E$. (2) Take any $β&lt;s$ and produce $x∈E$ with $x&gt;β$, usually by solving an inequality for $n$ and invoking Archimedes. Equivalent ε-form: for every $ε&gt;0$ find $x∈E$ with $x&gt;s−ε$.",
+"chapter": 1,
+"rudin": "1.8",
+"lecture": "L1.2, L2.1, L2.2",
+"status": "covered"
+},
+{
+"id": "c1-pr-0",
+"type": "proof",
+"kind": "practice",
+"prompt": "Let $E=\\{(2n+1)/(n+3) : n∈ℕ\\}$. Find $\\sup E$ and $\\inf E$ and prove both from the definitions.",
+"hint": "Rewrite $(2n+1)/(n+3) = 2 − 5/(n+3)$.",
+"modelProof": "The terms increase in $n$. $\\inf E = 3/4$, attained at $n=1$, and it is a lower bound since $5/(n+3) ≤ 5/4$. $\\sup E = 2$: it is an upper bound since $5/(n+3)&gt;0$. If $β&lt;2$, choose $n&gt;5/(2−β)−3$ (Archimedes); then $5/(n+3)&lt;2−β$, so the term exceeds $β$.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-pr-1",
+"type": "proof",
+"kind": "practice",
+"prompt": "Let $A$ be nonempty and bounded above and $c&gt;0$. Prove $\\sup(cA)=c\\sup A$.",
+"hint": "Mirror quiz problem 4, but the inequality does not flip.",
+"modelProof": "$a ≤ \\sup A$ gives $ca ≤ c\\sup A$, an upper bound. If $β&lt;c\\sup A$ then $β/c&lt;\\sup A$, so some $a∈A$ has $a&gt;β/c$, i.e. $ca&gt;β$.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-pr-2",
+"type": "proof",
+"kind": "practice",
+"prompt": "Prove there is no rational $r$ with $r^{3}=2$.",
+"hint": "Write $r=m/n$ in lowest terms.",
+"modelProof": "$m^{3}=2n^{3}$ makes $m^{3}$ even, so $m$ is even, $m=2k$. Then $8k^{3}=2n^{3}$, so $n^{3}=4k^{3}$ is even and $n$ is even, contradicting lowest terms.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-pr-3",
+"type": "proof",
+"kind": "practice",
+"prompt": "Prove that for $x,y∈ℝ^{k}$, $||x|−|y|| ≤ |x−y|$.",
+"hint": "Apply the triangle inequality twice.",
+"modelProof": "$|x| = |(x−y)+y| ≤ |x−y|+|y|$, so $|x|−|y| ≤ |x−y|$. Swapping roles gives $|y|−|x| ≤ |x−y|$.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-pr-4",
+"type": "proof",
+"kind": "practice",
+"prompt": "Let $A,B$ be nonempty sets of reals with $a ≤ b$ for every $a∈A, b∈B$. Prove $\\sup A ≤ \\inf B$.",
+"hint": "Each $b$ is an upper bound of $A$.",
+"modelProof": "Every $b∈B$ is an upper bound of $A$, so $\\sup A ≤ b$. Thus $\\sup A$ is a lower bound of $B$, so $\\sup A ≤ \\inf B$.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-pr-5",
+"type": "proof",
+"kind": "practice",
+"prompt": "If $z∈C$ and $|z|=1$, show $1/z=\\bar z$. Then show $|z+w|^{2}=|z|^{2}+2\\,\\mathrm{Re}(z\\bar w)+|w|^{2}$.",
+"hint": "Use $z\\bar z=|z|^{2}$.",
+"modelProof": "$z\\bar z=1$, so $\\bar z$ is the inverse. For the identity expand $(z+w)(\\bar z+\\bar w)$ and note $z\\bar w + \\bar z w = 2\\mathrm{Re}(z\\bar w)$.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-pr-6",
+"type": "proof",
+"kind": "practice",
+"prompt": "From L1.1 (“check at home”): show $(a,b)\\sim(m,n)$ ⟺ $an=bm$ is an equivalence relation on $ℤ×(ℤ∖\\{0\\})$.",
+"hint": "Transitivity is the only real step; you'll need $n≠0$.",
+"modelProof": "Reflexive: $ab=ba$. Symmetric: $an=bm ⇒ mb=na$. Transitive: if $an=bm$ and $mq=np$, then $anq=bmq=bnp$, so $n(aq−bp)=0$; since $n≠0$, $aq=bp$.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-pr-7",
+"type": "proof",
+"kind": "practice",
+"prompt": "From L1.2: in $ℤ×ℤ$ with the lexicographic order, show $A=\\{(0,a): a∈ℤ\\}$ has upper bounds but no least upper bound.",
+"hint": "What can the first coordinate of an upper bound be?",
+"modelProof": "$(1,b)$ is an upper bound for any $b$. If $(x,y)$ is an upper bound then $x≥1$ (if $x≤0$, the element $(0,y+1)$ or $(0,0)$ beats it). But then $(x,y−1)$ is a smaller upper bound, so none is least.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-pr-8",
+"type": "proof",
+"kind": "practice",
+"prompt": "From L2.1's warning: give a set $A$ with $a&lt;1$ for every $a∈A$ but $\\sup A=1$.",
+"hint": "Approach 1 from below.",
+"modelProof": "$A=\\{1−1/n\\}$. Each element is below 1, and by Archimedes nothing smaller than 1 is an upper bound.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-tf-0",
+"type": "tf",
+"prompt": "If $\\sup A$ exists and $\\sup A ∉ A$, then $A$ is infinite.",
+"answer": true,
+"explanation": "A finite nonempty set contains its maximum, which is its sup. So if the sup is missing from $A$, $A$ can't be finite.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-tf-1",
+"type": "tf",
+"prompt": "For nonempty sets bounded above, $\\sup(A+B)=\\sup A+\\sup B$, where $A+B=\\{a+b\\}$.",
+"answer": true,
+"explanation": "$a+b ≤ \\sup A+\\sup B$ gives one direction. For the other, given $ε$ pick $a&gt;\\sup A−ε/2$ and $b&gt;\\sup B−ε/2$.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-tf-2",
+"type": "tf",
+"prompt": "$\\sup(AB) = \\sup A · \\sup B$, where $AB=\\{ab : a∈A,b∈B\\}$.",
+"answer": false,
+"explanation": "Take $A=B=\\{−1,0\\}$. Then $\\sup A · \\sup B = 0$ but $AB=\\{0,1\\}$ has sup 1. The identity does hold when all elements are nonnegative.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-tf-3",
+"type": "tf",
+"prompt": "If $x &lt; y+ε$ for every $ε&gt;0$, then $x&lt;y$.",
+"answer": false,
+"explanation": "$x=y$ satisfies the hypothesis. The correct conclusion is $x ≤ y$ (compare B 2.1.9).",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-tf-4",
+"type": "tf",
+"prompt": "Between two distinct reals there are infinitely many rationals.",
+"answer": true,
+"explanation": "Apply density to get $p_{1}∈(x,y)$, then again in $(x,p_{1})$, and so on.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-tf-5",
+"type": "tf",
+"prompt": "Every nonempty subset of $ℚ$ that is bounded above has a supremum in $ℝ$.",
+"answer": true,
+"explanation": "It is a subset of $ℝ$, and $ℝ$ has the LUB property. The sup just may not be rational.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-tf-6",
+"type": "tf",
+"prompt": "If $x,y∈ℝ^{k}$ and $|x+y|=|x|+|y|$, then $x=y$.",
+"answer": false,
+"explanation": "$x=(1,0)$, $y=(2,0)$. Equality holds exactly when one vector is a nonnegative multiple of the other.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-tf-7",
+"type": "tf",
+"prompt": "If $A⊂ℝ$ is nonempty and bounded, $\\sup A−\\inf A = \\sup\\{|a−b| : a,b∈A\\}$.",
+"answer": true,
+"explanation": "$|a−b| ≤ \\sup A − \\inf A$ always. For the reverse, pick $a$ near $\\sup A$ and $b$ near $\\inf A$.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-fl-0",
+"type": "flaw",
+"claim": "$\\sup\\{n/(n+1) : n∈ℕ\\} = 1$.",
+"lines": [
+"Each term is below 1, so 1 is an upper bound.",
+"Given $ε&gt;0$, let $n=1/ε$.",
+"Then $n/(n+1) = 1/(1+ε) &gt; 1−ε$, so nothing below 1 is an upper bound."
+],
+"bad": [
+1
+],
+"explanation": "$1/ε$ is usually not a natural number, so “let $n=1/ε$” picks no element of the set. Fix: $n/(n+1)&gt;1−ε$ ⟺ $n&gt;1/ε−1$, and the Archimedean property supplies such an $n$.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-fl-1",
+"type": "flaw",
+"claim": "$ℚ$ has the least-upper-bound property.",
+"lines": [
+"Let $E⊂ℚ$ be nonempty and bounded above.",
+"Since $ℝ$ has the LUB property, $α=\\sup E$ exists in $ℝ$.",
+"Every element of $E$ is rational and $ℚ$ is dense in $ℝ$, so $α$ is rational too."
+],
+"bad": [
+2
+],
+"explanation": "Density says rationals are near every real, not that a sup of rationals is rational. $E=\\{p∈ℚ: p^{2}&lt;2\\}$ has $\\sup E=\\sqrt2 ∉ Q$.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-fl-2",
+"type": "flaw",
+"claim": "Archimedean property: if $x&gt;0$ then $nx&gt;y$ for some $n$.",
+"lines": [
+"If not, $n ≤ y/x$ for every $n$.",
+"This is impossible because $ℕ$ is not bounded above."
+],
+"bad": [
+1
+],
+"explanation": "“$N$ is not bounded above in $ℝ$” is the Archimedean property itself. The argument is circular; the real proof uses the LUB property (see Proofs).",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-cx-0",
+"type": "counterexample",
+"name": "$\\{p∈ℚ : p&gt;0,\\ p^{2}&lt;2\\}$",
+"details": "Bounded above in $ℚ$ with no supremum in $ℚ$. The standard witness that $ℚ$ lacks the LUB property.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-cx-1",
+"type": "counterexample",
+"name": "$\\{1/n : n∈ℕ\\}$",
+"details": "$\\sup = 1$ is attained; $\\inf = 0$ is not. Shows a sup or inf need not belong to the set.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-cx-2",
+"type": "counterexample",
+"name": "Trying to order $ℂ$",
+"details": "In an ordered field $x^{2}&gt;0$ for $x≠0$, so $−1 = i^{2} &gt; 0$, while also $1&gt;0$ gives $0=1+(−1)&gt;0$. Contradiction, so $ℂ$ has no field order.",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+},
+{
+"id": "c1-cx-3",
+"type": "counterexample",
+"name": "$\\sqrt2 · \\sqrt2 = 2$",
+"details": "Irrationals are not closed under multiplication (or addition: $\\sqrt2 + (−\\sqrt2)=0$).",
+"chapter": 1,
+"rudin": "",
+"lecture": null,
+"status": "covered"
+}
+]
+}

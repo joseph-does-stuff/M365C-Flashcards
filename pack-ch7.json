@@ -1,0 +1,635 @@
+{
+"id": "rudin-ch7",
+"title": "Rudin Ch 7: Sequences and Series of Functions",
+"course": "M365C",
+"created": "2026-09-29",
+"version": 1,
+"items": [
+{
+"id": "c7-def-0",
+"type": "flashcard",
+"kind": "definition",
+"front": "Pointwise convergence",
+"back": "$f_{n}(x)→f(x)$ for each $x∈E$ separately.",
+"chapter": 7,
+"rudin": "7.1",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§8.1*"
+],
+"abbott": [
+"6.2.1"
+]
+},
+{
+"id": "c7-def-1",
+"type": "flashcard",
+"kind": "definition",
+"front": "Uniform convergence",
+"back": "For every $ε$ there is $N$ (independent of $x$) with $|f_{n}(x)−f(x)|≤ε$ for all $n≥N$ and all $x∈E$.",
+"chapter": 7,
+"rudin": "7.7",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§8.1*"
+],
+"abbott": [
+"6.2.3"
+]
+},
+{
+"id": "c7-def-2",
+"type": "flashcard",
+"kind": "definition",
+"front": "Uniform convergence of a series",
+"back": "$Σf_{n}$ converges uniformly if its partial sums do.",
+"chapter": 7,
+"rudin": "7.7",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§9.4"
+],
+"abbott": [
+"6.4.1"
+]
+},
+{
+"id": "c7-def-3",
+"type": "flashcard",
+"kind": "definition",
+"front": "$C(X)$ and the sup norm",
+"back": "Bounded continuous complex functions on $X$ with $\\|f\\|=\\sup|f(x)|$. Uniform convergence is convergence in this metric.",
+"chapter": 7,
+"rudin": "7.14",
+"lecture": null,
+"status": "not-yet",
+"abbott": [
+"§8.2 (sup norm)"
+]
+},
+{
+"id": "c7-def-4",
+"type": "flashcard",
+"kind": "definition",
+"front": "Pointwise and uniformly bounded",
+"back": "$|f_{n}(x)|≤φ(x)$ for each $x$, versus $|f_{n}(x)|≤M$ for all $n,x$.",
+"chapter": 7,
+"rudin": "7.19",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-def-5",
+"type": "flashcard",
+"kind": "definition",
+"front": "Equicontinuous family",
+"back": "For every $ε$ there is one $δ$ with $|f(x)−f(y)|&lt;ε$ whenever $d(x,y)&lt;δ$, for all $f$ in the family.",
+"chapter": 7,
+"rudin": "7.22",
+"lecture": null,
+"status": "not-yet",
+"abbott": [
+"§8.2"
+]
+},
+{
+"id": "c7-def-6",
+"type": "flashcard",
+"kind": "definition",
+"front": "Algebra; separates points; vanishes at no point",
+"back": "Closed under $+$, $·$ and scalars; for $x≠y$ some $f$ has $f(x)≠f(y)$; for each $x$ some $f(x)≠0$.",
+"chapter": 7,
+"rudin": "7.28, 7.30",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-thm-0",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Cauchy criterion for uniform convergence",
+"back": "$f_{n}$ converges uniformly iff for every $ε$ there's $N$ with $|f_{n}(x)−f_{m}(x)|≤ε$ for all $m,n≥N$ and all $x$.",
+"chapter": 7,
+"rudin": "7.8",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§8.1*"
+],
+"abbott": [
+"6.2.5"
+]
+},
+{
+"id": "c7-thm-1",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Sup-norm test",
+"back": "$f_{n}→f$ uniformly iff $M_{n}=\\sup_{x}|f_{n}(x)−f(x)|→0$.",
+"chapter": 7,
+"rudin": "7.9",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§8.1*"
+],
+"note": "The practical test."
+},
+{
+"id": "c7-thm-2",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Weierstrass M-test",
+"back": "If $|f_{n}(x)|≤M_{n}$ and $ΣM_{n}$ converges, then $Σf_{n}$ converges uniformly (and absolutely).",
+"chapter": 7,
+"rudin": "7.10",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§9.4*"
+],
+"abbott": [
+"6.4.5"
+]
+},
+{
+"id": "c7-thm-3",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Interchanging limits",
+"back": "If $f_{n}→f$ uniformly near $x$ and $\\lim_{t→x}f_{n}(t)=A_{n}$, then $A_{n}$ converges and $\\lim_{t→x}f(t)=\\lim A_{n}$.",
+"chapter": 7,
+"rudin": "7.11",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§8.2*"
+]
+},
+{
+"id": "c7-thm-4",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Uniform limits of continuous functions",
+"back": "are continuous.",
+"chapter": 7,
+"rudin": "7.12",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§8.2*"
+],
+"abbott": [
+"6.2.6, 6.4.2"
+]
+},
+{
+"id": "c7-thm-5",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Dini's theorem",
+"back": "On a compact set, if continuous $f_{n}$ decrease pointwise to 0, the convergence is uniform.",
+"chapter": 7,
+"rudin": "7.13",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-thm-6",
+"type": "flashcard",
+"kind": "theorem",
+"front": "$C(X)$ is complete",
+"back": "The sup-norm metric on $C(X)$ is complete.",
+"chapter": 7,
+"rudin": "7.15",
+"lecture": null,
+"status": "not-yet",
+"abbott": [
+"§8.2"
+]
+},
+{
+"id": "c7-thm-7",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Uniform convergence and integration",
+"back": "If $f_{n}∈\\mathscr R(α)$ and $f_{n}→f$ uniformly on $[a,b]$, then $f∈\\mathscr R(α)$ and $∫f_{n}\\,dα→∫f\\,dα$.",
+"chapter": 7,
+"rudin": "7.16",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§8.2*"
+],
+"abbott": [
+"7.4.4"
+]
+},
+{
+"id": "c7-thm-8",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Uniform convergence and differentiation",
+"back": "If $f_{n}'$ converge uniformly and $f_{n}(x_{0})$ converges for one $x_{0}$, then $f_{n}$ converge uniformly to some $f$ and $f'=\\lim f_{n}'$.",
+"chapter": 7,
+"rudin": "7.17",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"9.4.12 (power series)"
+],
+"abbott": [
+"6.3.1, 6.3.3, 6.4.3"
+]
+},
+{
+"id": "c7-thm-9",
+"type": "flashcard",
+"kind": "theorem",
+"front": "A continuous nowhere-differentiable function",
+"back": "Built from a sawtooth $φ$: $f(x)=Σ(3/4)^{n}φ(4^{n}x)$.",
+"chapter": 7,
+"rudin": "7.18",
+"lecture": null,
+"status": "not-yet",
+"abbott": [
+"§5.4"
+]
+},
+{
+"id": "c7-thm-10",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Uniform convergence ⇒ equicontinuity",
+"back": "On compact $K$, a uniformly convergent sequence in $C(K)$ is equicontinuous.",
+"chapter": 7,
+"rudin": "7.24",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-thm-11",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Arzelà–Ascoli",
+"back": "On compact $K$, a pointwise bounded, equicontinuous sequence in $C(K)$ is uniformly bounded and has a uniformly convergent subsequence.",
+"chapter": 7,
+"rudin": "7.25",
+"lecture": null,
+"status": "not-yet",
+"abbott": [
+"§8.2"
+],
+"note": "Compactness in $C(K)$."
+},
+{
+"id": "c7-thm-12",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Weierstrass approximation",
+"back": "Every continuous function on $[a,b]$ is a uniform limit of polynomials.",
+"chapter": 7,
+"rudin": "7.26",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"5.4.14"
+],
+"abbott": [
+"6.7.1"
+]
+},
+{
+"id": "c7-thm-13",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Stone–Weierstrass",
+"back": "An algebra of real continuous functions on a compact $K$ that separates points and vanishes at no point is dense in $C(K)$.",
+"chapter": 7,
+"rudin": "7.32",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-pf-0",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Uniform limits of continuous functions are continuous (ε/3).",
+"modelProof": "$|f(x)−f(p)|≤|f(x)−f_{N}(x)|+|f_{N}(x)−f_{N}(p)|+|f_{N}(p)−f(p)|$. Fix $N$ so the outer terms are $&lt;ε/3$ for every point (uniformity), then use continuity of $f_{N}$ at $p$ for the middle term.",
+"chapter": 7,
+"rudin": "7.12",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-pf-1",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: M-test.",
+"modelProof": "$|Σ_{k=n}^{m}f_{k}(x)|≤Σ_{k=n}^{m}M_{k}$, which is small for large $n$ independent of $x$. Apply 7.8.",
+"chapter": 7,
+"rudin": "7.10",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-pf-2",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Integration.",
+"modelProof": "With $ε_{n}=\\sup|f_{n}−f|$: $f_{n}−ε_{n}≤f≤f_{n}+ε_{n}$, so the upper and lower integrals of $f$ differ by at most $2ε_{n}[α(b)−α(a)]→0$, and $|∫f−∫f_{n}|≤ε_{n}[α(b)−α(a)]$.",
+"chapter": 7,
+"rudin": "7.16",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-pf-3",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Weierstrass approximation (Rudin's route).",
+"modelProof": "Convolve $f$ (extended by 0) with $Q_{n}(x)=c_{n}(1−x^{2})^{n}$, which are polynomials concentrating their mass at 0. The convolution is a polynomial and converges uniformly to $f$. Abbott instead approximates by polygonal functions and approximates $|x|$ by polynomials.",
+"chapter": 7,
+"rudin": "7.26",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-pr-0",
+"type": "proof",
+"kind": "practice",
+"prompt": "Show $f_{n}(x)=x/(1+nx^{2})$ converges uniformly on $ℝ$.",
+"hint": "Maximize $|f_{n}|$.",
+"modelProof": "The max of $|f_{n}|$ is at $x=1/\\sqrt n$, value $1/(2\\sqrt n)→0$. Pointwise limit 0, so uniform by 7.9.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-pr-1",
+"type": "proof",
+"kind": "practice",
+"prompt": "Show $Σ\\sin(nx)/n^{2}$ converges uniformly on $ℝ$ to a continuous function.",
+"hint": "M-test.",
+"modelProof": "$|\\sin(nx)/n^{2}|≤1/n^{2}$, summable. Uniform convergence (7.10), continuity (7.12).",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-pr-2",
+"type": "proof",
+"kind": "practice",
+"prompt": "Let $f_{n}(x)=nx(1−x)^{n}$ on $[0,1]$. Find the pointwise limit and decide whether convergence is uniform.",
+"hint": "Maximize with calculus.",
+"modelProof": "Pointwise limit 0. The max is at $x=1/(n+1)$, value $(n/(n+1))^{n+1}→1/e$. Not uniform.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-pr-3",
+"type": "proof",
+"kind": "practice",
+"prompt": "If $f_{n}→f$ uniformly on $E$ and each $f_{n}$ is bounded, prove $(f_{n})$ is uniformly bounded.",
+"hint": "Cauchy criterion with $ε=1$.",
+"modelProof": "For $n≥N$, $|f_{n}|≤|f_{N}|+1≤M_{N}+1$. Take the max with the bounds of $f_{1},…,f_{N−1}$.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-pr-4",
+"type": "proof",
+"kind": "practice",
+"prompt": "Show $Σ_{n≥1}x^{n}/n=−\\log(1−x)$ for $|x|&lt;1$.",
+"hint": "Differentiate term by term on $[−r,r]$ with $r&lt;1$.",
+"modelProof": "The derivative series $Σx^{n−1}$ converges uniformly on $[−r,r]$ (M-test with $r^{n−1}$) to $1/(1−x)$. By 7.17 the sum $f$ satisfies $f'=1/(1−x)$, $f(0)=0$.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-pr-5",
+"type": "proof",
+"kind": "practice",
+"prompt": "Compute $\\lim∫_{0}^{1}n^{2}x(1−x^{2})^{n}dx$ and compare with $∫_{0}^{1}\\lim$.",
+"hint": "Substitute $u=1−x^{2}$.",
+"modelProof": "$∫_{0}^{1}n^{2}x(1−x^{2})^{n}dx=n^{2}/(2n+2)→∞$, while the pointwise limit is 0 with integral 0. So the convergence can't be uniform.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-tf-0",
+"type": "tf",
+"prompt": "A uniform limit of continuous functions is continuous.",
+"answer": true,
+"explanation": "7.12.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-tf-1",
+"type": "tf",
+"prompt": "If $f_{n}$ are continuous on $[0,1]$ and converge pointwise to a continuous $f$, the convergence is uniform.",
+"answer": false,
+"explanation": "Moving bump. (Dini adds monotonicity.)",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-tf-2",
+"type": "tf",
+"prompt": "If $f_{n}→f$ uniformly and each $f_{n}$ is differentiable, then $f$ is differentiable.",
+"answer": false,
+"explanation": "$\\sqrt{x^{2}+1/n}→|x|$.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-tf-3",
+"type": "tf",
+"prompt": "If $f_{n}∈\\mathscr R$ and $f_{n}→f$ uniformly on $[a,b]$, then $∫f_{n}→∫f$.",
+"answer": true,
+"explanation": "7.16.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-tf-4",
+"type": "tf",
+"prompt": "If $Σf_{n}$ converges uniformly, then $Σ|f_{n}|$ converges pointwise.",
+"answer": false,
+"explanation": "Constant functions $f_{n}=(−1)^{n}/n$.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-tf-5",
+"type": "tf",
+"prompt": "If $f_{n}→f$ uniformly on $ℝ$ and $g:ℝ→ℝ$ is continuous, then $g∘f_{n}→g∘f$ uniformly.",
+"answer": false,
+"explanation": "$f_{n}(x)=x+1/n$, $g(x)=x^{2}$: the difference is $2x/n+1/n^{2}$, unbounded in $x$. True if $g$ is uniformly continuous.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-tf-6",
+"type": "tf",
+"prompt": "If $f_{n}→f$ uniformly and each $f_{n}$ is bounded, then $f$ is bounded.",
+"answer": true,
+"explanation": "$|f|≤|f_{N}|+1$ for a suitable $N$.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-fl-0",
+"type": "flaw",
+"claim": "A pointwise limit of continuous functions is continuous.",
+"lines": [
+"$f(x)=\\lim_{n}f_{n}(x)$ for each $x$.",
+"So $\\lim_{x→c}f(x)=\\lim_{x→c}\\lim_{n}f_{n}(x)$.",
+"Swap the limits: this equals $\\lim_{n}\\lim_{x→c}f_{n}(x)$.",
+"Each $f_{n}$ is continuous, so this is $\\lim_{n}f_{n}(c)=f(c)$."
+],
+"bad": [
+2
+],
+"explanation": "Swapping the two limits is exactly what needs justification (7.11 requires uniform convergence). $x^{n}$ on $[0,1]$.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-fl-1",
+"type": "flaw",
+"claim": "If $f_{n}→f$ uniformly, then $f_{n}'→f'$.",
+"lines": [
+"$f_{n}→f$ uniformly, so $\\sup|f_{n}−f|→0$.",
+"A function whose values are uniformly small has uniformly small slope.",
+"So $\\sup|f_{n}'−f'|→0$."
+],
+"bad": [
+1
+],
+"explanation": "A function can be uniformly small while wiggling steeply. $\\sin(nx)/\\sqrt n$.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-fl-2",
+"type": "flaw",
+"claim": "$x^{n}→0$ uniformly on $[0,1)$.",
+"lines": [
+"For each $x∈[0,1)$, $x^{n}→0$.",
+"Pick $N$ with $x^{N}&lt;ε$;",
+"then $x^{n}&lt;ε$ for all $n≥N$."
+],
+"bad": [
+1
+],
+"explanation": "$N$ depends on $x$. $\\sup_{[0,1)}x^{n}=1$ for every $n$, so the convergence is not uniform.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-cx-0",
+"type": "counterexample",
+"name": "$x^{n}$ on $[0,1]$",
+"details": "Continuous functions converging pointwise to a discontinuous limit. Uniform on $[0,b]$ for $b&lt;1$.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-cx-1",
+"type": "counterexample",
+"name": "$Σx^{2}/(1+x^{2})^{n}$",
+"details": "A series of continuous functions whose sum is discontinuous at 0 (Rudin 7.3).",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-cx-2",
+"type": "counterexample",
+"name": "$\\lim_{m}\\lim_{n}(\\cos m!πx)^{2n}$",
+"details": "Equals the Dirichlet function: iterated pointwise limits of continuous functions (Rudin 7.4).",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-cx-3",
+"type": "counterexample",
+"name": "$\\sin(nx)/\\sqrt n$",
+"details": "Converges uniformly to 0 but $f_{n}'(0)=\\sqrt n→∞$ (Rudin 7.5).",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-cx-4",
+"type": "counterexample",
+"name": "$n^{2}x(1−x^{2})^{n}$ on $[0,1]$",
+"details": "Converges pointwise to 0 but $∫_{0}^{1}f_{n}=n^{2}/(2n+2)→∞$ (Rudin 7.6).",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-cx-5",
+"type": "counterexample",
+"name": "Moving bump $f_{n}$",
+"details": "Triangle of height 1 supported on $[1/(n+1),1/n]$: continuous, pointwise to 0, $\\|f_{n}\\|=1$, and no subsequence converges uniformly. Pointwise limit continuous does not give uniform convergence.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c7-cx-6",
+"type": "counterexample",
+"name": "$\\sqrt{x^{2}+1/n}$",
+"details": "Smooth functions converging uniformly to $|x|$: uniform limits of differentiable functions need not be differentiable.",
+"chapter": 7,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+}
+]
+}

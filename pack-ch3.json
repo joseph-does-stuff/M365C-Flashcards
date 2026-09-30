@@ -1,0 +1,880 @@
+{
+"id": "rudin-ch3",
+"title": "Rudin Ch 3: Numerical Sequences and Series",
+"course": "M365C",
+"created": "2026-09-29",
+"version": 1,
+"items": [
+{
+"id": "c3-def-0",
+"type": "flashcard",
+"kind": "definition",
+"front": "Convergent sequence",
+"back": "$p_{n}→p$ if for every $ε&gt;0$ there is $N$ with $d(p_{n},p)&lt;ε$ for all $n≥N$.",
+"chapter": 3,
+"rudin": "3.1",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.1.3, 11.4.4"
+],
+"abbott": [
+"8.2.2"
+]
+},
+{
+"id": "c3-def-1",
+"type": "flashcard",
+"kind": "definition",
+"front": "Subsequence; subsequential limit",
+"back": "For $n_{1}&lt;n_{2}&lt;⋯$, $(p_{n_{i}})$ is a subsequence; its limit, if any, is a subsequential limit of $(p_{n})$.",
+"chapter": 3,
+"rudin": "3.5",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.4.1"
+],
+"abbott": [
+"§2.5*"
+]
+},
+{
+"id": "c3-def-2",
+"type": "flashcard",
+"kind": "definition",
+"front": "Cauchy sequence",
+"back": "For every $ε&gt;0$ there is $N$ with $d(p_{n},p_{m})&lt;ε$ for all $n,m≥N$.",
+"chapter": 3,
+"rudin": "3.8",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.5.1, 11.4.6"
+],
+"abbott": [
+"8.2.3"
+]
+},
+{
+"id": "c3-def-3",
+"type": "flashcard",
+"kind": "definition",
+"front": "Diameter",
+"back": "$\\mathrm{diam}\\,E = \\sup\\{d(p,q): p,q∈E\\}$.",
+"chapter": 3,
+"rudin": "3.9",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-def-4",
+"type": "flashcard",
+"kind": "definition",
+"front": "Complete metric space",
+"back": "Every Cauchy sequence converges. $ℝ^{k}$ and compact spaces are complete; $ℚ$ is not.",
+"chapter": 3,
+"rudin": "3.12",
+"lecture": null,
+"status": "next",
+"bartle": [
+"11.4.7"
+],
+"abbott": [
+"8.2.4"
+]
+},
+{
+"id": "c3-def-5",
+"type": "flashcard",
+"kind": "definition",
+"front": "Monotone sequence",
+"back": "Increasing if $s_{n}≤s_{n+1}$ for all $n$; decreasing similarly.",
+"chapter": 3,
+"rudin": "3.13",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.3.1"
+]
+},
+{
+"id": "c3-def-6",
+"type": "flashcard",
+"kind": "definition",
+"front": "$s_{n}→+∞$",
+"back": "For every $M$ there is $N$ with $s_{n}≥M$ for $n≥N$.",
+"chapter": 3,
+"rudin": "3.15",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.6.1"
+]
+},
+{
+"id": "c3-def-7",
+"type": "flashcard",
+"kind": "definition",
+"front": "lim sup and lim inf",
+"back": "Let $E$ be the set of subsequential limits in the extended reals. $s^{*}=\\sup E$, $s_{*}=\\inf E$. Equivalently $\\limsup s_{n} = \\lim_{n}\\sup_{k≥n}s_{k}$.",
+"chapter": 3,
+"rudin": "3.16",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.4.10, 3.4.11"
+],
+"abbott": [
+"§2.4*"
+]
+},
+{
+"id": "c3-def-8",
+"type": "flashcard",
+"kind": "definition",
+"front": "Series; partial sums",
+"back": "$Σa_{n}$ converges if the partial sums $s_{n}=a_{1}+⋯+a_{n}$ converge.",
+"chapter": 3,
+"rudin": "3.21",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.7.1"
+]
+},
+{
+"id": "c3-def-9",
+"type": "flashcard",
+"kind": "definition",
+"front": "Power series; radius of convergence",
+"back": "$Σc_{n}z^{n}$ with $R = 1/\\limsup |c_{n}|^{1/n}$: converges absolutely for $|z|&lt;R$, diverges for $|z|&gt;R$.",
+"chapter": 3,
+"rudin": "3.38–3.39",
+"lecture": null,
+"status": "next",
+"bartle": [
+"9.4.9 (Cauchy–Hadamard)"
+],
+"abbott": [
+"6.5.1–6.5.2"
+]
+},
+{
+"id": "c3-def-10",
+"type": "flashcard",
+"kind": "definition",
+"front": "Absolute convergence",
+"back": "$Σa_{n}$ converges absolutely if $Σ|a_{n}|$ converges.",
+"chapter": 3,
+"rudin": "3.45",
+"lecture": null,
+"status": "next",
+"bartle": [
+"§9.1*"
+],
+"abbott": [
+"§2.7*"
+]
+},
+{
+"id": "c3-def-11",
+"type": "flashcard",
+"kind": "definition",
+"front": "Cauchy product; rearrangement",
+"back": "$c_{n}=Σ_{k=0}^{n}a_{k}b_{n−k}$. A rearrangement is $Σa_{k_{n}}$ for a bijection $n↦k_{n}$ of $ℕ$.",
+"chapter": 3,
+"rudin": "3.48, 3.52",
+"lecture": null,
+"status": "next",
+"bartle": [
+"§9.1*"
+],
+"abbott": [
+"§2.7–2.8*"
+]
+},
+{
+"id": "c3-thm-0",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Basic facts about limits",
+"back": "In a metric space: $p_{n}→p$ iff every neighborhood of $p$ contains all but finitely many $p_{n}$; limits are unique; convergent sequences are bounded; if $p∈E'$ some sequence in $E$ converges to $p$.",
+"chapter": 3,
+"rudin": "3.2",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.1.5, 3.2.2"
+],
+"abbott": [
+"3.2.5"
+]
+},
+{
+"id": "c3-thm-1",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Algebra of limits",
+"back": "Sums, scalar multiples, products and quotients (nonzero limit) of convergent complex sequences converge to the expected limits.",
+"chapter": 3,
+"rudin": "3.3",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.2.3"
+],
+"abbott": [
+"§2.3*"
+]
+},
+{
+"id": "c3-thm-2",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Sequential compactness; Bolzano–Weierstrass",
+"back": "(a) Every sequence in a compact metric space has a convergent subsequence. (b) Every bounded sequence in $ℝ^{k}$ has a convergent subsequence.",
+"chapter": 3,
+"rudin": "3.6",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.4.8, 11.2.6"
+],
+"abbott": [
+"3.3.4, §2.5*"
+]
+},
+{
+"id": "c3-thm-3",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Subsequential limits form a closed set",
+"back": "The set of subsequential limits of $(p_{n})$ is closed.",
+"chapter": 3,
+"rudin": "3.7",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-thm-4",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Diameter and nested compact sets",
+"back": "$\\mathrm{diam}\\,\\bar E = \\mathrm{diam}\\,E$. If $K_{n}$ are nested nonempty compact sets with diameters $→0$, their intersection is exactly one point.",
+"chapter": 3,
+"rudin": "3.10",
+"lecture": null,
+"status": "next",
+"abbott": [
+"3.3.5"
+]
+},
+{
+"id": "c3-thm-5",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Cauchy ⟺ convergent (in the right spaces)",
+"back": "(a) Convergent ⇒ Cauchy in any metric space. (b) Cauchy ⇒ convergent in a compact space. (c) Cauchy ⇒ convergent in $ℝ^{k}$.",
+"chapter": 3,
+"rudin": "3.11",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.5.3–3.5.5"
+],
+"abbott": [
+"§2.6*"
+]
+},
+{
+"id": "c3-thm-6",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Monotone convergence",
+"back": "A monotone sequence converges iff it is bounded.",
+"chapter": 3,
+"rudin": "3.14",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.3.2"
+],
+"abbott": [
+"§2.4*"
+]
+},
+{
+"id": "c3-thm-7",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Characterizing lim sup",
+"back": "$s^{*}$ is itself a subsequential limit, and if $x&gt;s^{*}$ then $s_{n}&lt;x$ for all large $n$. It is the only number with both properties.",
+"chapter": 3,
+"rudin": "3.17",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.4.11, 3.4.12"
+]
+},
+{
+"id": "c3-thm-8",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Comparison of lim sups",
+"back": "If $s_{n}≤t_{n}$ for $n≥N$, then $\\liminf s_{n} ≤ \\liminf t_{n}$ and $\\limsup s_{n} ≤ \\limsup t_{n}$.",
+"chapter": 3,
+"rudin": "3.19",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-thm-9",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Special sequences",
+"back": "$1/n^{p}→0$ ($p&gt;0$); $p^{1/n}→1$ ($p&gt;0$); $n^{1/n}→1$; $n^{α}/(1+p)^{n}→0$ ($p&gt;0$); $x^{n}→0$ ($|x|&lt;1$).",
+"chapter": 3,
+"rudin": "3.20",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.1.11, 3.2.11, 3.3.3"
+]
+},
+{
+"id": "c3-thm-10",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Cauchy criterion; $n$th term test",
+"back": "$Σa_{n}$ converges iff for each $ε$ there's $N$ with $|Σ_{k=n}^{m}a_{k}|≤ε$ for $m≥n≥N$. Hence convergence forces $a_{n}→0$.",
+"chapter": 3,
+"rudin": "3.22, 3.23",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.7.3, 3.7.4"
+]
+},
+{
+"id": "c3-thm-11",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Comparison test",
+"back": "If $|a_{n}|≤c_{n}$ eventually and $Σc_{n}$ converges, so does $Σa_{n}$. If $a_{n}≥d_{n}≥0$ and $Σd_{n}$ diverges, so does $Σa_{n}$.",
+"chapter": 3,
+"rudin": "3.25",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.7.7, 3.7.8 (limit comparison)"
+]
+},
+{
+"id": "c3-thm-12",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Geometric series",
+"back": "$Σx^{n}=1/(1−x)$ for $|x|&lt;1$; diverges for $|x|≥1$.",
+"chapter": 3,
+"rudin": "3.26",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.7.6"
+]
+},
+{
+"id": "c3-thm-13",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Cauchy condensation",
+"back": "If $a_{1}≥a_{2}≥⋯≥0$, then $Σa_{n}$ converges iff $Σ2^{k}a_{2^{k}}$ converges.",
+"chapter": 3,
+"rudin": "3.27",
+"lecture": null,
+"status": "next",
+"bartle": [
+"§9.2*"
+],
+"abbott": [
+"§2.4*"
+],
+"note": "Gives 3.28–3.29 in two lines."
+},
+{
+"id": "c3-thm-14",
+"type": "flashcard",
+"kind": "theorem",
+"front": "$p$-series and log series",
+"back": "$Σ1/n^{p}$ converges iff $p&gt;1$. $Σ1/(n(\\log n)^{p})$ converges iff $p&gt;1$.",
+"chapter": 3,
+"rudin": "3.28, 3.29",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.7.6"
+]
+},
+{
+"id": "c3-thm-15",
+"type": "flashcard",
+"kind": "theorem",
+"front": "The number $e$",
+"back": "$e = Σ1/n!$ $= \\lim(1+1/n)^{n}$, and $e$ is irrational.",
+"chapter": 3,
+"rudin": "3.30–3.32",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.3.6"
+]
+},
+{
+"id": "c3-thm-16",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Root and ratio tests",
+"back": "Root: $α=\\limsup|a_{n}|^{1/n}$; converges if $α&lt;1$, diverges if $α&gt;1$. Ratio: converges if $\\limsup|a_{n+1}/a_{n}|&lt;1$; diverges if $|a_{n+1}/a_{n}|≥1$ eventually.",
+"chapter": 3,
+"rudin": "3.33, 3.34",
+"lecture": null,
+"status": "next",
+"bartle": [
+"3.2.11 (sequence version), §9.2*"
+]
+},
+{
+"id": "c3-thm-17",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Ratio vs root",
+"back": "$\\liminf\\frac{c_{n+1}}{c_{n}} ≤ \\liminf c_{n}^{1/n} ≤ \\limsup c_{n}^{1/n} ≤ \\limsup\\frac{c_{n+1}}{c_{n}}$. The root test is stronger.",
+"chapter": 3,
+"rudin": "3.37",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-thm-18",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Summation by parts; Dirichlet test",
+"back": "If partial sums of $Σa_{n}$ are bounded and $b_{n}$ decreases to 0, then $Σa_{n}b_{n}$ converges.",
+"chapter": 3,
+"rudin": "3.41, 3.42",
+"lecture": null,
+"status": "next",
+"bartle": [
+"§9.3*"
+],
+"abbott": [
+"§2.7*"
+]
+},
+{
+"id": "c3-thm-19",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Alternating series",
+"back": "If $|c_{1}|≥|c_{2}|≥⋯$, $c_{n}→0$ and signs alternate, $Σc_{n}$ converges.",
+"chapter": 3,
+"rudin": "3.43",
+"lecture": null,
+"status": "next",
+"bartle": [
+"§9.3*"
+],
+"abbott": [
+"§2.7*"
+]
+},
+{
+"id": "c3-thm-20",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Absolute convergence ⇒ convergence",
+"back": "If $Σ|a_{n}|$ converges, so does $Σa_{n}$.",
+"chapter": 3,
+"rudin": "3.45",
+"lecture": null,
+"status": "next",
+"bartle": [
+"§9.1*"
+],
+"abbott": [
+"§2.7*"
+]
+},
+{
+"id": "c3-thm-21",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Mertens",
+"back": "If $Σa_{n}$ converges absolutely to $A$ and $Σb_{n}$ converges to $B$, their Cauchy product converges to $AB$.",
+"chapter": 3,
+"rudin": "3.50",
+"lecture": null,
+"status": "next",
+"bartle": [
+"§9.1*"
+]
+},
+{
+"id": "c3-thm-22",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Rearrangements",
+"back": "A conditionally convergent real series can be rearranged to converge to any value (or diverge). Absolutely convergent series: every rearrangement has the same sum.",
+"chapter": 3,
+"rudin": "3.54, 3.55",
+"lecture": null,
+"status": "next",
+"bartle": [
+"§9.1*"
+],
+"abbott": [
+"§2.7*"
+]
+},
+{
+"id": "c3-pf-0",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Convergent ⇒ Cauchy.",
+"modelProof": "If $p_{n}→p$, pick $N$ with $d(p_{n},p)&lt;ε/2$ for $n≥N$. Then $d(p_{n},p_{m}) ≤ d(p_{n},p)+d(p,p_{m})&lt;ε$.",
+"chapter": 3,
+"rudin": "3.11(a)",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-pf-1",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Cauchy in $ℝ^{k}$ ⇒ convergent.",
+"modelProof": "A Cauchy sequence is bounded (take $ε=1$). By Bolzano–Weierstrass it has a subsequence $p_{n_{i}}→p$. Given $ε$, choose $N$ from the Cauchy condition and $n_{i}≥N$ with $d(p_{n_{i}},p)&lt;ε$; then $d(p_{n},p)&lt;2ε$ for $n≥N$.",
+"chapter": 3,
+"rudin": "3.11(c)",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-pf-2",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Monotone convergence.",
+"modelProof": "If $(s_{n})$ increases and is bounded, let $s=\\sup s_{n}$. For $ε&gt;0$, some $s_{N}&gt;s−ε$, and then $s−ε&lt;s_{N}≤s_{n}≤s$ for $n≥N$.",
+"chapter": 3,
+"rudin": "3.14",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-pf-3",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Cauchy condensation.",
+"modelProof": "Group terms in blocks $[2^{k},2^{k+1})$. Since terms decrease, $s_{n} ≤ t_{k}=Σ_{j≤k}2^{j}a_{2^{j}}$ when $n&lt;2^{k+1}$, and $s_{n} ≥ \\tfrac12 t_{k}$ when $n&gt;2^{k}$. So one sequence of partial sums is bounded iff the other is.",
+"chapter": 3,
+"rudin": "3.27",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-pf-4",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Root test.",
+"modelProof": "If $α&lt;β&lt;1$, then $|a_{n}|^{1/n}&lt;β$ for large $n$ (3.17), so $|a_{n}|&lt;β^{n}$ and compare with a geometric series. If $α&gt;1$, then $|a_{n}|&gt;1$ infinitely often, so $a_{n}\\not→0$.",
+"chapter": 3,
+"rudin": "3.33",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-pf-5",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: $e$ is irrational.",
+"modelProof": "Let $s_{n}=Σ_{k≤n}1/k!$. Then $0&lt;e−s_{n}&lt;1/(n!\\,n)$. If $e=m/n$, then $n!(e−s_{n})$ is a positive integer below $1/n≤1$, impossible.",
+"chapter": 3,
+"rudin": "3.32",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-pr-0",
+"type": "proof",
+"kind": "practice",
+"prompt": "Prove from the definition that $(3n+1)/(n+2)→3$.",
+"hint": "Compute $|a_{n}−3|$ exactly.",
+"modelProof": "$|a_{n}−3| = 5/(n+2)$. Given $ε$, take $N&gt;5/ε$; then $n≥N$ gives $5/(n+2)&lt;5/n&lt;ε$.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-pr-1",
+"type": "proof",
+"kind": "practice",
+"prompt": "Let $s_{1}=1$ and $s_{n+1}=\\sqrt{3+2s_{n}}$. Prove $(s_{n})$ converges and find the limit.",
+"hint": "Induction: $s_{n}&lt;3$ and $s_{n}&lt;s_{n+1}$.",
+"modelProof": "If $s_{n}&lt;3$ then $s_{n+1}&lt;\\sqrt9=3$. And $s_{n+1}^{2}−s_{n}^{2}=3+2s_{n}−s_{n}^{2}=(3−s_{n})(1+s_{n})&gt;0$. Monotone and bounded, so $s_{n}→L$ with $L=\\sqrt{3+2L}$, i.e. $L^{2}−2L−3=0$, so $L=3$ (since $L≥1$).",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-pr-2",
+"type": "proof",
+"kind": "practice",
+"prompt": "Find $\\limsup$ and $\\liminf$ of $s_{n}=\\cos(nπ/3)+1/n$.",
+"hint": "$\\cos(nπ/3)$ cycles with period 6.",
+"modelProof": "The cosine takes values $\\tfrac12,−\\tfrac12,−1,−\\tfrac12,\\tfrac12,1$. Subsequential limits are $\\{−1,−\\tfrac12,\\tfrac12,1\\}$, so $\\limsup=1$ and $\\liminf=−1$.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-pr-3",
+"type": "proof",
+"kind": "practice",
+"prompt": "Decide convergence: (a) $Σ n!/n^{n}$ (b) $Σ(\\sqrt{n+1}−\\sqrt n)$ (c) $Σ(\\sqrt{n+1}−\\sqrt n)/n$ (d) $Σ 1/n^{1+1/n}$.",
+"hint": "Ratio test; telescoping; rationalize; limit comparison with $1/n$.",
+"modelProof": "(a) Ratio $=(n/(n+1))^{n}→1/e&lt;1$: converges. (b) Partial sums $\\sqrt{N+1}−1→∞$: diverges. (c) Term $=1/(n(\\sqrt{n+1}+\\sqrt n))≤1/(2n^{3/2})$: converges. (d) $n^{1/n}→1$, so term$/(1/n)→1$: diverges.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-pr-4",
+"type": "proof",
+"kind": "practice",
+"prompt": "Find the radius of convergence of (a) $Σ(n!/n^{n})z^{n}$ (b) $Σ z^{n^{2}}/2^{n}$.",
+"hint": "Use 3.37 for (a); for (b) the nonzero coefficients sit at $k=n^{2}$.",
+"modelProof": "(a) Ratio of coefficients $→1/e$, so $R=e$. (b) $c_{k}=2^{−n}$ when $k=n^{2}$, else 0. $|c_{k}|^{1/k}=2^{−1/n}→1$ along those $k$, so $\\limsup=1$ and $R=1$.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-pr-5",
+"type": "proof",
+"kind": "practice",
+"prompt": "If $a_{n}≥0$ and $Σa_{n}$ converges, prove $Σ\\sqrt{a_{n}}/n$ converges.",
+"hint": "Cauchy–Schwarz on partial sums, or $\\sqrt{ab}≤(a+b)/2$.",
+"modelProof": "$\\sqrt{a_{n}}/n ≤ \\tfrac12(a_{n}+1/n^{2})$, and both series on the right converge.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-tf-0",
+"type": "tf",
+"prompt": "If $a_{n}&gt;0$ and $a_{n+1}/a_{n}&lt;1$ for every $n$, then $Σa_{n}$ converges.",
+"answer": false,
+"explanation": "$a_{n}=1/n$. The ratio must stay below some fixed $β&lt;1$, not just below 1.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-tf-1",
+"type": "tf",
+"prompt": "If $a_{n}≥0$ and $Σa_{n}$ converges, then $Σa_{n}^{2}$ converges.",
+"answer": true,
+"explanation": "$a_{n}→0$, so eventually $a_{n}&lt;1$ and $a_{n}^{2}≤a_{n}$. Compare.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-tf-2",
+"type": "tf",
+"prompt": "If $Σa_{n}$ converges, then $Σa_{n}^{2}$ converges.",
+"answer": false,
+"explanation": "$a_{n}=(−1)^{n}/\\sqrt n$ converges (alternating series) but $Σ1/n$ diverges.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-tf-3",
+"type": "tf",
+"prompt": "If every subsequence of $(s_{n})$ has a further subsequence converging to $s$, then $s_{n}→s$.",
+"answer": true,
+"explanation": "Otherwise some $ε$ and some subsequence stay at distance $≥ε$ from $s$; none of its sub-subsequences can converge to $s$.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-tf-4",
+"type": "tf",
+"prompt": "If $|s_{n+1}−s_{n}|→0$, then $(s_{n})$ is Cauchy.",
+"answer": false,
+"explanation": "$s_{n}=\\sqrt n$ or harmonic partial sums.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-tf-5",
+"type": "tf",
+"prompt": "$\\limsup(s_{n}+t_{n}) ≤ \\limsup s_{n} + \\limsup t_{n}$ (when the right side is not $∞−∞$).",
+"answer": true,
+"explanation": "Rudin Ex 3.5. Equality can fail: $s_{n}=(−1)^{n}$, $t_{n}=(−1)^{n+1}$.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-tf-6",
+"type": "tf",
+"prompt": "A Cauchy sequence with a convergent subsequence converges.",
+"answer": true,
+"explanation": "Same argument as 3.11(c), in any metric space.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-tf-7",
+"type": "tf",
+"prompt": "$Σ1/(n\\log n)$ converges.",
+"answer": false,
+"explanation": "Condensation gives $Σ2^{k}/(2^{k}k\\log2)=Σ1/(k\\log2)$, which diverges.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-fl-0",
+"type": "flaw",
+"claim": "Every Cauchy sequence in a metric space converges.",
+"lines": [
+"A Cauchy sequence is bounded.",
+"By Bolzano–Weierstrass it has a convergent subsequence, and a Cauchy sequence with a convergent subsequence converges."
+],
+"bad": [
+1
+],
+"explanation": "Bolzano–Weierstrass holds in $ℝ^{k}$ (and in compact spaces), not in every metric space. In $ℚ$, truncations of $\\sqrt2$ are Cauchy with no limit.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-fl-1",
+"type": "flaw",
+"claim": "$\\lim(1+1/n)^{n}=1$.",
+"lines": [
+"$1+1/n→1$ as $n→∞$.",
+"$1^{n}=1$ for every $n$.",
+"So $(1+1/n)^{n}→1^{n}=1$."
+],
+"bad": [
+2
+],
+"explanation": "You can't send the base to its limit while leaving the exponent $n$ free; both depend on $n$. The actual limit is $e$ (3.31).",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-fl-2",
+"type": "flaw",
+"claim": "If $a_{n}→0$ then $Σa_{n}$ converges.",
+"lines": [
+"By the Cauchy criterion we need $|a_{n+1}+⋯+a_{m}|$ small.",
+"Each $|a_{k}|&lt;ε$ for large $k$, so the sum is small."
+],
+"bad": [
+1
+],
+"explanation": "The block has $m−n$ terms, which can be huge, so the bound is $(m−n)ε$, not $ε$. Harmonic series is the counterexample.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-cx-0",
+"type": "counterexample",
+"name": "$s_{n}=(−1)^{n}$",
+"details": "Bounded, divergent. Subsequential limits $\\{−1,1\\}$, so $\\limsup=1$, $\\liminf=−1$.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-cx-1",
+"type": "counterexample",
+"name": "Harmonic series $Σ1/n$",
+"details": "Terms $→0$ yet the series diverges. Also shows $s_{n+1}−s_{n}→0$ does not imply Cauchy.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-cx-2",
+"type": "counterexample",
+"name": "$Σ(−1)^{n+1}/n$",
+"details": "Converges (to $\\log 2$) but not absolutely; rearrangements can change its sum (3.54).",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-cx-3",
+"type": "counterexample",
+"name": "$Σ1/n$ vs $Σ1/n^{2}$",
+"details": "Ratio and root tests both give limit 1 for each, yet one diverges and one converges.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-cx-4",
+"type": "counterexample",
+"name": "Decimal truncations of $\\sqrt2$ in $ℚ$",
+"details": "Cauchy in $ℚ$ with no limit in $ℚ$, so $ℚ$ is not complete.",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+},
+{
+"id": "c3-cx-5",
+"type": "counterexample",
+"name": "An enumeration of $ℚ∩[0,1]$",
+"details": "Every point of $[0,1]$ is a subsequential limit (consistent with 3.7: the set is closed).",
+"chapter": 3,
+"rudin": "",
+"lecture": null,
+"status": "next"
+}
+]
+}

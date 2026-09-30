@@ -1,0 +1,541 @@
+{
+"id": "rudin-ch9",
+"title": "Rudin Ch 9: Functions of Several Variables",
+"course": "M365C",
+"created": "2026-09-29",
+"version": 1,
+"items": [
+{
+"id": "c9-def-0",
+"type": "flashcard",
+"kind": "definition",
+"front": "Vector space, basis, dimension",
+"back": "Standard linear algebra, with $\\dim ℝ^{n}=n$.",
+"chapter": 9,
+"rudin": "9.1",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-def-1",
+"type": "flashcard",
+"kind": "definition",
+"front": "Linear transformation; $L(X,Y)$",
+"back": "$A(αx+βy)=αAx+βAy$. $L(X,Y)$ is the set of linear maps $X→Y$.",
+"chapter": 9,
+"rudin": "9.4",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-def-2",
+"type": "flashcard",
+"kind": "definition",
+"front": "Operator norm",
+"back": "$\\|A\\|=\\sup\\{|Ax| : |x|≤1\\}$, so $|Ax|≤\\|A\\||x|$.",
+"chapter": 9,
+"rudin": "9.6",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-def-3",
+"type": "flashcard",
+"kind": "definition",
+"front": "Derivative (total derivative)",
+"back": "$f:E⊂ℝ^{n}→ℝ^{m}$ is differentiable at $x$ if some $A∈L(ℝ^{n},ℝ^{m})$ has $\\dfrac{|f(x+h)−f(x)−Ah|}{|h|}→0$ as $h→0$. Write $f'(x)=A$.",
+"chapter": 9,
+"rudin": "9.11",
+"lecture": null,
+"status": "not-yet",
+"abbott": [
+"5.2.1 (one variable)"
+]
+},
+{
+"id": "c9-def-4",
+"type": "flashcard",
+"kind": "definition",
+"front": "Partial derivatives",
+"back": "$(D_{j}f_{i})(x)=\\lim_{t→0}\\dfrac{f_{i}(x+te_{j})−f_{i}(x)}{t}$.",
+"chapter": 9,
+"rudin": "9.16",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-def-5",
+"type": "flashcard",
+"kind": "definition",
+"front": "$\\mathscr C'$ (continuously differentiable)",
+"back": "$f'$ exists and $x↦f'(x)$ is continuous into $L(ℝ^{n},ℝ^{m})$.",
+"chapter": 9,
+"rudin": "9.20",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-def-6",
+"type": "flashcard",
+"kind": "definition",
+"front": "Contraction",
+"back": "$d(φ(x),φ(y))≤c\\,d(x,y)$ for some $c&lt;1$.",
+"chapter": 9,
+"rudin": "9.22",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"3.5.7"
+]
+},
+{
+"id": "c9-def-7",
+"type": "flashcard",
+"kind": "definition",
+"front": "Rank; determinant; Jacobian",
+"back": "Rank = dimension of the range. $J_{f}(x)=\\det f'(x)$.",
+"chapter": 9,
+"rudin": "9.30, 9.33, 9.38",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-thm-0",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Injective ⟺ surjective",
+"back": "A linear operator on a finite-dimensional space is one-to-one iff it is onto.",
+"chapter": 9,
+"rudin": "9.5",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-thm-1",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Operator norm facts",
+"back": "$\\|A\\|&lt;∞$ and $A$ is uniformly continuous; $\\|A+B\\|≤\\|A\\|+\\|B\\|$; $\\|BA\\|≤\\|B\\|\\|A\\|$.",
+"chapter": 9,
+"rudin": "9.7",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-thm-2",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Invertible operators form an open set",
+"back": "If $A$ is invertible and $\\|B−A\\|\\|A^{−1}\\|&lt;1$, then $B$ is invertible. Inversion is continuous.",
+"chapter": 9,
+"rudin": "9.8",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-thm-3",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Uniqueness of the derivative",
+"back": "The linear map $A$ in 9.11 is unique.",
+"chapter": 9,
+"rudin": "9.12",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-thm-4",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Chain rule",
+"back": "$(g∘f)'(x_{0})=g'(f(x_{0}))f'(x_{0})$ (composition of linear maps).",
+"chapter": 9,
+"rudin": "9.15",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"6.1.6 (one variable)"
+],
+"abbott": [
+"5.2.5 (one variable)"
+]
+},
+{
+"id": "c9-thm-5",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Matrix of the derivative",
+"back": "If $f$ is differentiable at $x$, all partials exist and $[f'(x)]$ is the matrix $(D_{j}f_{i}(x))$.",
+"chapter": 9,
+"rudin": "9.17",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-thm-6",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Mean value inequality",
+"back": "On a convex open set with $\\|f'(x)\\|≤M$: $|f(b)−f(a)|≤M|b−a|$.",
+"chapter": 9,
+"rudin": "9.19",
+"lecture": null,
+"status": "not-yet",
+"note": "Compare Rudin 5.19."
+},
+{
+"id": "c9-thm-7",
+"type": "flashcard",
+"kind": "theorem",
+"front": "$\\mathscr C'$ via partials",
+"back": "$f∈\\mathscr C'(E)$ iff all partials $D_{j}f_{i}$ exist and are continuous on $E$.",
+"chapter": 9,
+"rudin": "9.21",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-thm-8",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Contraction principle",
+"back": "A contraction of a nonempty complete metric space has exactly one fixed point.",
+"chapter": 9,
+"rudin": "9.23",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"3.5.8, 3.5.10"
+],
+"abbott": [
+"§8.2"
+]
+},
+{
+"id": "c9-thm-9",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Inverse function theorem",
+"back": "If $f$ is $\\mathscr C'$ near $a$ and $f'(a)$ is invertible, there are open $U∋a$, $V∋f(a)$ with $f:U→V$ a bijection whose inverse is $\\mathscr C'$.",
+"chapter": 9,
+"rudin": "9.24",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"6.1.9 (one variable)"
+]
+},
+{
+"id": "c9-thm-10",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Open mapping corollary",
+"back": "If $f'(x)$ is invertible for every $x$, $f$ maps open sets to open sets.",
+"chapter": 9,
+"rudin": "9.25",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-thm-11",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Implicit function theorem",
+"back": "If $f(a,b)=0$, $f∈\\mathscr C'$ and $A_{x}$ (derivative in the $x$-variables) is invertible, then near $b$ there is a unique $\\mathscr C'$ function $g$ with $g(b)=a$ and $f(g(y),y)=0$, and $g'(b)=−(A_{x})^{−1}A_{y}$.",
+"chapter": 9,
+"rudin": "9.28",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-thm-12",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Rank theorem",
+"back": "A $\\mathscr C'$ map of constant rank $r$ locally looks like a projection onto an $r$-dimensional subspace.",
+"chapter": 9,
+"rudin": "9.32",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-thm-13",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Determinants",
+"back": "$\\det(AB)=\\det A\\det B$; $A$ is invertible iff $\\det A≠0$.",
+"chapter": 9,
+"rudin": "9.34–9.36",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-thm-14",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Equality of mixed partials",
+"back": "If $D_{1}f$, $D_{21}f$, $D_{2}f$ exist and $D_{21}f$ is continuous at a point, then $D_{12}f$ exists there and equals $D_{21}f$.",
+"chapter": 9,
+"rudin": "9.40, 9.41",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-thm-15",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Differentiating under the integral sign",
+"back": "If $φ$ and $D_{2}φ$ are suitably continuous, $\\dfrac{d}{dt}∫_{a}^{b}φ(x,t)dx=∫_{a}^{b}D_{2}φ(x,t)dx$.",
+"chapter": 9,
+"rudin": "9.42",
+"lecture": null,
+"status": "not-yet",
+"abbott": [
+"8.4.6"
+]
+},
+{
+"id": "c9-pf-0",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Contraction principle.",
+"modelProof": "Start at any $x_{0}$ and iterate $x_{n+1}=φ(x_{n})$. Then $d(x_{n+1},x_{n})≤c^{n}d(x_{1},x_{0})$, so for $n&lt;m$, $d(x_{n},x_{m})≤\\dfrac{c^{n}}{1−c}d(x_{1},x_{0})$. The sequence is Cauchy; its limit $x$ satisfies $φ(x)=x$ by continuity. Two fixed points $x,y$ would give $d(x,y)≤c\\,d(x,y)$, so $x=y$.",
+"chapter": 9,
+"rudin": "9.23",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-pf-1",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Chain rule.",
+"modelProof": "Write $f(x_{0}+h)=f(x_{0})+Ah+r(h)$ and $g(y_{0}+k)=g(y_{0})+Bk+s(k)$ with $r(h)/|h|→0$, $s(k)/|k|→0$. Substitute $k=Ah+r(h)$; the error $Br(h)+s(k)$ is $o(|h|)$ because $|k|≤(\\|A\\|+1)|h|$ for small $h$.",
+"chapter": 9,
+"rudin": "9.15",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-pf-2",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Inverse function theorem (outline).",
+"modelProof": "Let $A=f'(a)$, $λ$ with $2λ\\|A^{−1}\\|=1$, and a ball $U$ where $\\|f'(x)−A\\|&lt;λ$. For each $y$, $φ(x)=x+A^{−1}(y−f(x))$ is a contraction on $U$ with $\\|φ'\\|≤1/2$, so $f$ is one-to-one on $U$. Show $V=f(U)$ is open, then prove the inverse is differentiable with derivative $f'(x)^{−1}$, which is continuous by 9.8.",
+"chapter": 9,
+"rudin": "9.24",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-pr-0",
+"type": "proof",
+"kind": "practice",
+"prompt": "Compute $f'(x,y)$ for $f(x,y)=(x^{2}y,\\ \\sin(xy))$ and the derivative of $t↦f(t,t^{2})$ at $t=1$.",
+"hint": "Jacobian matrix, then the chain rule.",
+"modelProof": "$[f'(x,y)]=\\begin{pmatrix}2xy&amp;x^{2}\\\\ y\\cos(xy)&amp;x\\cos(xy)\\end{pmatrix}$. With $γ(t)=(t,t^{2})$, $γ'(1)=(1,2)$: $(f∘γ)'(1)=f'(1,1)(1,2)=(2+2,\\ \\cos1+2\\cos1)=(4,\\ 3\\cos 1)$.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-pr-1",
+"type": "proof",
+"kind": "practice",
+"prompt": "Show $f(x,y)=(x^{2}−y^{2},2xy)$ has invertible derivative at every point except the origin, but is not one-to-one on $ℝ^{2}∖\\{0\\}$.",
+"hint": "This is $z↦z^{2}$.",
+"modelProof": "$\\det f'=4x^{2}+4y^{2}$. But $f(x,y)=f(−x,−y)$.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-pr-2",
+"type": "proof",
+"kind": "practice",
+"prompt": "Near $(1,1,1)$, solve $x^{2}+y^{2}+z^{2}=3$ for $z=g(x,y)$ and compute $D_{1}g(1,1)$.",
+"hint": "Implicit function theorem.",
+"modelProof": "$D_{z}F=2z=2≠0$, so $g$ exists. $D_{1}g=−D_{x}F/D_{z}F=−x/z=−1$ at $(1,1,1)$.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-pr-3",
+"type": "proof",
+"kind": "practice",
+"prompt": "Prove $\\cos x=x$ has exactly one solution in $[0,1]$ using the contraction principle.",
+"hint": "Check that $\\cos$ maps $[0,1]$ into itself and bound its derivative.",
+"modelProof": "$\\cos([0,1])=[\\cos1,1]⊂[0,1]$, and $|\\cos x−\\cos y|≤\\sin(1)|x−y|$ with $\\sin 1&lt;1$. $[0,1]$ is complete, so 9.23 applies.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-pr-4",
+"type": "proof",
+"kind": "practice",
+"prompt": "Find $\\|A\\|$ for $A=\\begin{pmatrix}3&amp;0\\\\0&amp;−5\\end{pmatrix}$.",
+"hint": "Maximize $|Ax|$ on the unit circle.",
+"modelProof": "$|Ax|^{2}=9x_{1}^{2}+25x_{2}^{2}≤25$, with equality at $(0,1)$. $\\|A\\|=5$.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-tf-0",
+"type": "tf",
+"prompt": "If all partial derivatives of $f$ exist at $p$, then $f$ is differentiable at $p$.",
+"answer": false,
+"explanation": "$xy/(x^{2}+y^{2})$.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-tf-1",
+"type": "tf",
+"prompt": "If $f$ is differentiable at $p$, then all partials exist at $p$.",
+"answer": true,
+"explanation": "9.17.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-tf-2",
+"type": "tf",
+"prompt": "If $f'(x)$ is invertible for every $x∈ℝ^{2}$, then $f$ is one-to-one.",
+"answer": false,
+"explanation": "$(e^{x}\\cos y,e^{x}\\sin y)$.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-tf-3",
+"type": "tf",
+"prompt": "$\\|AB\\|≤\\|A\\|\\|B\\|$ for linear operators.",
+"answer": true,
+"explanation": "9.7(c).",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-tf-4",
+"type": "tf",
+"prompt": "If $d(φx,φy)&lt;d(x,y)$ for all $x≠y$ in a complete space, then $φ$ has a fixed point.",
+"answer": false,
+"explanation": "$\\sqrt{1+x^{2}}$ on $ℝ$.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-tf-5",
+"type": "tf",
+"prompt": "Mixed partials $D_{12}f$ and $D_{21}f$ are always equal when both exist.",
+"answer": false,
+"explanation": "$xy(x^{2}−y^{2})/(x^{2}+y^{2})$ at the origin. Continuity is needed (9.41).",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-fl-0",
+"type": "flaw",
+"claim": "$f(x,y)=xy/(x^{2}+y^{2})$ (with $f(0,0)=0$) is differentiable at 0 with $f'(0)=0$.",
+"lines": [
+"$D_{1}f(0,0)=\\lim f(t,0)/t=0$ and $D_{2}f(0,0)=0$.",
+"So the matrix of $f'(0)$ is $[0\\ \\ 0]$."
+],
+"bad": [
+1
+],
+"explanation": "9.17 goes the other way: differentiable ⇒ partials exist. Here $f$ isn't even continuous at 0, so it can't be differentiable.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-fl-1",
+"type": "flaw",
+"claim": "Contraction principle.",
+"lines": [
+"The iterates satisfy $d(x_{n+1},x_{n})≤c^{n}d(x_{1},x_{0})→0$.",
+"Consecutive terms get close, so $(x_{n})$ is Cauchy and converges."
+],
+"bad": [
+1
+],
+"explanation": "“Consecutive terms get close” does not make a sequence Cauchy ($\\sqrt n$). The real argument sums the geometric bound: $d(x_{n},x_{m})≤Σ_{k=n}^{m−1}c^{k}d(x_{1},x_{0})≤c^{n}d(x_{1},x_{0})/(1−c)$.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-cx-0",
+"type": "counterexample",
+"name": "$f(x,y)=\\dfrac{xy}{x^{2}+y^{2}}$, $f(0,0)=0$",
+"details": "Both partials exist at the origin, but $f$ isn't even continuous there ($f=1/2$ along $y=x$).",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-cx-1",
+"type": "counterexample",
+"name": "$f(x,y)=\\dfrac{xy(x^{2}−y^{2})}{x^{2}+y^{2}}$, $f(0,0)=0$",
+"details": "$\\mathscr C'$ with both mixed partials existing at 0, but they are $+1$ and $−1$.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-cx-2",
+"type": "counterexample",
+"name": "$(x,y)↦(e^{x}\\cos y,\\,e^{x}\\sin y)$",
+"details": "Jacobian $e^{2x}≠0$ everywhere, so locally invertible everywhere, but not one-to-one (period $2π$ in $y$). The inverse function theorem is local.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-cx-3",
+"type": "counterexample",
+"name": "$x+2x^{2}\\sin(1/x)$",
+"details": "$f'(0)=1≠0$ but $f$ is not one-to-one near 0. The inverse function theorem needs $\\mathscr C'$.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c9-cx-4",
+"type": "counterexample",
+"name": "$φ(x)=\\sqrt{1+x^{2}}$ on $ℝ$",
+"details": "$|φ(x)−φ(y)|&lt;|x−y|$ for $x≠y$, but no fixed point. A contraction needs a fixed constant $c&lt;1$.",
+"chapter": 9,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+}
+]
+}

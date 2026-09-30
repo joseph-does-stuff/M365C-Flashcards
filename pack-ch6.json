@@ -1,0 +1,644 @@
+{
+"id": "rudin-ch6",
+"title": "Rudin Ch 6: The Riemann–Stieltjes Integral",
+"course": "M365C",
+"created": "2026-09-29",
+"version": 1,
+"items": [
+{
+"id": "c6-def-0",
+"type": "flashcard",
+"kind": "definition",
+"front": "Partition, upper and lower sums",
+"back": "$P=\\{a=x_{0}&lt;⋯&lt;x_{n}=b\\}$, $M_{i}=\\sup_{[x_{i−1},x_{i}]}f$, $m_{i}=\\inf$. $U(P,f)=ΣM_{i}Δx_{i}$, $L(P,f)=Σm_{i}Δx_{i}$.",
+"chapter": 6,
+"rudin": "6.1",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§7.4*"
+],
+"abbott": [
+"7.2.1"
+]
+},
+{
+"id": "c6-def-1",
+"type": "flashcard",
+"kind": "definition",
+"front": "Upper and lower integrals; $f∈\\mathscr R$",
+"back": "$\\overline{∫}f=\\inf_{P}U(P,f)$, $\\underline{∫}f=\\sup_{P}L(P,f)$. $f$ is Riemann integrable if they are equal.",
+"chapter": 6,
+"rudin": "6.1",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§7.4*"
+],
+"abbott": [
+"7.2.5, 7.2.7"
+]
+},
+{
+"id": "c6-def-2",
+"type": "flashcard",
+"kind": "definition",
+"front": "Riemann–Stieltjes integral $∫f\\,dα$",
+"back": "Same with $Δα_{i}=α(x_{i})−α(x_{i−1})$ for an increasing $α$. Written $f∈\\mathscr R(α)$.",
+"chapter": 6,
+"rudin": "6.2",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-def-3",
+"type": "flashcard",
+"kind": "definition",
+"front": "Refinement; common refinement",
+"back": "$P^{*}⊇P$. The common refinement of $P_{1},P_{2}$ is $P_{1}∪P_{2}$.",
+"chapter": 6,
+"rudin": "6.3",
+"lecture": null,
+"status": "not-yet",
+"abbott": [
+"7.2.2"
+]
+},
+{
+"id": "c6-def-4",
+"type": "flashcard",
+"kind": "definition",
+"front": "Unit step function",
+"back": "$I(x)=0$ for $x≤0$, $1$ for $x&gt;0$. Integrating against $I(x−s)$ evaluates at $s$.",
+"chapter": 6,
+"rudin": "6.14",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-def-5",
+"type": "flashcard",
+"kind": "definition",
+"front": "Rectifiable curve; length",
+"back": "$Λ(γ)=\\sup_{P}Σ|γ(x_{i})−γ(x_{i−1})|$; rectifiable if finite.",
+"chapter": 6,
+"rudin": "6.26",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-thm-0",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Refinement improves sums",
+"back": "If $P^{*}$ refines $P$: $L(P,f,α)≤L(P^{*},f,α)$ and $U(P^{*},f,α)≤U(P,f,α)$.",
+"chapter": 6,
+"rudin": "6.4",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§7.4*"
+],
+"abbott": [
+"7.2.3"
+]
+},
+{
+"id": "c6-thm-1",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Lower ≤ upper",
+"back": "$\\underline{∫}f\\,dα≤\\overline{∫}f\\,dα$.",
+"chapter": 6,
+"rudin": "6.5",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§7.4*"
+],
+"abbott": [
+"7.2.4, 7.2.6"
+]
+},
+{
+"id": "c6-thm-2",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Riemann's criterion",
+"back": "$f∈\\mathscr R(α)$ iff for every $ε&gt;0$ there is $P$ with $U(P,f,α)−L(P,f,α)&lt;ε$.",
+"chapter": 6,
+"rudin": "6.6",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§7.4*"
+],
+"abbott": [
+"7.2.8"
+],
+"note": "The single most-used theorem in the chapter."
+},
+{
+"id": "c6-thm-3",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Riemann sums",
+"back": "If $U−L&lt;ε$ for $P$, then any choice of tags gives a sum within $ε$ of the integral.",
+"chapter": 6,
+"rudin": "6.7",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§7.1*"
+],
+"abbott": [
+"8.1.2"
+]
+},
+{
+"id": "c6-thm-4",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Continuous ⇒ integrable",
+"back": "If $f$ is continuous on $[a,b]$, $f∈\\mathscr R(α)$.",
+"chapter": 6,
+"rudin": "6.8",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§7.2*"
+],
+"abbott": [
+"7.2.9"
+]
+},
+{
+"id": "c6-thm-5",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Monotone ⇒ integrable",
+"back": "If $f$ is monotone and $α$ is continuous, $f∈\\mathscr R(α)$.",
+"chapter": 6,
+"rudin": "6.9",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§7.2*"
+]
+},
+{
+"id": "c6-thm-6",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Finitely many discontinuities",
+"back": "A bounded $f$ with finitely many discontinuities, at none of which $α$ jumps, is in $\\mathscr R(α)$.",
+"chapter": 6,
+"rudin": "6.10",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§7.2*"
+],
+"abbott": [
+"7.3.2"
+],
+"note": "Abbott Ch 7.6 upgrades this: bounded and continuous except on a set of measure zero."
+},
+{
+"id": "c6-thm-7",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Continuous functions of integrable functions",
+"back": "If $f∈\\mathscr R(α)$ with $m≤f≤M$ and $φ$ is continuous on $[m,M]$, then $φ∘f∈\\mathscr R(α)$.",
+"chapter": 6,
+"rudin": "6.11",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-thm-8",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Properties",
+"back": "Linear; monotone ($f≤g ⇒ ∫f≤∫g$); additive over $[a,c]∪[c,b]$; $fg∈\\mathscr R$; $|∫f\\,dα|≤∫|f|\\,dα$.",
+"chapter": 6,
+"rudin": "6.12, 6.13",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§7.2*"
+],
+"abbott": [
+"7.4.1, 7.4.2"
+]
+},
+{
+"id": "c6-thm-9",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Step integrators and series",
+"back": "$∫f\\,d I(x−s)=f(s)$ for $f$ continuous at $s$. With $α=Σc_{n}I(x−s_{n})$, $∫f\\,dα=Σc_{n}f(s_{n})$.",
+"chapter": 6,
+"rudin": "6.15, 6.16",
+"lecture": null,
+"status": "not-yet",
+"note": "Sums are integrals."
+},
+{
+"id": "c6-thm-10",
+"type": "flashcard",
+"kind": "theorem",
+"front": "$dα=α'\\,dx$",
+"back": "If $α'∈\\mathscr R$, then $∫f\\,dα=∫f(x)α'(x)\\,dx$ (one side exists iff the other does).",
+"chapter": 6,
+"rudin": "6.17",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-thm-11",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Change of variables",
+"back": "For $φ$ strictly increasing and continuous onto $[a,b]$: $∫_{A}^{B}g\\,dβ=∫_{a}^{b}f\\,dα$ with $g=f∘φ$, $β=α∘φ$.",
+"chapter": 6,
+"rudin": "6.19",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"10.1.12"
+],
+"abbott": [
+"8.1.10"
+]
+},
+{
+"id": "c6-thm-12",
+"type": "flashcard",
+"kind": "theorem",
+"front": "The integral as a function",
+"back": "If $f∈\\mathscr R$ and $F(x)=∫_{a}^{x}f$, then $F$ is continuous (Lipschitz), and $F'(x_{0})=f(x_{0})$ wherever $f$ is continuous.",
+"chapter": 6,
+"rudin": "6.20",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§7.3*"
+],
+"abbott": [
+"7.5.1(ii)"
+]
+},
+{
+"id": "c6-thm-13",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Fundamental theorem of calculus",
+"back": "If $f∈\\mathscr R$ and $F'=f$ on $[a,b]$, then $∫_{a}^{b}f=F(b)−F(a)$.",
+"chapter": 6,
+"rudin": "6.21",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§7.3*",
+"10.1.9"
+],
+"abbott": [
+"7.5.1(i)"
+],
+"note": "The hypothesis $f∈\\mathscr R$ is essential."
+},
+{
+"id": "c6-thm-14",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Integration by parts",
+"back": "$∫_{a}^{b}Fg=F(b)G(b)−F(a)G(a)−∫_{a}^{b}fG$ when $F'=f$, $G'=g$ are integrable.",
+"chapter": 6,
+"rudin": "6.22",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"10.1.15"
+]
+},
+{
+"id": "c6-thm-15",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Arc length",
+"back": "If $γ'$ is continuous, $γ$ is rectifiable and $Λ(γ)=∫_{a}^{b}|γ'(t)|\\,dt$.",
+"chapter": 6,
+"rudin": "6.27",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-pf-0",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Refinement.",
+"modelProof": "Add one point $x^{*}$ to $[x_{i−1},x_{i}]$. The inf of $f$ on each half is at least $m_{i}$, so the lower sum can only grow. Induct on the number of added points.",
+"chapter": 6,
+"rudin": "6.4",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-pf-1",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Riemann's criterion.",
+"modelProof": "($⇐$) $L(P)≤\\underline{∫}≤\\overline{∫}≤U(P)$, so $0≤\\overline{∫}−\\underline{∫}&lt;ε$ for every $ε$. ($⇒$) Pick $P_{1},P_{2}$ with $U(P_{2})&lt;∫+ε/2$ and $L(P_{1})&gt;∫−ε/2$, and use the common refinement.",
+"chapter": 6,
+"rudin": "6.6",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-pf-2",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Continuous ⇒ integrable.",
+"modelProof": "$f$ is uniformly continuous on $[a,b]$ (4.19). Choose $η$ with $[α(b)−α(a)]η&lt;ε$ and $δ$ so that $|x−t|&lt;δ ⇒ |f(x)−f(t)|&lt;η$. For $Δx_{i}&lt;δ$, $M_{i}−m_{i}≤η$, so $U−L≤ηΣΔα_{i}&lt;ε$.",
+"chapter": 6,
+"rudin": "6.8",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-pf-3",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: $F$ is continuous and $F'=f$ at continuity points.",
+"modelProof": "$|F(y)−F(x)|≤M|y−x|$ with $M=\\sup|f|$. At a continuity point $x_{0}$: $\\left|\\dfrac{F(t)−F(s)}{t−s}−f(x_{0})\\right|=\\left|\\dfrac{1}{t−s}∫_{s}^{t}(f(u)−f(x_{0}))du\\right|&lt;ε$ when $s,t$ are within $δ$ of $x_{0}$.",
+"chapter": 6,
+"rudin": "6.20",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-pf-4",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: FTC.",
+"modelProof": "For any partition, the MVT gives $t_{i}$ with $F(x_{i})−F(x_{i−1})=f(t_{i})Δx_{i}$. Summing, $F(b)−F(a)=Σf(t_{i})Δx_{i}$, which lies between $L(P)$ and $U(P)$. Since $f∈\\mathscr R$, those squeeze to $∫f$.",
+"chapter": 6,
+"rudin": "6.21",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-pr-0",
+"type": "proof",
+"kind": "practice",
+"prompt": "Show from the definition that $∫_{0}^{1}x\\,dx=1/2$.",
+"hint": "Use the uniform partition with $n$ pieces.",
+"modelProof": "$U(P_{n})=Σ_{i=1}^{n}(i/n)(1/n)=(n+1)/(2n)$ and $L(P_{n})=(n−1)/(2n)$. $U−L=1/n→0$, and both tend to $1/2$.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-pr-1",
+"type": "proof",
+"kind": "practice",
+"prompt": "Let $f(x)=x$ for rational $x$ and 0 otherwise, on $[0,1]$. Show $f∉\\mathscr R$.",
+"hint": "Compute the upper integral.",
+"modelProof": "$L(P)=0$ always. $U(P)=Σx_{i}Δx_{i}≥∫_{0}^{1}x\\,dx=1/2$, so $\\overline{∫}f=1/2≠0$.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-pr-2",
+"type": "proof",
+"kind": "practice",
+"prompt": "Let $α(x)=x+⌊x⌋$ on $[0,3/2]$. Compute $∫_{0}^{3/2}x\\,dα$.",
+"hint": "Split $α$ into $x$ plus a unit jump at 1 (6.15, 6.17).",
+"modelProof": "$∫x\\,dx=9/8$ from the smooth part, plus $f(1)·1=1$ from the jump. Total $17/8$.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-pr-3",
+"type": "proof",
+"kind": "practice",
+"prompt": "If $f$ is continuous on $[a,b]$, prove $∫_{a}^{b}f=f(c)(b−a)$ for some $c$.",
+"hint": "EVT and IVT.",
+"modelProof": "With $m,M$ the min and max, $m(b−a)≤∫f≤M(b−a)$. The average lies in $[m,M]$, and IVT gives $c$ with $f(c)$ equal to it.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-pr-4",
+"type": "proof",
+"kind": "practice",
+"prompt": "Compute $\\dfrac{d}{dx}∫_{0}^{x^{2}}\\sqrt{1+t^{3}}\\,dt$.",
+"hint": "6.20 plus the chain rule.",
+"modelProof": "$2x\\sqrt{1+x^{6}}$.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-pr-5",
+"type": "proof",
+"kind": "practice",
+"prompt": "Find the length of $y=x^{3/2}$ for $0≤x≤4$.",
+"hint": "6.27 with $γ(t)=(t,t^{3/2})$.",
+"modelProof": "$∫_{0}^{4}\\sqrt{1+9t/4}\\,dt=\\tfrac{8}{27}\\left(10^{3/2}−1\\right)≈9.07$.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-tf-0",
+"type": "tf",
+"prompt": "If $|f|∈\\mathscr R$ on $[a,b]$, then $f∈\\mathscr R$.",
+"answer": false,
+"explanation": "$f=2·1_{Q}−1$.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-tf-1",
+"type": "tf",
+"prompt": "If $f∈\\mathscr R$, then $|f|∈\\mathscr R$.",
+"answer": true,
+"explanation": "6.11 with $φ(t)=|t|$, or 6.13.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-tf-2",
+"type": "tf",
+"prompt": "If $f∈\\mathscr R$, then $F(x)=∫_{a}^{x}f$ is differentiable.",
+"answer": false,
+"explanation": "$f=\\mathrm{sgn}$ gives $F$ with a corner. $F$ is always continuous, though.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-tf-3",
+"type": "tf",
+"prompt": "A bounded function on $[a,b]$ that is continuous except at countably many points is Riemann integrable.",
+"answer": true,
+"explanation": "Countable sets have measure zero; Lebesgue's criterion (A 7.6.5, Rudin 11.33).",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-tf-4",
+"type": "tf",
+"prompt": "If $f≥0$ is continuous and $∫_{a}^{b}f=0$, then $f≡0$.",
+"answer": true,
+"explanation": "If $f(c)&gt;0$, continuity keeps $f&gt;f(c)/2$ on an interval, making the integral positive.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-tf-5",
+"type": "tf",
+"prompt": "Changing $f$ at one point doesn't change integrability or the integral.",
+"answer": true,
+"explanation": "The difference is 0 except at one point; its upper sums can be made small.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-tf-6",
+"type": "tf",
+"prompt": "If $f$ is differentiable on $[a,b]$, then $f'∈\\mathscr R$.",
+"answer": false,
+"explanation": "$x^{2}\\sin(1/x^{2})$ has unbounded derivative.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-fl-0",
+"type": "flaw",
+"claim": "The Dirichlet function is Riemann integrable on $[0,1]$ with integral 0.",
+"lines": [
+"The rationals are countable, so they take up no length.",
+"$f=0$ everywhere except on a set that doesn't matter."
+],
+"bad": [
+1
+],
+"explanation": "Upper sums use the sup on each subinterval, and every subinterval contains rationals, so $U(P)=1$ for every $P$. “Countable sets don't matter” is true for the Lebesgue integral, not the Riemann integral.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-fl-1",
+"type": "flaw",
+"claim": "If $F'=f$ on $[a,b]$ then $∫_{a}^{b}f=F(b)−F(a)$.",
+"lines": [
+"Take any partition.",
+"By MVT, $F(x_{i})−F(x_{i−1})=f(t_{i})Δx_{i}$.",
+"The sum telescopes, so every Riemann sum equals $F(b)−F(a)$."
+],
+"bad": [
+2
+],
+"explanation": "MVT produces particular tags $t_{i}$, not arbitrary ones, and nothing guarantees $f$ is integrable. Rudin assumes $f∈\\mathscr R$ in 6.21. $F=x^{2}\\sin(1/x^{2})$ breaks the claim.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-fl-2",
+"type": "flaw",
+"claim": "$∫_{−1}^{1}x^{−2}\\,dx=−2$.",
+"lines": [
+"$f(x)=x^{−2}$ has antiderivative $F(x)=−1/x$.",
+"By the fundamental theorem of calculus, $∫_{−1}^{1}f=F(1)−F(−1)$.",
+"That equals $−1−1=−2$."
+],
+"bad": [
+1
+],
+"explanation": "$x^{−2}$ is unbounded on $[−1,1]$, so it is not Riemann integrable, and $F'=f$ fails at 0. (A positive function with a negative integral is a warning sign.)",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-cx-0",
+"type": "counterexample",
+"name": "Dirichlet function $1_{Q}$ on $[0,1]$",
+"details": "Every $U=1$, every $L=0$: not Riemann integrable. (It is Lebesgue integrable with integral 0; Chapter 11.)",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-cx-1",
+"type": "counterexample",
+"name": "Thomae's function",
+"details": "Integrable with integral 0 even though it is discontinuous at every rational (its discontinuities have measure zero).",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-cx-2",
+"type": "counterexample",
+"name": "$2·1_{Q}−1$",
+"details": "$f^{2}≡1$ and $|f|≡1$ are integrable, but $f$ is not.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-cx-3",
+"type": "counterexample",
+"name": "$F(x)=x^{2}\\sin(1/x^{2})$, $F(0)=0$",
+"details": "$F$ is differentiable on $[0,1]$ but $F'$ is unbounded, so $F'∉\\mathscr R$. FTC needs its hypothesis.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c6-cx-4",
+"type": "counterexample",
+"name": "$\\mathrm{sgn}(x)$ on $[−1,1]$",
+"details": "Integrable, but $F(x)=∫_{−1}^{x}\\mathrm{sgn}=|x|−1$ is not differentiable at 0.",
+"chapter": 6,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+}
+]
+}

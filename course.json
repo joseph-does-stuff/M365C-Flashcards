@@ -1,0 +1,265 @@
+{
+ "course": "M365C",
+ "instructor": "Arie Israel",
+ "asOf": "Lecture 5.2",
+ "chapters": [
+  {
+   "n": 1,
+   "title": "The Real and Complex Number Systems",
+   "state": "done"
+  },
+  {
+   "n": 2,
+   "title": "Basic Topology",
+   "state": "progress"
+  },
+  {
+   "n": 3,
+   "title": "Numerical Sequences and Series",
+   "state": "next"
+  },
+  {
+   "n": 4,
+   "title": "Continuity",
+   "state": "later"
+  },
+  {
+   "n": 5,
+   "title": "Differentiation",
+   "state": "later"
+  },
+  {
+   "n": 6,
+   "title": "The Riemann–Stieltjes Integral",
+   "state": "later"
+  },
+  {
+   "n": 7,
+   "title": "Sequences and Series of Functions",
+   "state": "later"
+  },
+  {
+   "n": 8,
+   "title": "Some Special Functions",
+   "state": "later"
+  },
+  {
+   "n": 9,
+   "title": "Functions of Several Variables",
+   "state": "later"
+  },
+  {
+   "n": 10,
+   "title": "Integration of Differential Forms",
+   "state": "later"
+  },
+  {
+   "n": 11,
+   "title": "The Lebesgue Theory",
+   "state": "later"
+  }
+ ],
+ "lectures": [
+  {
+   "id": "L1.1",
+   "title": "Course setup, ordered field axioms, sets, induction, relations, constructing $ℚ$",
+   "topics": [
+    "1.12, 1.17 field axioms",
+    "De Morgan",
+    "well-ordering ⇒ induction",
+    "equivalence relations",
+    "$ℚ$ as equivalence classes"
+   ]
+  },
+  {
+   "id": "L1.2",
+   "title": "Ordered sets and fields, $\\sqrt2$ irrational, upper bounds and suprema",
+   "topics": [
+    "1.5–1.8",
+    "1.14–1.18 (Prop. 5)",
+    "$ℂ$ can't be ordered",
+    "lexicographic order on $ℤ×ℤ$",
+    "$\\sup\\{r∈ℚ : r&lt;4\\}=4$"
+   ]
+  },
+  {
+   "id": "L2.1",
+   "title": "Completeness, $ℚ$ not complete, Archimedes, density, $n$th roots, infima",
+   "topics": [
+    "1.10–1.11",
+    "1.19 (stated)",
+    "1.20(a)(b)",
+    "1.21 (stated)",
+    "ε-characterization of sup"
+   ]
+  },
+  {
+   "id": "L2.2",
+   "title": "Worked sup problems, extended reals, $ℝ^{k}$, Cauchy–Schwarz, cardinality",
+   "topics": [
+    "$\\sup(A∪B)$, $\\sup(A+B)$",
+    "1.23",
+    "1.36–1.37",
+    "2.1–2.4"
+   ]
+  },
+  {
+   "id": "L3.1",
+   "title": "Countable sets, $ℕ×ℕ$, countable unions, Cantor's theorem",
+   "topics": [
+    "2.8",
+    "2.12–2.13",
+    "2.14",
+    "power set"
+   ]
+  },
+  {
+   "id": "L3.2",
+   "title": "Metric spaces and examples, neighborhoods, limit/isolated/interior points",
+   "topics": [
+    "2.15",
+    "2.18(a–e)",
+    "2.20 and corollary"
+   ]
+  },
+  {
+   "id": "L4.1",
+   "title": "Open and closed sets, closure, complements, unions and intersections",
+   "topics": [
+    "2.18(d–f)",
+    "2.19",
+    "2.22–2.24",
+    "2.26–2.27"
+   ]
+  },
+  {
+   "id": "L4.2",
+   "title": "Sup in the closure, relative openness, dense sets, open covers",
+   "topics": [
+    "2.28",
+    "2.29–2.30",
+    "dense-set equivalences",
+    "2.31"
+   ]
+  },
+  {
+   "id": "L5.1",
+   "title": "Compactness: examples, compact ⇒ bounded and closed, closed ⊂ compact, nested intervals",
+   "topics": [
+    "2.32",
+    "2.34–2.35",
+    "2.38 (stated)"
+   ]
+  },
+  {
+   "id": "L5.2",
+   "title": "Nested intervals, $ℝ$ uncountable, $k$-cells compact, Heine–Borel, Bolzano–Weierstrass",
+   "topics": [
+    "2.38–2.40",
+    "2.41",
+    "2.37 (stated)",
+    "2.42"
+   ]
+  }
+ ],
+ "next": [
+  {
+   "rudin": "2.36–2.37",
+   "title": "Finite intersection property; infinite subsets of compact sets",
+   "why": "2.37 was stated in L5.2 without proof. Nested compact sets have nonempty intersection.",
+   "chapter": 2
+  },
+  {
+   "rudin": "2.33",
+   "title": "Compactness doesn't depend on the ambient space",
+   "why": "Skipped past so far.",
+   "chapter": 2
+  },
+  {
+   "rudin": "2.43–2.44",
+   "title": "Perfect sets and the Cantor set",
+   "why": "Nonempty perfect sets are uncountable; L5.2 set this up by proving $ℝ$ is uncountable with nested intervals.",
+   "chapter": 2
+  },
+  {
+   "rudin": "2.45–2.47",
+   "title": "Connected sets",
+   "why": "Connected subsets of $ℝ$ are exactly the intervals.",
+   "chapter": 2
+  },
+  {
+   "rudin": "3.1–3.12",
+   "title": "Sequences in metric spaces, subsequences, Cauchy sequences, completeness",
+   "why": "Opens Chapter 3.",
+   "chapter": 3
+  },
+  {
+   "rudin": "3.13–3.20",
+   "title": "Monotone sequences, lim sup / lim inf, special limits",
+   "why": "",
+   "chapter": 3
+  },
+  {
+   "rudin": "3.21–3.55",
+   "title": "Series: tests, power series, absolute convergence, rearrangements",
+   "why": "",
+   "chapter": 3
+  }
+ ],
+ "skipped": [
+  {
+   "rudin": "1.22",
+   "title": "Decimal expansions"
+  },
+  {
+   "rudin": "1.24–1.35",
+   "title": "Complex numbers, $|z|$, complex Cauchy–Schwarz (only “$ℂ$ can't be ordered” came up)"
+  },
+  {
+   "rudin": "1.19 appendix",
+   "title": "Constructing $ℝ$ from Dedekind cuts (existence was stated, not proved)"
+  }
+ ],
+ "later": [
+  {
+   "chapter": 4,
+   "title": "Continuity",
+   "about": "limits of functions, continuity and compactness (EVT, uniform continuity), IVT, discontinuities, monotone functions"
+  },
+  {
+   "chapter": 5,
+   "title": "Differentiation",
+   "about": "MVT, Darboux, L'Hospital, Taylor"
+  },
+  {
+   "chapter": 6,
+   "title": "The Riemann–Stieltjes Integral",
+   "about": "upper/lower sums, integrability, FTC"
+  },
+  {
+   "chapter": 7,
+   "title": "Sequences and Series of Functions",
+   "about": "uniform convergence, Arzelà–Ascoli, Weierstrass approximation"
+  },
+  {
+   "chapter": 8,
+   "title": "Some Special Functions",
+   "about": "power series, exp/log/trig, Fourier series, Gamma"
+  },
+  {
+   "chapter": 9,
+   "title": "Functions of Several Variables",
+   "about": "derivative as a linear map, inverse and implicit function theorems"
+  },
+  {
+   "chapter": 10,
+   "title": "Integration of Differential Forms",
+   "about": "forms, Stokes' theorem"
+  },
+  {
+   "chapter": 11,
+   "title": "The Lebesgue Theory",
+   "about": "measure, Lebesgue integral, convergence theorems, $L^{2}$"
+  }
+ ]
+}

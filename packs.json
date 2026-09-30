@@ -1,0 +1,92 @@
+{
+ "packs": [
+  {
+   "id": "rudin-ch1",
+   "file": "pack-ch1.json",
+   "title": "Rudin Ch 1: The Real and Complex Number Systems",
+   "chapter": 1,
+   "count": 57,
+   "version": 1
+  },
+  {
+   "id": "rudin-ch2",
+   "file": "pack-ch2.json",
+   "title": "Rudin Ch 2: Basic Topology",
+   "chapter": 2,
+   "count": 85,
+   "version": 1
+  },
+  {
+   "id": "rudin-ch3",
+   "file": "pack-ch3.json",
+   "title": "Rudin Ch 3: Numerical Sequences and Series",
+   "chapter": 3,
+   "count": 64,
+   "version": 1
+  },
+  {
+   "id": "rudin-ch4",
+   "file": "pack-ch4.json",
+   "title": "Rudin Ch 4: Continuity",
+   "chapter": 4,
+   "count": 53,
+   "version": 1
+  },
+  {
+   "id": "rudin-ch5",
+   "file": "pack-ch5.json",
+   "title": "Rudin Ch 5: Differentiation",
+   "chapter": 5,
+   "count": 43,
+   "version": 1
+  },
+  {
+   "id": "rudin-ch6",
+   "file": "pack-ch6.json",
+   "title": "Rudin Ch 6: The Riemann–Stieltjes Integral",
+   "chapter": 6,
+   "count": 48,
+   "version": 1
+  },
+  {
+   "id": "rudin-ch7",
+   "file": "pack-ch7.json",
+   "title": "Rudin Ch 7: Sequences and Series of Functions",
+   "chapter": 7,
+   "count": 48,
+   "version": 1
+  },
+  {
+   "id": "rudin-ch8",
+   "file": "pack-ch8.json",
+   "title": "Rudin Ch 8: Some Special Functions",
+   "chapter": 8,
+   "count": 45,
+   "version": 1
+  },
+  {
+   "id": "rudin-ch9",
+   "file": "pack-ch9.json",
+   "title": "Rudin Ch 9: Functions of Several Variables",
+   "chapter": 9,
+   "count": 45,
+   "version": 1
+  },
+  {
+   "id": "rudin-ch10",
+   "file": "pack-ch10.json",
+   "title": "Rudin Ch 10: Integration of Differential Forms",
+   "chapter": 10,
+   "count": 30,
+   "version": 1
+  },
+  {
+   "id": "rudin-ch11",
+   "file": "pack-ch11.json",
+   "title": "Rudin Ch 11: The Lebesgue Theory",
+   "chapter": 11,
+   "count": 46,
+   "version": 1
+  }
+ ]
+}

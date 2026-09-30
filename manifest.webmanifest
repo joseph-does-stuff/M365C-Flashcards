@@ -1,0 +1,16 @@
+{
+  "name": "M365C Study",
+  "short_name": "M365C Study",
+  "description": "Practice for real analysis: flashcards, prove-or-disprove, find the flaw, and proofs, tracked against the lectures.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#141731",
+  "theme_color": "#141731",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

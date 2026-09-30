@@ -1,0 +1,369 @@
+{
+"id": "rudin-ch10",
+"title": "Rudin Ch 10: Integration of Differential Forms",
+"course": "M365C",
+"created": "2026-09-29",
+"version": 1,
+"items": [
+{
+"id": "c10-def-0",
+"type": "flashcard",
+"kind": "definition",
+"front": "Integral over a $k$-cell",
+"back": "Iterated Riemann integrals $∫_{I^{k}}f=∫\\cdots∫f\\,dx_{1}\\cdots dx_{k}$.",
+"chapter": 10,
+"rudin": "10.1",
+"lecture": null,
+"status": "not-yet",
+"abbott": [
+"8.4.8"
+]
+},
+{
+"id": "c10-def-1",
+"type": "flashcard",
+"kind": "definition",
+"front": "Support",
+"back": "Closure of $\\{x: f(x)≠0\\}$.",
+"chapter": 10,
+"rudin": "10.3",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-def-2",
+"type": "flashcard",
+"kind": "definition",
+"front": "Primitive mapping; flip",
+"back": "A map changing only one coordinate; a linear map swapping two coordinates. Every $\\mathscr C'$ map with invertible derivative is locally a composition of these.",
+"chapter": 10,
+"rudin": "10.5–10.6",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-def-3",
+"type": "flashcard",
+"kind": "definition",
+"front": "Partition of unity",
+"back": "Continuous $ψ_{i}≥0$ with $Σψ_{i}=1$ on $K$, each supported in a set of a given cover.",
+"chapter": 10,
+"rudin": "10.8",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-def-4",
+"type": "flashcard",
+"kind": "definition",
+"front": "$k$-surface; $k$-form",
+"back": "A $k$-surface is a $\\mathscr C'$ map $Φ:D⊂ℝ^{k}→ℝ^{n}$. A $k$-form is $ω=Σa_{I}(x)\\,dx_{I}$, and $∫_{Φ}ω$ is defined by pulling back.",
+"chapter": 10,
+"rudin": "10.10–10.11",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-def-5",
+"type": "flashcard",
+"kind": "definition",
+"front": "Wedge product; exterior derivative",
+"back": "$dx_{i}∧dx_{j}=−dx_{j}∧dx_{i}$. $d(f\\,dx_{I})=Σ_{j}(D_{j}f)\\,dx_{j}∧dx_{I}$.",
+"chapter": 10,
+"rudin": "10.16–10.18",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-def-6",
+"type": "flashcard",
+"kind": "definition",
+"front": "Pullback (transfer)",
+"back": "For $T:E→V$, $ω_{T}$ replaces each $y_{i}$ by $T_{i}(x)$ and $dy_{i}$ by $dT_{i}$.",
+"chapter": 10,
+"rudin": "10.21",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-def-7",
+"type": "flashcard",
+"kind": "definition",
+"front": "Chains and boundaries",
+"back": "Oriented simplexes, formal sums (chains), and the boundary operator $∂$.",
+"chapter": 10,
+"rudin": "10.26–10.31",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-def-8",
+"type": "flashcard",
+"kind": "definition",
+"front": "Closed; exact",
+"back": "$ω$ is closed if $dω=0$; exact if $ω=dλ$ for some $λ$.",
+"chapter": 10,
+"rudin": "10.34",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-thm-0",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Order of integration doesn't matter",
+"back": "For continuous $f$ on a $k$-cell, every order of iterated integration gives the same value.",
+"chapter": 10,
+"rudin": "10.2",
+"lecture": null,
+"status": "not-yet",
+"abbott": [
+"8.4.8"
+]
+},
+{
+"id": "c10-thm-1",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Change of variables",
+"back": "For a one-to-one $\\mathscr C'$ map $T$ with $J_{T}≠0$: $∫f(y)dy=∫f(T(x))|J_{T}(x)|dx$.",
+"chapter": 10,
+"rudin": "10.9",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"10.1.12 (one variable)"
+],
+"abbott": [
+"8.1.10 (one variable)"
+]
+},
+{
+"id": "c10-thm-2",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Properties of $d$",
+"back": "$d(ω∧λ)=dω∧λ+(−1)^{k}ω∧dλ$ for a $k$-form $ω$; $d(dω)=0$ for $\\mathscr C''$ forms.",
+"chapter": 10,
+"rudin": "10.20",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-thm-3",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Pullbacks respect everything",
+"back": "$(ω∧λ)_{T}=ω_{T}∧λ_{T}$, $(dω)_{T}=d(ω_{T})$, and $∫_{TΦ}ω=∫_{Φ}ω_{T}$.",
+"chapter": 10,
+"rudin": "10.22–10.25",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-thm-4",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Stokes' theorem",
+"back": "For a $k$-chain $Ψ$ of class $\\mathscr C''$ and a $(k−1)$-form $ω$ of class $\\mathscr C'$: $∫_{Ψ}dω=∫_{∂Ψ}ω$.",
+"chapter": 10,
+"rudin": "10.33",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"10.1.9 ($k=1$)"
+],
+"abbott": [
+"7.5.1 ($k=1$)"
+],
+"note": "FTC, Green, the classical Stokes and divergence theorems are all special cases."
+},
+{
+"id": "c10-thm-5",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Exact ⇒ closed",
+"back": "Because $d^{2}=0$.",
+"chapter": 10,
+"rudin": "10.35",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-thm-6",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Poincaré lemma",
+"back": "On a convex open set, every closed $k$-form ($k≥1$) is exact.",
+"chapter": 10,
+"rudin": "10.39",
+"lecture": null,
+"status": "not-yet",
+"note": "Convexity (or at least some topological condition) is needed."
+},
+{
+"id": "c10-thm-7",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Vector analysis",
+"back": "Green's theorem in the plane, Stokes' formula for surfaces in $ℝ^{3}$, and the divergence theorem, all from 10.33.",
+"chapter": 10,
+"rudin": "10.43–10.51",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-pf-0",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: $d^{2}=0$ for a 0-form.",
+"modelProof": "$df=ΣD_{j}f\\,dx_{j}$, so $d(df)=Σ_{i,j}D_{ij}f\\,dx_{i}∧dx_{j}$. Terms with $i=j$ vanish, and the $(i,j)$ and $(j,i)$ terms cancel because $D_{ij}f=D_{ji}f$ for $\\mathscr C''$ functions and $dx_{i}∧dx_{j}=−dx_{j}∧dx_{i}$.",
+"chapter": 10,
+"rudin": "10.20",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-pf-1",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Stokes' theorem (strategy).",
+"modelProof": "By 10.25 and linearity it reduces to the standard simplex $Q^{k}$ with the identity map. There $ω$ is a sum of terms $f\\,dx_{1}∧⋯\\widehat{dx_{r}}⋯∧dx_{k}$; for each, both sides are computed directly with the one-variable FTC and compared.",
+"chapter": 10,
+"rudin": "10.33",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-pr-0",
+"type": "proof",
+"kind": "practice",
+"prompt": "Compute $dω$ for $ω=xy\\,dx+z\\,dy$ in $ℝ^{3}$.",
+"hint": "$d(f\\,dx_{i})=df∧dx_{i}$.",
+"modelProof": "$d(xy\\,dx)=x\\,dy∧dx=−x\\,dx∧dy$ and $d(z\\,dy)=dz∧dy=−dy∧dz$. So $dω=−x\\,dx∧dy−dy∧dz$.",
+"chapter": 10,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-pr-1",
+"type": "proof",
+"kind": "practice",
+"prompt": "Use Green's theorem to find the area of the ellipse $x^{2}/a^{2}+y^{2}/b^{2}≤1$.",
+"hint": "Area $=\\frac12∮x\\,dy−y\\,dx$.",
+"modelProof": "Parametrize $(a\\cos t,b\\sin t)$: $\\frac12∫_{0}^{2π}ab(\\cos^{2}t+\\sin^{2}t)dt=πab$.",
+"chapter": 10,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-pr-2",
+"type": "proof",
+"kind": "practice",
+"prompt": "Compute $∬_{x^{2}+y^{2}≤1}(x^{2}+y^{2})\\,dA$ with polar coordinates.",
+"hint": "$J=r$.",
+"modelProof": "$∫_{0}^{2π}∫_{0}^{1}r^{2}·r\\,dr\\,dθ=2π·\\frac14=π/2$.",
+"chapter": 10,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-pr-3",
+"type": "proof",
+"kind": "practice",
+"prompt": "Show $η=(x\\,dy−y\\,dx)/(x^{2}+y^{2})$ is closed and compute its integral over the unit circle.",
+"hint": "Compute $dη$ directly; pull back with $(\\cos t,\\sin t)$.",
+"modelProof": "$D_{x}\\left(\\frac{x}{x^{2}+y^{2}}\\right)+D_{y}\\left(\\frac{y}{x^{2}+y^{2}}\\right)=0$, so $dη=0$. On the circle $η$ pulls back to $dt$, so the integral is $2π$. Hence $η$ is not exact.",
+"chapter": 10,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-pr-4",
+"type": "proof",
+"kind": "practice",
+"prompt": "Use the divergence theorem to find the outward flux of $F=(x,y,z)$ through the unit sphere.",
+"hint": "$\\mathrm{div}F=3$.",
+"modelProof": "$3·\\frac43π=4π$.",
+"chapter": 10,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-tf-0",
+"type": "tf",
+"prompt": "$d(dω)=0$ for every $\\mathscr C''$ form $ω$.",
+"answer": true,
+"explanation": "10.20.",
+"chapter": 10,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-tf-1",
+"type": "tf",
+"prompt": "Every closed form on an open set is exact.",
+"answer": false,
+"explanation": "$η$ on the punctured plane.",
+"chapter": 10,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-tf-2",
+"type": "tf",
+"prompt": "Every exact form is closed.",
+"answer": true,
+"explanation": "$d(dλ)=0$.",
+"chapter": 10,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-tf-3",
+"type": "tf",
+"prompt": "$dx∧dy=dy∧dx$.",
+"answer": false,
+"explanation": "They differ by a sign; and $dx∧dx=0$.",
+"chapter": 10,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-fl-0",
+"type": "flaw",
+"claim": "$∫_{\\text{unit circle}}\\dfrac{x\\,dy−y\\,dx}{x^{2}+y^{2}}=0$.",
+"lines": [
+"The circle is the boundary of the unit disk $D$, and $dη=0$.",
+"By Stokes, $∫_{∂D}η=∫_{D}dη=0$."
+],
+"bad": [
+1
+],
+"explanation": "$η$ is not defined (let alone $\\mathscr C'$) at the origin, which lies inside $D$. Stokes needs the form to be smooth on the whole chain. The integral is $2π$.",
+"chapter": 10,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c10-cx-0",
+"type": "counterexample",
+"name": "$η=\\dfrac{x\\,dy−y\\,dx}{x^{2}+y^{2}}$ on $ℝ^{2}∖\\{0\\}$",
+"details": "Closed ($dη=0$) but not exact: its integral around the unit circle is $2π≠0$. The punctured plane is not convex, so the Poincaré lemma doesn't apply.",
+"chapter": 10,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+}
+]
+}

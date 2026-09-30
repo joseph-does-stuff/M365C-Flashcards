@@ -1,0 +1,730 @@
+{
+"id": "rudin-ch4",
+"title": "Rudin Ch 4: Continuity",
+"course": "M365C",
+"created": "2026-09-29",
+"version": 1,
+"items": [
+{
+"id": "c4-def-0",
+"type": "flashcard",
+"kind": "definition",
+"front": "Limit of a function",
+"back": "For $p∈E'$, $\\lim_{x→p}f(x)=q$ if for every $ε&gt;0$ there is $δ&gt;0$ with $d_{Y}(f(x),q)&lt;ε$ whenever $x∈E$ and $0&lt;d_{X}(x,p)&lt;δ$.",
+"chapter": 4,
+"rudin": "4.1",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"4.1.4"
+],
+"abbott": [
+"4.2.1"
+]
+},
+{
+"id": "c4-def-1",
+"type": "flashcard",
+"kind": "definition",
+"front": "Continuity at a point",
+"back": "For every $ε&gt;0$ there is $δ&gt;0$ with $d_{Y}(f(x),f(p))&lt;ε$ whenever $x∈E$, $d_{X}(x,p)&lt;δ$. Note $p$ must be in $E$, and need not be a limit point.",
+"chapter": 4,
+"rudin": "4.5",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"5.1.1"
+],
+"abbott": [
+"4.3.1"
+]
+},
+{
+"id": "c4-def-2",
+"type": "flashcard",
+"kind": "definition",
+"front": "Bounded function",
+"back": "$|f(x)|≤M$ for all $x$.",
+"chapter": 4,
+"rudin": "4.13",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"5.3.1"
+]
+},
+{
+"id": "c4-def-3",
+"type": "flashcard",
+"kind": "definition",
+"front": "Uniform continuity",
+"back": "For every $ε&gt;0$ there is one $δ&gt;0$ that works for all $p,q$: $d_{X}(p,q)&lt;δ ⇒ d_{Y}(f(p),f(q))&lt;ε$.",
+"chapter": 4,
+"rudin": "4.18",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"5.4.1, 5.4.2 (negation)"
+],
+"abbott": [
+"4.4.4"
+]
+},
+{
+"id": "c4-def-4",
+"type": "flashcard",
+"kind": "definition",
+"front": "One-sided limits",
+"back": "$f(x+)=q$ if $f(t_{n})→q$ for every sequence $t_{n}↓x$ with $t_{n}&gt;x$; similarly $f(x−)$.",
+"chapter": 4,
+"rudin": "4.25",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"4.3.1"
+],
+"abbott": [
+"4.6.2"
+]
+},
+{
+"id": "c4-def-5",
+"type": "flashcard",
+"kind": "definition",
+"front": "Discontinuities of the first and second kind",
+"back": "First kind (simple): $f(x+)$ and $f(x−)$ both exist but $f$ is not continuous at $x$. Second kind: otherwise.",
+"chapter": 4,
+"rudin": "4.26",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-def-6",
+"type": "flashcard",
+"kind": "definition",
+"front": "Monotone function",
+"back": "Increasing if $x&lt;y ⇒ f(x)≤f(y)$.",
+"chapter": 4,
+"rudin": "4.28",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§5.6"
+],
+"abbott": [
+"4.6.1"
+]
+},
+{
+"id": "c4-def-7",
+"type": "flashcard",
+"kind": "definition",
+"front": "Limits at infinity; infinite limits",
+"back": "Stated with neighborhoods $(c,+∞)$ of $+∞$ so the definition of 4.1 carries over.",
+"chapter": 4,
+"rudin": "4.32–4.33",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"4.3.5, 4.3.10, 4.3.13"
+]
+},
+{
+"id": "c4-thm-0",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Sequential criterion for limits",
+"back": "$\\lim_{x→p}f(x)=q$ iff $f(p_{n})→q$ for every sequence $p_{n}$ in $E$ with $p_{n}≠p$, $p_{n}→p$.",
+"chapter": 4,
+"rudin": "4.2",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"4.1.8"
+],
+"abbott": [
+"4.2.3"
+],
+"note": "Best tool for showing a limit does not exist: find two sequences with different limits."
+},
+{
+"id": "c4-thm-1",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Algebra of limits",
+"back": "Sums, products and quotients of limits behave as expected.",
+"chapter": 4,
+"rudin": "4.4",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"4.2.4"
+],
+"abbott": [
+"4.2.4"
+]
+},
+{
+"id": "c4-thm-2",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Continuity at limit points",
+"back": "If $p∈E$ is a limit point of $E$, $f$ is continuous at $p$ iff $\\lim_{x→p}f(x)=f(p)$. At isolated points every $f$ is continuous.",
+"chapter": 4,
+"rudin": "4.6",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"5.1.2, 5.1.3"
+],
+"abbott": [
+"4.3.2"
+]
+},
+{
+"id": "c4-thm-3",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Composition",
+"back": "If $f$ is continuous at $p$ and $g$ at $f(p)$, then $g∘f$ is continuous at $p$.",
+"chapter": 4,
+"rudin": "4.7",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"5.2.6"
+],
+"abbott": [
+"4.3.9"
+]
+},
+{
+"id": "c4-thm-4",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Topological characterization",
+"back": "$f:X→Y$ is continuous iff $f^{−1}(V)$ is open for every open $V⊂Y$ (equivalently, preimages of closed sets are closed).",
+"chapter": 4,
+"rudin": "4.8",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"11.3.2, 11.4.11"
+],
+"abbott": [
+"§4.3 (exercises)"
+],
+"note": "Makes “$\\{x: f(x)&gt;0\\}$ is open” a one-liner."
+},
+{
+"id": "c4-thm-5",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Continuous images of compact sets",
+"back": "If $X$ is compact and $f$ continuous, $f(X)$ is compact.",
+"chapter": 4,
+"rudin": "4.14",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"11.3.4, 11.4.12"
+],
+"abbott": [
+"4.4.1"
+]
+},
+{
+"id": "c4-thm-6",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Extreme value theorem",
+"back": "A continuous real function on a compact space attains its max and min.",
+"chapter": 4,
+"rudin": "4.16",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"5.3.4"
+],
+"abbott": [
+"4.4.2"
+]
+},
+{
+"id": "c4-thm-7",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Continuous inverse",
+"back": "A continuous bijection from a compact space has a continuous inverse.",
+"chapter": 4,
+"rudin": "4.17",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"11.3.6, 5.6.5"
+],
+"note": "Fails without compactness (4.21)."
+},
+{
+"id": "c4-thm-8",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Compact ⇒ uniformly continuous",
+"back": "A continuous map on a compact metric space is uniformly continuous.",
+"chapter": 4,
+"rudin": "4.19",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"5.4.3"
+],
+"abbott": [
+"4.4.7"
+]
+},
+{
+"id": "c4-thm-9",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Noncompact sets",
+"back": "If $E⊂ℝ$ is not compact, there is a continuous function on $E$ that is unbounded, and one that is bounded but has no maximum. If $E$ is also bounded, there is a continuous function on $E$ that is not uniformly continuous.",
+"chapter": 4,
+"rudin": "4.20",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-thm-10",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Continuous images of connected sets",
+"back": "If $E$ is connected and $f$ continuous, $f(E)$ is connected.",
+"chapter": 4,
+"rudin": "4.22",
+"lecture": null,
+"status": "not-yet",
+"abbott": [
+"4.5.2"
+]
+},
+{
+"id": "c4-thm-11",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Intermediate value theorem",
+"back": "If $f$ is continuous on $[a,b]$ and $c$ is between $f(a)$ and $f(b)$, then $f(x)=c$ for some $x∈(a,b)$.",
+"chapter": 4,
+"rudin": "4.23",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"5.3.7, 5.3.10"
+],
+"abbott": [
+"4.5.1"
+]
+},
+{
+"id": "c4-thm-12",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Monotone functions have one-sided limits",
+"back": "If $f$ increases on $(a,b)$, then $f(x−)=\\sup_{t&lt;x}f(t) ≤ f(x) ≤ \\inf_{t&gt;x}f(t)=f(x+)$.",
+"chapter": 4,
+"rudin": "4.29",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"5.6.1, 5.6.3"
+]
+},
+{
+"id": "c4-thm-13",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Discontinuities of monotone functions",
+"back": "A monotone function has at most countably many discontinuities, all of the first kind.",
+"chapter": 4,
+"rudin": "4.30",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"5.6.4"
+],
+"abbott": [
+"§4.6"
+],
+"note": "Rudin 4.31 shows the set can still be dense."
+},
+{
+"id": "c4-thm-14",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Extra tools from the other books",
+"back": "Lipschitz ⇒ uniformly continuous (B 5.4.5). Uniformly continuous maps send Cauchy sequences to Cauchy sequences (B 5.4.7). $f$ is uniformly continuous on $(a,b)$ iff it extends continuously to $[a,b]$ (B 5.4.8). The set of discontinuities of any $f:ℝ→ℝ$ is an $F_{σ}$ set (A 4.6.6).",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"5.4.5, 5.4.7, 5.4.8"
+],
+"abbott": [
+"4.4.5, 4.6.6"
+]
+},
+{
+"id": "c4-pf-0",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Extreme value theorem.",
+"modelProof": "$f(X)$ is compact (4.14), so closed and bounded in $ℝ$. Its sup $M$ exists and lies in the closure (2.28), which is $f(X)$ itself. So $M=f(p)$ for some $p$.",
+"chapter": 4,
+"rudin": "4.16",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-pf-1",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Compact ⇒ uniformly continuous (sequence version).",
+"modelProof": "If not, there are $ε&gt;0$ and $p_{n},q_{n}$ with $d(p_{n},q_{n})&lt;1/n$ but $d(f(p_{n}),f(q_{n}))≥ε$. By compactness $p_{n_{k}}→p$, so $q_{n_{k}}→p$ too. Continuity at $p$ forces $d(f(p_{n_{k}}),f(q_{n_{k}}))→0$, a contradiction. (Rudin uses an open-cover argument; A 4.4.7 uses this one.)",
+"chapter": 4,
+"rudin": "4.19",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-pf-2",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: IVT by a sup argument.",
+"modelProof": "Say $f(a)&lt;c&lt;f(b)$. Let $s=\\sup\\{x∈[a,b]: f(x)&lt;c\\}$. If $f(s)&lt;c$, continuity puts points just right of $s$ in the set; if $f(s)&gt;c$, a whole interval left of $s$ is outside the set. Both contradict the definition of $s$, so $f(s)=c$. (Rudin instead uses connectedness, 4.22.)",
+"chapter": 4,
+"rudin": "4.23",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-pf-3",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Preimage characterization.",
+"modelProof": "($⇒$) If $V$ is open and $f(p)∈V$, pick $ε$ with $N_{ε}(f(p))⊂V$ and the matching $δ$; then $N_{δ}(p)⊂f^{−1}(V)$. ($⇐$) Apply the hypothesis to $V=N_{ε}(f(p))$; $p$ is an interior point of $f^{−1}(V)$, which gives $δ$.",
+"chapter": 4,
+"rudin": "4.8",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-pf-4",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Monotone discontinuities are countable.",
+"modelProof": "At each discontinuity $x$ of increasing $f$, $f(x−)&lt;f(x+)$; choose a rational $r(x)$ strictly between them. Different $x$ give disjoint intervals, so $x↦r(x)$ is one-to-one into $ℚ$.",
+"chapter": 4,
+"rudin": "4.30",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-pr-0",
+"type": "proof",
+"kind": "practice",
+"prompt": "Prove with ε–δ that $f(x)=\\sqrt x$ is continuous at every $c&gt;0$.",
+"hint": "Rationalize: $\\sqrt x−\\sqrt c = (x−c)/(\\sqrt x+\\sqrt c)$.",
+"modelProof": "$|\\sqrt x−\\sqrt c| ≤ |x−c|/\\sqrt c$. Take $δ=ε\\sqrt c$.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-pr-1",
+"type": "proof",
+"kind": "practice",
+"prompt": "Prove $1/x$ is uniformly continuous on $[1,∞)$ but not on $(0,1)$.",
+"hint": "$|1/x−1/y|=|x−y|/(xy)$.",
+"modelProof": "On $[1,∞)$, $xy≥1$, so $δ=ε$ works (Lipschitz). On $(0,1)$, $x_{n}=1/n$ and $y_{n}=1/(n+1)$ get arbitrarily close while $|1/x_{n}−1/y_{n}|=1$.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-pr-2",
+"type": "proof",
+"kind": "practice",
+"prompt": "If $f:X→Y$ is continuous, prove $f(\\bar E)⊂\\overline{f(E)}$. Give an example where the inclusion is strict.",
+"hint": "Take $p∈\\bar E$ and a sequence in $E$ converging to it, or use 4.8.",
+"modelProof": "$f^{−1}(\\overline{f(E)})$ is closed and contains $E$, so it contains $\\bar E$. Strict: $f=\\arctan$, $E=ℝ$: $f(\\bar E)=(−π/2,π/2)$ but its closure adds $±π/2$.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-pr-3",
+"type": "proof",
+"kind": "practice",
+"prompt": "If $f$ is a continuous real function on a metric space $X$, prove $Z(f)=\\{p: f(p)=0\\}$ is closed.",
+"hint": "Preimage of a closed set.",
+"modelProof": "$Z(f)=f^{−1}(\\{0\\})$ and $\\{0\\}$ is closed; apply 4.8.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-pr-4",
+"type": "proof",
+"kind": "practice",
+"prompt": "Prove every real polynomial of odd degree has a real root.",
+"hint": "Look at the sign for large $|x|$.",
+"modelProof": "If the leading coefficient is positive, $p(x)→+∞$ as $x→+∞$ and $→−∞$ as $x→−∞$. Pick $a,b$ with $p(a)&lt;0&lt;p(b)$ and apply the IVT.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-pr-5",
+"type": "proof",
+"kind": "practice",
+"prompt": "Let $f(x)=x\\sin(1/x)$ for $x≠0$ and $f(0)=0$. Prove $f$ is uniformly continuous on $[−1,1]$.",
+"hint": "Show continuity everywhere, then use 4.19.",
+"modelProof": "Away from 0 it is a composition of continuous functions. At 0, $|f(x)|≤|x|$, so take $δ=ε$. $[−1,1]$ is compact, so 4.19 gives uniform continuity.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-tf-0",
+"type": "tf",
+"prompt": "If $f$ is continuous and bounded on $(0,1)$, then $f$ is uniformly continuous.",
+"answer": false,
+"explanation": "$\\sin(1/x)$.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-tf-1",
+"type": "tf",
+"prompt": "If $f$ is uniformly continuous on $(0,1)$, then $f$ is bounded.",
+"answer": true,
+"explanation": "It extends continuously to $[0,1]$ (B 5.4.8), which is compact.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-tf-2",
+"type": "tf",
+"prompt": "The continuous image of an open set is open.",
+"answer": false,
+"explanation": "$x^{2}$ maps $(−1,1)$ onto $[0,1)$.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-tf-3",
+"type": "tf",
+"prompt": "The preimage of a compact set under a continuous map is compact.",
+"answer": false,
+"explanation": "A constant map $ℝ→ℝ$: the preimage of $\\{0\\}$ is $ℝ$.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-tf-4",
+"type": "tf",
+"prompt": "If $f$ and $g$ are both discontinuous at $c$, so is $f+g$.",
+"answer": false,
+"explanation": "$f=1_{Q}$, $g=−1_{Q}$; the sum is 0.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-tf-5",
+"type": "tf",
+"prompt": "If $|f|$ is continuous, then $f$ is continuous.",
+"answer": false,
+"explanation": "$f=2·1_{Q}−1$ has $|f|≡1$.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-tf-6",
+"type": "tf",
+"prompt": "A continuous one-to-one $f:[a,b]→ℝ$ is strictly monotone.",
+"answer": true,
+"explanation": "If not, three points $x&lt;y&lt;z$ have $f(y)$ above (or below) both $f(x)$ and $f(z)$; IVT then gives a repeated value.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-tf-7",
+"type": "tf",
+"prompt": "Every continuous $f:[0,1]→[0,1]$ has a fixed point.",
+"answer": true,
+"explanation": "Apply IVT to $g(x)=f(x)−x$, which has $g(0)≥0≥g(1)$.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-tf-8",
+"type": "tf",
+"prompt": "If $f:ℝ→ℝ$ is continuous and $f(q)=0$ for every rational $q$, then $f≡0$.",
+"answer": true,
+"explanation": "Each real is a limit of rationals; use the sequential criterion (or: the zero set is closed and dense).",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-fl-0",
+"type": "flaw",
+"claim": "$f(x)=x^{2}$ is uniformly continuous on $ℝ$.",
+"lines": [
+"Let $ε&gt;0$ and fix $x$.",
+"Set $δ=\\min(1,ε/(2|x|+1))$.",
+"If $|x−y|&lt;δ$ then $|x^{2}−y^{2}|=|x−y||x+y|&lt;δ(2|x|+1)≤ε$.",
+"Since $ε$ was arbitrary, $x^{2}$ is uniformly continuous on $ℝ$."
+],
+"bad": [
+3
+],
+"explanation": "$δ$ depends on $x$. That proves continuity at each point, not uniform continuity. The claim is false: $x_{n}=n$, $y_{n}=n+1/n$ are close but $|x_{n}^{2}−y_{n}^{2}|&gt;2$.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-fl-1",
+"type": "flaw",
+"claim": "Every continuous $f$ on $(0,1]$ attains a maximum.",
+"lines": [
+"Let $f$ be continuous on $(0,1]$.",
+"$(0,1]$ is bounded.",
+"By the extreme value theorem, a continuous function on a bounded set attains its maximum.",
+"So $f$ attains a maximum on $(0,1]$."
+],
+"bad": [
+2
+],
+"explanation": "EVT needs a compact domain, and $(0,1]$ is not closed. $f(x)=−x$ has sup 0, never attained.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-fl-2",
+"type": "flaw",
+"claim": "If $f(1/n)→f(0)$, then $f$ is continuous at 0.",
+"lines": [
+"The sequential criterion: $f$ is continuous at 0 if $f(x_{n})→f(0)$ whenever $x_{n}→0$.",
+"The sequence $x_{n}=1/n$ tends to 0.",
+"By hypothesis $f(1/n)→f(0)$.",
+"So $f$ is continuous at 0."
+],
+"bad": [
+3
+],
+"explanation": "The criterion requires every sequence tending to 0, not one. $f=1_{Q}$ has $f(1/n)=1=f(0)$ but is discontinuous at 0.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-cx-0",
+"type": "counterexample",
+"name": "Dirichlet function $1_{Q}$",
+"details": "Discontinuous everywhere, every discontinuity of the second kind (A §4.1).",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-cx-1",
+"type": "counterexample",
+"name": "$x·1_{Q}(x)$",
+"details": "Continuous only at 0.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-cx-2",
+"type": "counterexample",
+"name": "Thomae's function",
+"details": "$f(p/q)=1/q$ in lowest terms, $f=0$ on irrationals. Continuous exactly at the irrationals.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-cx-3",
+"type": "counterexample",
+"name": "$1/x$ on $(0,1)$",
+"details": "Continuous, unbounded, not uniformly continuous. $x^{2}$ on $ℝ$: continuous, not uniformly continuous.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-cx-4",
+"type": "counterexample",
+"name": "$\\sin(1/x)$ with $f(0)=0$",
+"details": "Has the intermediate value property but is not continuous at 0; discontinuity of the second kind.",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-cx-5",
+"type": "counterexample",
+"name": "$t↦(\\cos t,\\sin t)$ on $[0,2π)$",
+"details": "Continuous bijection onto the circle whose inverse is not continuous at $(1,0)$ (Rudin 4.21).",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c4-cx-6",
+"type": "counterexample",
+"name": "$f(x)=Σ_{x_{n}&lt;x}2^{−n}$ for an enumeration $(x_{n})$ of $ℚ$",
+"details": "Increasing, with a jump at every rational (Rudin 4.31).",
+"chapter": 4,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+}
+]
+}

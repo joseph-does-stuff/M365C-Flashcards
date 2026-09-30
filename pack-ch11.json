@@ -1,0 +1,569 @@
+{
+"id": "rudin-ch11",
+"title": "Rudin Ch 11: The Lebesgue Theory",
+"course": "M365C",
+"created": "2026-09-29",
+"version": 1,
+"items": [
+{
+"id": "c11-def-0",
+"type": "flashcard",
+"kind": "definition",
+"front": "Ring; $σ$-ring",
+"back": "A family of sets closed under differences and finite (resp. countable) unions.",
+"chapter": 11,
+"rudin": "11.1",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-def-1",
+"type": "flashcard",
+"kind": "definition",
+"front": "Additive; countably additive",
+"back": "$φ(A∪B)=φ(A)+φ(B)$ for disjoint $A,B$; countable version for disjoint sequences.",
+"chapter": 11,
+"rudin": "11.2",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-def-2",
+"type": "flashcard",
+"kind": "definition",
+"front": "Elementary sets; $m$",
+"back": "Finite unions of intervals (boxes); $m$ is total length (volume).",
+"chapter": 11,
+"rudin": "11.4–11.5",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-def-3",
+"type": "flashcard",
+"kind": "definition",
+"front": "Outer measure",
+"back": "$μ^{*}(E)=\\inf Σμ(A_{n})$ over countable covers of $E$ by open elementary sets.",
+"chapter": 11,
+"rudin": "11.8",
+"lecture": null,
+"status": "not-yet",
+"abbott": [
+"7.6.1 (measure zero)"
+]
+},
+{
+"id": "c11-def-4",
+"type": "flashcard",
+"kind": "definition",
+"front": "Measurable sets $\\mathfrak M(μ)$",
+"back": "Sets approximable by elementary sets in the metric $d(A,B)=μ^{*}(AΔB)$, then countable unions of those.",
+"chapter": 11,
+"rudin": "11.9–11.10",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"10.4.7"
+]
+},
+{
+"id": "c11-def-5",
+"type": "flashcard",
+"kind": "definition",
+"front": "Measure space; measurable function",
+"back": "$f$ is measurable if $\\{x: f(x)&gt;a\\}$ is measurable for every real $a$.",
+"chapter": 11,
+"rudin": "11.12–11.13",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"10.4.7"
+]
+},
+{
+"id": "c11-def-6",
+"type": "flashcard",
+"kind": "definition",
+"front": "Simple function",
+"back": "A measurable function with finitely many values, $s=Σc_{i}K_{E_{i}}$.",
+"chapter": 11,
+"rudin": "11.19",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-def-7",
+"type": "flashcard",
+"kind": "definition",
+"front": "Lebesgue integral",
+"back": "$∫s\\,dμ=Σc_{i}μ(E_{i})$; for $f≥0$, the sup over simple $0≤s≤f$; for general $f$, $∫f^{+}−∫f^{−}$. $\\mathscr L(μ)$: both finite.",
+"chapter": 11,
+"rudin": "11.21–11.22",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"10.2.3"
+],
+"abbott": [
+"§8.1"
+]
+},
+{
+"id": "c11-def-8",
+"type": "flashcard",
+"kind": "definition",
+"front": "Almost everywhere",
+"back": "Except on a set of measure zero. Changing $f$ on a null set doesn't change $∫f$.",
+"chapter": 11,
+"rudin": "11.23–11.25",
+"lecture": null,
+"status": "not-yet",
+"abbott": [
+"7.6.1"
+]
+},
+{
+"id": "c11-def-9",
+"type": "flashcard",
+"kind": "definition",
+"front": "$\\mathscr L^{2}(μ)$; complete orthonormal set",
+"back": "$∫|f|^{2}&lt;∞$ with norm $\\|f\\|=(∫|f|^{2})^{1/2}$.",
+"chapter": 11,
+"rudin": "11.34, 11.44",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-thm-0",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Continuity from below",
+"back": "If $φ$ is countably additive and $A_{1}⊂A_{2}⊂⋯$, then $φ(\\bigcup A_{n})=\\lim φ(A_{n})$.",
+"chapter": 11,
+"rudin": "11.3",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-thm-1",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Outer measure",
+"back": "$μ^{*}$ agrees with $μ$ on elementary sets and is countably subadditive.",
+"chapter": 11,
+"rudin": "11.8",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-thm-2",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Measurable sets form a $σ$-ring",
+"back": "$\\mathfrak M(μ)$ is a $σ$-ring and $μ^{*}$ is countably additive on it.",
+"chapter": 11,
+"rudin": "11.10",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-thm-3",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Measurability is robust",
+"back": "Equivalent forms using $≥,&lt;,≤$; $|f|$, $\\sup f_{n}$, $\\limsup f_{n}$, $f+g$, $fg$ are measurable.",
+"chapter": 11,
+"rudin": "11.15–11.18",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"10.4.9"
+]
+},
+{
+"id": "c11-thm-4",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Simple approximation",
+"back": "Every measurable $f$ is a pointwise limit of simple functions (increasing if $f≥0$).",
+"chapter": 11,
+"rudin": "11.20",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"10.4.10"
+]
+},
+{
+"id": "c11-thm-5",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Monotone convergence theorem",
+"back": "If $0≤f_{1}≤f_{2}≤⋯$ are measurable and $f_{n}→f$, then $∫f_{n}→∫f$.",
+"chapter": 11,
+"rudin": "11.28",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"10.4.4"
+]
+},
+{
+"id": "c11-thm-6",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Series of nonnegative functions",
+"back": "$∫Σf_{n}=Σ∫f_{n}$ for measurable $f_{n}≥0$.",
+"chapter": 11,
+"rudin": "11.30",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-thm-7",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Fatou's lemma",
+"back": "For $f_{n}≥0$ measurable: $∫\\liminf f_{n}≤\\liminf∫f_{n}$.",
+"chapter": 11,
+"rudin": "11.31",
+"lecture": null,
+"status": "not-yet",
+"note": "Inequality can be strict."
+},
+{
+"id": "c11-thm-8",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Dominated convergence theorem",
+"back": "If $f_{n}→f$ pointwise a.e. and $|f_{n}|≤g$ with $g∈\\mathscr L$, then $∫f_{n}→∫f$.",
+"chapter": 11,
+"rudin": "11.32",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"10.4.5"
+]
+},
+{
+"id": "c11-thm-9",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Riemann vs Lebesgue",
+"back": "If $f∈\\mathscr R$ on $[a,b]$, then $f∈\\mathscr L$ with the same integral. A bounded $f$ is Riemann integrable iff it is continuous almost everywhere.",
+"chapter": 11,
+"rudin": "11.33",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"10.1.3 (consistency)"
+],
+"abbott": [
+"7.6.5"
+]
+},
+{
+"id": "c11-thm-10",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Schwarz; Minkowski",
+"back": "$|∫f\\bar g|≤\\|f\\|\\|g\\|$ and $\\|f+g\\|≤\\|f\\|+\\|g\\|$ in $\\mathscr L^{2}$.",
+"chapter": 11,
+"rudin": "11.35, 11.36",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-thm-11",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Continuous functions are dense in $\\mathscr L^{2}$",
+"back": "On $[a,b]$.",
+"chapter": 11,
+"rudin": "11.38",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-thm-12",
+"type": "flashcard",
+"kind": "theorem",
+"front": "$\\mathscr L^{2}$ is complete; Riesz–Fischer",
+"back": "Cauchy sequences in $\\mathscr L^{2}$ converge (and a subsequence converges a.e.). Any square-summable coefficients are the Fourier coefficients of some $f∈\\mathscr L^{2}$.",
+"chapter": 11,
+"rudin": "11.42, 11.43",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"10.2.12 (for $\\mathscr L^{1}$)"
+]
+},
+{
+"id": "c11-thm-13",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Parseval",
+"back": "For a complete orthonormal set, $∫|f|^{2}=Σ|c_{n}|^{2}$.",
+"chapter": 11,
+"rudin": "11.45",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-pf-0",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: A countable set has measure zero.",
+"modelProof": "Enumerate it as $x_{1},x_{2},…$ and cover $x_{n}$ by an interval of length $ε/2^{n}$. Total length $≤ε$.",
+"chapter": 11,
+"rudin": "11.8",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-pf-1",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Monotone convergence.",
+"modelProof": "$∫f_{n}$ increases to some $α≤∫f$. For the reverse, take simple $0≤s≤f$ and $0&lt;c&lt;1$, and let $E_{n}=\\{f_{n}≥cs\\}$. The $E_{n}$ increase to the whole space, so $∫f_{n}≥c∫_{E_{n}}s→c∫s$ (by 11.24 and 11.3). Let $c→1$ and take the sup over $s$.",
+"chapter": 11,
+"rudin": "11.28",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-pf-2",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Dominated convergence from Fatou.",
+"modelProof": "Apply Fatou to $g+f_{n}≥0$ and to $g−f_{n}≥0$. The first gives $∫f≤\\liminf∫f_{n}$, the second $\\limsup∫f_{n}≤∫f$.",
+"chapter": 11,
+"rudin": "11.32",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-pr-0",
+"type": "proof",
+"kind": "practice",
+"prompt": "Show $ℚ∩[0,1]$ has measure zero.",
+"hint": "List it; cover the $n$th point by an interval of length $ε/2^{n}$.",
+"modelProof": "Total length $≤Σε/2^{n}=ε$ for every $ε$.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-pr-1",
+"type": "proof",
+"kind": "practice",
+"prompt": "Let $f=1$ on $ℚ$ and $f(x)=x^{2}$ on irrationals, on $[0,1]$. Compute $∫f\\,dm$. Is $f$ Riemann integrable?",
+"hint": "$f=x^{2}$ a.e.",
+"modelProof": "$∫f=∫x^{2}=1/3$. Not Riemann integrable: $f$ is discontinuous at every point of $(0,1]$, a set of positive measure.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-pr-2",
+"type": "proof",
+"kind": "practice",
+"prompt": "Evaluate $∫_{0}^{1}\\dfrac{−\\log(1−x)}{x}dx$.",
+"hint": "Expand $−\\log(1−x)/x=Σx^{n−1}/n$ (nonnegative terms) and use 11.30.",
+"modelProof": "$Σ∫_{0}^{1}x^{n−1}/n\\,dx=Σ1/n^{2}=π^{2}/6$.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-pr-3",
+"type": "proof",
+"kind": "practice",
+"prompt": "Compute $\\lim_{n→∞}∫_{0}^{1}(1+x/n)^{n}dx$ and justify.",
+"hint": "DCT with $g(x)=e^{x}$.",
+"modelProof": "$(1+x/n)^{n}≤e^{x}$ and $→e^{x}$. The limit is $∫_{0}^{1}e^{x}=e−1$.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-pr-4",
+"type": "proof",
+"kind": "practice",
+"prompt": "Prove the Cantor set has measure zero.",
+"hint": "After $n$ steps it is covered by $2^{n}$ intervals of length $3^{−n}$.",
+"modelProof": "Total length $(2/3)^{n}→0$.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-tf-0",
+"type": "tf",
+"prompt": "Every countable set has measure zero.",
+"answer": true,
+"explanation": "Cover the $n$th point by an interval of length $ε/2^{n}$.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-tf-1",
+"type": "tf",
+"prompt": "Every set of measure zero is countable.",
+"answer": false,
+"explanation": "The Cantor set.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-tf-2",
+"type": "tf",
+"prompt": "If $f_{n}≥0$ and $f_{n}→f$ pointwise, then $∫f≤\\liminf∫f_{n}$.",
+"answer": true,
+"explanation": "Fatou (11.31).",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-tf-3",
+"type": "tf",
+"prompt": "If $|f_{n}|≤1$ on $[0,1]$ and $f_{n}→f$ pointwise, then $∫f_{n}→∫f$.",
+"answer": true,
+"explanation": "DCT with $g=1$, integrable on a finite interval.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-tf-4",
+"type": "tf",
+"prompt": "If $|f_{n}|≤1$ on $ℝ$ and $f_{n}→f$ pointwise, then $∫f_{n}→∫f$.",
+"answer": false,
+"explanation": "$1_{[n,n+1]}$.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-tf-5",
+"type": "tf",
+"prompt": "If $f$ is Riemann integrable on $[a,b]$, it is Lebesgue integrable with the same integral.",
+"answer": true,
+"explanation": "11.33.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-tf-6",
+"type": "tf",
+"prompt": "Convergence in $\\mathscr L^{2}$ implies convergence almost everywhere.",
+"answer": false,
+"explanation": "Typewriter sequence. A subsequence does converge a.e.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-fl-0",
+"type": "flaw",
+"claim": "$\\lim∫_{0}^{1}n·1_{(0,1/n)}=0$.",
+"lines": [
+"$n·1_{(0,1/n)}(x)→0$ for every $x$.",
+"The dominated convergence theorem applies.",
+"So the integrals tend to $∫0=0$."
+],
+"bad": [
+1
+],
+"explanation": "There is no integrable $g$ dominating the sequence: $\\sup_{n}n·1_{(0,1/n)}(x)≈1/x$, which isn't integrable. The integrals are all 1.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-fl-1",
+"type": "flaw",
+"claim": "Every set of measure zero is countable.",
+"lines": [
+"A set of measure zero can be covered by intervals of total length $ε$ for every $ε$.",
+"So it contains no interval of positive length.",
+"A set containing no interval is countable."
+],
+"bad": [
+2
+],
+"explanation": "“Contains no interval” does not imply countable. The Cantor set contains no interval and is uncountable.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-cx-0",
+"type": "counterexample",
+"name": "$1_{Q}$ on $[0,1]$",
+"details": "Lebesgue integral 0 (equals 0 a.e.), not Riemann integrable.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-cx-1",
+"type": "counterexample",
+"name": "$n·1_{(0,1/n)}$",
+"details": "Pointwise to 0 but every integral is 1. No integrable dominating function; Fatou is strict.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-cx-2",
+"type": "counterexample",
+"name": "$1_{[n,n+1]}$ on $ℝ$",
+"details": "Pointwise to 0, integrals all 1. Bounded by 1, but 1 is not integrable on $ℝ$.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-cx-3",
+"type": "counterexample",
+"name": "Typewriter sequence",
+"details": "Indicators of $[j/2^{k},(j+1)/2^{k}]$ run through in order: $\\|f_{n}\\|_{2}→0$, yet $f_{n}(x)$ converges for no $x$.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c11-cx-4",
+"type": "counterexample",
+"name": "The Cantor set",
+"details": "Uncountable with measure zero.",
+"chapter": 11,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+}
+]
+}

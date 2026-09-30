@@ -1,0 +1,579 @@
+{
+"id": "rudin-ch5",
+"title": "Rudin Ch 5: Differentiation",
+"course": "M365C",
+"created": "2026-09-29",
+"version": 1,
+"items": [
+{
+"id": "c5-def-0",
+"type": "flashcard",
+"kind": "definition",
+"front": "Derivative",
+"back": "$f'(x)=\\lim_{t→x}\\dfrac{f(t)−f(x)}{t−x}$ for $x∈[a,b]$ (one-sided at the endpoints).",
+"chapter": 5,
+"rudin": "5.1",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"6.1.1"
+],
+"abbott": [
+"5.2.1"
+]
+},
+{
+"id": "c5-def-1",
+"type": "flashcard",
+"kind": "definition",
+"front": "Local maximum",
+"back": "$f$ has a local max at $p$ if $f(q)≤f(p)$ for all $q$ in some neighborhood of $p$.",
+"chapter": 5,
+"rudin": "5.7",
+"lecture": null,
+"status": "not-yet",
+"abbott": [
+"5.2.6"
+]
+},
+{
+"id": "c5-def-2",
+"type": "flashcard",
+"kind": "definition",
+"front": "Higher derivatives",
+"back": "$f^{(n)}=(f^{(n−1)})'$. Existence of $f^{(n)}(x)$ requires $f^{(n−1)}$ to exist near $x$.",
+"chapter": 5,
+"rudin": "5.14",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§6.4*"
+],
+"abbott": [
+"§6.6"
+]
+},
+{
+"id": "c5-def-3",
+"type": "flashcard",
+"kind": "definition",
+"front": "Vector-valued derivative",
+"back": "For $f:[a,b]→ℝ^{k}$, $f'(x)$ is the vector $y$ with $|(f(t)−f(x))/(t−x)−y|→0$; equivalently, differentiate each component.",
+"chapter": 5,
+"rudin": "5.16",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-thm-0",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Differentiable ⇒ continuous",
+"back": "If $f'(x)$ exists then $f$ is continuous at $x$.",
+"chapter": 5,
+"rudin": "5.2",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"6.1.2"
+],
+"abbott": [
+"5.2.3"
+]
+},
+{
+"id": "c5-thm-1",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Algebra of derivatives",
+"back": "Sum, product and quotient rules.",
+"chapter": 5,
+"rudin": "5.3",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"6.1.3, 6.1.4"
+],
+"abbott": [
+"5.2.4"
+]
+},
+{
+"id": "c5-thm-2",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Chain rule",
+"back": "If $f'(x)$ and $g'(f(x))$ exist, then $(g∘f)'(x)=g'(f(x))f'(x)$.",
+"chapter": 5,
+"rudin": "5.5",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"6.1.6 (via Carathéodory 6.1.5)"
+],
+"abbott": [
+"5.2.5"
+]
+},
+{
+"id": "c5-thm-3",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Interior extremum",
+"back": "If $f$ has a local max or min at $x∈(a,b)$ and $f'(x)$ exists, then $f'(x)=0$.",
+"chapter": 5,
+"rudin": "5.8",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"6.2.1"
+],
+"abbott": [
+"5.2.6"
+]
+},
+{
+"id": "c5-thm-4",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Generalized (Cauchy) mean value theorem",
+"back": "If $f,g$ are continuous on $[a,b]$ and differentiable on $(a,b)$, some $x∈(a,b)$ has $[f(b)−f(a)]g'(x)=[g(b)−g(a)]f'(x)$.",
+"chapter": 5,
+"rudin": "5.9",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"6.3.2"
+],
+"abbott": [
+"5.3.5"
+]
+},
+{
+"id": "c5-thm-5",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Mean value theorem",
+"back": "Some $x∈(a,b)$ has $f(b)−f(a)=(b−a)f'(x)$. (Rolle is the case $f(a)=f(b)$.)",
+"chapter": 5,
+"rudin": "5.10",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"6.2.3, 6.2.4"
+],
+"abbott": [
+"5.3.1, 5.3.2"
+]
+},
+{
+"id": "c5-thm-6",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Monotonicity from $f'$",
+"back": "$f'≥0$ ⇒ increasing; $f'=0$ ⇒ constant; $f'≤0$ ⇒ decreasing.",
+"chapter": 5,
+"rudin": "5.11",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"6.2.5, 6.2.7"
+],
+"abbott": [
+"5.3.3, 5.3.4"
+]
+},
+{
+"id": "c5-thm-7",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Darboux's theorem",
+"back": "If $f$ is differentiable on $[a,b]$ and $λ$ lies between $f'(a)$ and $f'(b)$, then $f'(x)=λ$ for some $x∈(a,b)$. Corollary: a derivative has no simple (jump) discontinuities.",
+"chapter": 5,
+"rudin": "5.12",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"6.2.12"
+],
+"abbott": [
+"5.2.7"
+],
+"note": "Derivatives need not be continuous, but they satisfy the IVT."
+},
+{
+"id": "c5-thm-8",
+"type": "flashcard",
+"kind": "theorem",
+"front": "L'Hospital's rule",
+"back": "If $f,g$ are differentiable on $(a,b)$, $g'≠0$, $f'/g'→A$ as $x→a$, and either $f,g→0$ or $g→±∞$, then $f/g→A$.",
+"chapter": 5,
+"rudin": "5.13",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"6.3.1, 6.3.3 (and Rule II)"
+],
+"abbott": [
+"5.3.6, 5.3.8"
+]
+},
+{
+"id": "c5-thm-9",
+"type": "flashcard",
+"kind": "theorem",
+"front": "Taylor's theorem",
+"back": "If $f^{(n−1)}$ is continuous on $[a,b]$ and $f^{(n)}$ exists on $(a,b)$, then for $α≠β$ in $[a,b]$, $f(β)=P(β)+\\dfrac{f^{(n)}(x)}{n!}(β−α)^{n}$ for some $x$ between them, where $P$ is the degree $n−1$ Taylor polynomial at $α$.",
+"chapter": 5,
+"rudin": "5.15",
+"lecture": null,
+"status": "not-yet",
+"bartle": [
+"§6.4*"
+],
+"abbott": [
+"6.6.2, 6.6.3 (Lagrange remainder), 8.3.1 (integral remainder)"
+]
+},
+{
+"id": "c5-thm-10",
+"type": "flashcard",
+"kind": "theorem",
+"front": "MVT fails for complex/vector functions; inequality survives",
+"back": "For $f:[a,b]→ℝ^{k}$ continuous and differentiable on $(a,b)$: $|f(b)−f(a)| ≤ (b−a)|f'(x)|$ for some $x$.",
+"chapter": 5,
+"rudin": "5.17, 5.19",
+"lecture": null,
+"status": "not-yet",
+"note": "The equality version fails: $e^{ix}$ on $[0,2π]$."
+},
+{
+"id": "c5-pf-0",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Differentiable ⇒ continuous.",
+"modelProof": "$f(t)−f(x)=\\dfrac{f(t)−f(x)}{t−x}·(t−x)→f'(x)·0=0$.",
+"chapter": 5,
+"rudin": "5.2",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-pf-1",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Interior extremum.",
+"modelProof": "At a local max $x$, the difference quotient is $≥0$ for $t&lt;x$ and $≤0$ for $t&gt;x$ (near $x$). The limit is both $≥0$ and $≤0$.",
+"chapter": 5,
+"rudin": "5.8",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-pf-2",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Cauchy MVT ⇒ MVT.",
+"modelProof": "Let $h(t)=[f(b)−f(a)]g(t)−[g(b)−g(a)]f(t)$. Then $h(a)=h(b)$. $h$ attains a max or min in the interior (or is constant), where $h'=0$ by 5.8. Take $g(t)=t$ for the ordinary MVT.",
+"chapter": 5,
+"rudin": "5.9, 5.10",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-pf-3",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Darboux.",
+"modelProof": "Say $f'(a)&lt;λ&lt;f'(b)$. Let $g(t)=f(t)−λt$, so $g'(a)&lt;0&lt;g'(b)$. $g$ attains a minimum on $[a,b]$; the signs of $g'$ at the ends mean the minimum is not at $a$ or $b$. So it is interior and $g'(x)=0$.",
+"chapter": 5,
+"rudin": "5.12",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-pf-4",
+"type": "proof",
+"kind": "proof-to-know",
+"prompt": "Prove: Taylor via Rolle.",
+"modelProof": "Choose $M$ so that $f(β)=P(β)+M(β−α)^{n}$. Let $g(t)=f(t)−P(t)−M(t−α)^{n}$. Then $g(α)=g'(α)=⋯=g^{(n−1)}(α)=0$ and $g(β)=0$. Applying Rolle $n$ times gives $x$ with $g^{(n)}(x)=0$, i.e. $f^{(n)}(x)=n!M$.",
+"chapter": 5,
+"rudin": "5.15",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-pr-0",
+"type": "proof",
+"kind": "practice",
+"prompt": "Prove $|\\sin x−\\sin y|≤|x−y|$ for all real $x,y$.",
+"hint": "MVT.",
+"modelProof": "$\\sin x−\\sin y=\\cos(c)(x−y)$ and $|\\cos c|≤1$.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-pr-1",
+"type": "proof",
+"kind": "practice",
+"prompt": "If $f'(t)≠1$ for every real $t$, prove $f$ has at most one fixed point.",
+"hint": "Suppose two, apply MVT between them.",
+"modelProof": "If $f(a)=a$ and $f(b)=b$ with $a&lt;b$, MVT gives $c$ with $f'(c)=\\dfrac{b−a}{b−a}=1$.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-pr-2",
+"type": "proof",
+"kind": "practice",
+"prompt": "Prove $e^{x}≥1+x$ for every real $x$.",
+"hint": "Consider $g(x)=e^{x}−1−x$.",
+"modelProof": "$g'(x)=e^{x}−1$ is negative for $x&lt;0$ and positive for $x&gt;0$, so $g$ has its minimum $g(0)=0$.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-pr-3",
+"type": "proof",
+"kind": "practice",
+"prompt": "If $f'&gt;0$ on $(a,b)$, show $f$ is strictly increasing and its inverse $g$ satisfies $g'(f(x))=1/f'(x)$.",
+"hint": "MVT; then the difference quotient of $g$ is the reciprocal of that of $f$.",
+"modelProof": "MVT gives $f(y)−f(x)=f'(c)(y−x)&gt;0$. For the inverse, $\\dfrac{g(s)−g(y)}{s−y}=\\dfrac{t−x}{f(t)−f(x)}$ with $s=f(t)$, $y=f(x)$; $g$ is continuous (B 5.6.5), so $t→x$ as $s→y$.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-pr-4",
+"type": "proof",
+"kind": "practice",
+"prompt": "Compute $\\lim_{x→0}\\dfrac{1−\\cos x}{x^{2}}$ and check that L'Hospital applies.",
+"hint": "Apply twice.",
+"modelProof": "Both $→0$ and $g'(x)=2x≠0$ near 0. $f'/g'=\\sin x/(2x)→1/2$. Answer $1/2$.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-pr-5",
+"type": "proof",
+"kind": "practice",
+"prompt": "Bound the error in $\\cos(0.1)≈1−0.1^{2}/2$.",
+"hint": "Taylor with $n=4$: the cubic term vanishes.",
+"modelProof": "The degree-3 Taylor polynomial is $1−x^{2}/2$. Remainder $=\\cos(c)x^{4}/24$, so the error is at most $0.1^{4}/24≈4.2×10^{−6}$.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-tf-0",
+"type": "tf",
+"prompt": "If $f'(c)&gt;0$, then $f$ is increasing on some interval around $c$.",
+"answer": false,
+"explanation": "$f(x)=x+2x^{2}\\sin(1/x)$ at $c=0$. It is true if $f'$ is continuous at $c$.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-tf-1",
+"type": "tf",
+"prompt": "If $f'(x)=0$ for all $x∈(a,b)$, then $f$ is constant on $(a,b)$.",
+"answer": true,
+"explanation": "MVT on any $[x,y]⊂(a,b)$.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-tf-2",
+"type": "tf",
+"prompt": "If $f$ is differentiable on $ℝ$ and $f'$ is bounded, then $f$ is uniformly continuous.",
+"answer": true,
+"explanation": "MVT gives $|f(x)−f(y)|≤M|x−y|$.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-tf-3",
+"type": "tf",
+"prompt": "A derivative can have a jump discontinuity.",
+"answer": false,
+"explanation": "Darboux's theorem (5.12 corollary).",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-tf-4",
+"type": "tf",
+"prompt": "If $f$ is differentiable at $c$, then $f'$ is continuous at $c$.",
+"answer": false,
+"explanation": "$x^{2}\\sin(1/x)$ at 0.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-tf-5",
+"type": "tf",
+"prompt": "If $f$ is differentiable on $(0,∞)$ and $f(x)→L$ as $x→∞$, then $f'(x)→0$.",
+"answer": false,
+"explanation": "$f(x)=\\sin(x^{2})/x$: $f→0$ but $f'(x)=2\\cos(x^{2})−\\sin(x^{2})/x^{2}$ does not tend to 0.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-tf-6",
+"type": "tf",
+"prompt": "If $f/g→L$ (as $x→∞$, with $g→∞$), then $f'/g'→L$.",
+"answer": false,
+"explanation": "$f=x+\\sin x$, $g=x$: $f/g→1$ but $f'/g'=1+\\cos x$ has no limit. L'Hospital only goes one way.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-fl-0",
+"type": "flaw",
+"claim": "MVT for complex $f$: $f(b)−f(a)=(b−a)f'(c)$ for some $c$.",
+"lines": [
+"Write $f=u+iv$.",
+"Apply the real MVT to $u$ and $v$: $u(b)−u(a)=(b−a)u'(c)$ and $v(b)−v(a)=(b−a)v'(c)$.",
+"Add."
+],
+"bad": [
+1
+],
+"explanation": "The two applications give two different points, $c_{1}$ for $u$ and $c_{2}$ for $v$. There is no single $c$ in general: $e^{ix}$ on $[0,2π]$.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-fl-1",
+"type": "flaw",
+"claim": "Chain rule.",
+"lines": [
+"Write $\\dfrac{g(f(t))−g(f(x))}{t−x}=\\dfrac{g(f(t))−g(f(x))}{f(t)−f(x)}·\\dfrac{f(t)−f(x)}{t−x}$.",
+"As $t→x$, the second factor tends to $f'(x)$.",
+"As $t→x$, $f(t)→f(x)$, so the first factor tends to $g'(f(x))$.",
+"Multiply the two limits."
+],
+"bad": [
+0
+],
+"explanation": "$f(t)−f(x)$ can be 0 for $t$ arbitrarily close to $x$ (e.g. $f=x^{2}\\sin(1/x)$ at 0), so the first factor is undefined. Rudin fixes this with remainder functions $u(t)$, $v(s)$ in 5.5; Bartle with Carathéodory's theorem 6.1.5.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-fl-2",
+"type": "flaw",
+"claim": "$f(x)=x^{2}\\sin(1/x)$ (with $f(0)=0$) is not differentiable at 0.",
+"lines": [
+"For $x≠0$, $f'(x)=2x\\sin(1/x)−\\cos(1/x)$, which has no limit as $x→0$.",
+"So $f'(0)$ does not exist."
+],
+"bad": [
+1
+],
+"explanation": "$f'(0)$ is defined by the difference quotient at 0, not by the limit of $f'(x)$. Here $|f(t)/t|≤|t|→0$, so $f'(0)=0$.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-cx-0",
+"type": "counterexample",
+"name": "$|x|$",
+"details": "Continuous, not differentiable at 0.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-cx-1",
+"type": "counterexample",
+"name": "$x\\sin(1/x)$, $f(0)=0$",
+"details": "Continuous at 0, not differentiable there (Rudin 5.6).",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-cx-2",
+"type": "counterexample",
+"name": "$x^{2}\\sin(1/x)$, $f(0)=0$",
+"details": "Differentiable everywhere, $f'(0)=0$, but $f'$ is discontinuous at 0 (a second-kind discontinuity, as Darboux requires).",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-cx-3",
+"type": "counterexample",
+"name": "$x+2x^{2}\\sin(1/x)$",
+"details": "$f'(0)=1&gt;0$ yet $f$ is not increasing on any interval around 0.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-cx-4",
+"type": "counterexample",
+"name": "$e^{ix}$ on $[0,2π]$",
+"details": "$f(2π)−f(0)=0$ but $|f'(x)|=1$ always: the MVT equation fails for complex functions (5.17).",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-cx-5",
+"type": "counterexample",
+"name": "$e^{−1/x^{2}}$, $f(0)=0$",
+"details": "Infinitely differentiable with every derivative 0 at 0, yet not 0 near 0. Taylor series need not represent the function.",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+},
+{
+"id": "c5-cx-6",
+"type": "counterexample",
+"name": "Weierstrass's function",
+"details": "Continuous everywhere, differentiable nowhere (Rudin 7.18, A §5.4).",
+"chapter": 5,
+"rudin": "",
+"lecture": null,
+"status": "not-yet"
+}
+]
+}
