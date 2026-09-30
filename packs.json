@@ -6,6 +6,7 @@
    "title": "Rudin Ch 1: The Real and Complex Number Systems",
    "chapter": 1,
    "count": 57,
+   "lessons": 0,
    "version": 1
   },
   {
@@ -14,7 +15,8 @@
    "title": "Rudin Ch 2: Basic Topology",
    "chapter": 2,
    "count": 85,
-   "version": 1
+   "lessons": 5,
+   "version": 2
   },
   {
    "id": "rudin-ch3",
@@ -22,7 +24,8 @@
    "title": "Rudin Ch 3: Numerical Sequences and Series",
    "chapter": 3,
    "count": 64,
-   "version": 1
+   "lessons": 7,
+   "version": 2
   },
   {
    "id": "rudin-ch4",
@@ -30,6 +33,7 @@
    "title": "Rudin Ch 4: Continuity",
    "chapter": 4,
    "count": 53,
+   "lessons": 0,
    "version": 1
   },
   {
@@ -38,6 +42,7 @@
    "title": "Rudin Ch 5: Differentiation",
    "chapter": 5,
    "count": 43,
+   "lessons": 0,
    "version": 1
   },
   {
@@ -46,6 +51,7 @@
    "title": "Rudin Ch 6: The Riemann–Stieltjes Integral",
    "chapter": 6,
    "count": 48,
+   "lessons": 0,
    "version": 1
   },
   {
@@ -54,6 +60,7 @@
    "title": "Rudin Ch 7: Sequences and Series of Functions",
    "chapter": 7,
    "count": 48,
+   "lessons": 0,
    "version": 1
   },
   {
@@ -62,6 +69,7 @@
    "title": "Rudin Ch 8: Some Special Functions",
    "chapter": 8,
    "count": 45,
+   "lessons": 0,
    "version": 1
   },
   {
@@ -70,6 +78,7 @@
    "title": "Rudin Ch 9: Functions of Several Variables",
    "chapter": 9,
    "count": 45,
+   "lessons": 0,
    "version": 1
   },
   {
@@ -78,6 +87,7 @@
    "title": "Rudin Ch 10: Integration of Differential Forms",
    "chapter": 10,
    "count": 30,
+   "lessons": 0,
    "version": 1
   },
   {
@@ -86,6 +96,7 @@
    "title": "Rudin Ch 11: The Lebesgue Theory",
    "chapter": 11,
    "count": 46,
+   "lessons": 0,
    "version": 1
   }
  ]

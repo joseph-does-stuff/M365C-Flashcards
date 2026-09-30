@@ -1,14 +1,14 @@
 /* M365C Study service worker: app files cache-first, question packs network-first. Bump CACHE when app files change. */
-var CACHE = 'm365c-study-v1';
+var CACHE = 'm365c-study-v2';
 var SHELL = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'icon-180.png', 'icon-192.png', 'icon-512.png',
   'stix-latin-400-normal.woff2', 'stix-latin-400-italic.woff2', 'stix-latin-600-normal.woff2', 'stix-latin-700-normal.woff2',
   'stix-greek-400-normal.woff2', 'stix-greek-400-italic.woff2', 'stix-greek-600-normal.woff2', 'stix-greek-700-normal.woff2',
   'karla-400-normal.woff2', 'karla-400-italic.woff2', 'karla-700-normal.woff2', 'karla-800-normal.woff2'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) {
-    return c.addAll(SHELL).then(function () {
-      return fetch('packs.json').then(function (r) { return r.json(); }).then(function (idx) {
-        return c.addAll(['packs.json', 'course.json'].concat((idx.packs || []).map(function (p) { return p.file; })));
+    return c.addAll(SHELL.map(function (u) { return new Request(u, {cache: 'reload'}); })).then(function () {
+      return fetch('packs.json', {cache: 'reload'}).then(function (r) { return r.json(); }).then(function (idx) {
+        return c.addAll(['packs.json', 'course.json'].concat((idx.packs || []).map(function (p) { return p.file; })).map(function (u) { return new Request(u, {cache: 'reload'}); }));
       }).catch(function () {});
     });
   }).then(function () { return self.skipWaiting(); }));

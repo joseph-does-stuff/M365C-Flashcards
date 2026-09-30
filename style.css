@@ -198,6 +198,17 @@ h3{font:700 1.1rem var(--serif);margin:26px 0 8px}
 .packrow .muted{grid-column:1}
 code{font-size:.85em;background:var(--surface2);padding:1px 5px;border-radius:4px}
 
+/* lessons and first look */
+.newtopic{background:var(--goldsoft);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:8px 12px;font-size:.92rem;margin:0 0 12px}
+.newtopic b{color:var(--gold)}
+.lesson h2{margin-top:10px}
+.lesson .ltitle{margin:2px 0 0;color:var(--dim);font-weight:700}
+.lesson .stmt{font-size:1.06rem;line-height:1.65}
+.lnav{display:flex;gap:10px;margin-top:18px;position:sticky;bottom:calc(8px + env(safe-area-inset-bottom,0px))}
+.lnav .btn{flex:1}
+.lsdone{font-size:.78rem;font-weight:700;color:var(--faint);white-space:nowrap;padding-top:3px}
+.lsdone.ok{color:var(--good)}
+
 /* math */
 .m{font-family:var(--serif);font-size:1.05em}
 .m i{font-style:italic}

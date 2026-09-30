@@ -3,7 +3,7 @@
    Progress: localStorage, exportable as a backup file. */
 (function () {
 'use strict';
-var VERSION = '1.0.0';
+var VERSION = '1.1.0';
 var KEY_PROG = 'm365c-progress', KEY_SET = 'm365c-settings', KEY_IMP = 'm365c-imported';
 var DAY = 86400000;
 var INTERVALS = [0, 1, 3, 7, 14, 30, 60]; // days, indexed by box 1..6
@@ -16,6 +16,7 @@ function load(k, d) { try { var v = localStorage.getItem(k); return v ? JSON.par
 function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } }
 var prog = load(KEY_PROG, null) || {v: 1, items: {}};
 if (!prog.items) prog.items = {};
+if (!prog.lessons) prog.lessons = {};
 var settings = Object.assign({theme: 'system', len: 12, types: 'all'}, load(KEY_SET, {}));
 function applyTheme() {
   var r = document.documentElement;
@@ -112,7 +113,7 @@ function M(text) {
 function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 
 /* ---------------- data ---------------- */
-var DATA = {packs: [], items: {}, order: [], course: null, loaded: false, error: ''};
+var DATA = {packs: [], items: {}, order: [], lessons: [], lessonOf: {}, course: null, loaded: false, error: ''};
 function addPack(p, source) {
   if (!p || !p.id || !Array.isArray(p.items)) return 0;
   DATA.packs = DATA.packs.filter(function (x) { return x.id !== p.id; });
@@ -124,6 +125,13 @@ function addPack(p, source) {
     if (!DATA.items[it.id]) DATA.order.push(it.id);
     DATA.items[it.id] = it; n++;
   });
+  (p.lessons || []).forEach(function (L) {
+    if (!L || !L.id || !Array.isArray(L.steps)) return;
+    L.pack = p.id;
+    DATA.lessons = DATA.lessons.filter(function (x) { return x.id !== L.id; });
+    DATA.lessons.push(L);
+    (L.items || []).forEach(function (id) { DATA.lessonOf[id] = L.id; });
+  });
   return n;
 }
 function fetchJSON(url, fresh) {
@@ -131,7 +139,7 @@ function fetchJSON(url, fresh) {
     .then(function (r) { if (!r.ok) throw new Error(url + ': ' + r.status); return r.json(); });
 }
 function loadAll(fresh) {
-  DATA.packs = []; DATA.items = {}; DATA.order = [];
+  DATA.packs = []; DATA.items = {}; DATA.order = []; DATA.lessons = []; DATA.lessonOf = {};
   var built = fetchJSON('packs.json', fresh).then(function (idx) {
     return Promise.all((idx.packs || []).map(function (e) {
       return fetchJSON(e.file, fresh).then(function (p) { addPack(p, 'built-in'); }).catch(function () {});
@@ -141,6 +149,7 @@ function loadAll(fresh) {
   return Promise.all([built, course]).then(function () {
     load(KEY_IMP, []).forEach(function (p) { addPack(p, 'imported'); });
     DATA.order.sort(sortKey);
+    DATA.lessons.sort(function (a, b) { return (a.chapter - b.chapter) || (rnum(a.rudin) - rnum(b.rudin)); });
     DATA.loaded = true;
   });
 }
@@ -152,6 +161,11 @@ function sortKey(a, b) {
 }
 function items(filter) { return DATA.order.map(function (id) { return DATA.items[id]; }).filter(filter || function () { return true; }); }
 function isCovered(it) { return it.status === 'covered' || it.status === 'started'; }
+function lessonDone(id) { return !!(prog.lessons[id] && prog.lessons[id].done); }
+function lessonFor(it) { var id = DATA.lessonOf[it.id]; return id ? DATA.lessons.filter(function (L) { return L.id === id; })[0] : null; }
+function taught(it) { if (isCovered(it)) return true; var L = lessonFor(it); return !!(L && lessonDone(L.id)); }
+function firstLook(it) { return !taught(it) && !rec(it.id); }
+function aheadPool() { return items(function (it) { return !rec(it.id) && !isCovered(it) && taught(it) && typeOK(it); }); }
 function typeOK(it) { return settings.types === 'all' || it.type === settings.types; }
 
 /* ---------------- scheduling (Leitner) ---------------- */
@@ -160,7 +174,8 @@ function isDue(id, now) { var r = rec(id); return r && r.due <= (now || Date.now
 function grade(id, g) {
   var now = Date.now(), r = prog.items[id] || {box: 0, n: 0, lapses: 0};
   r.n++; r.last = now; r.g = g;
-  if (g === 'miss') { r.box = 1; r.lapses++; r.due = now + 10 * 60000; }
+  if (g === 'seen') { r.box = 0; r.due = now + DAY; }
+  else if (g === 'miss') { r.box = 1; r.lapses++; r.due = now + 10 * 60000; }
   else if (g === 'shaky') { r.box = Math.max(1, r.box); r.due = now + DAY; }
   else { r.box = Math.min(6, r.box + 1); r.due = now + INTERVALS[r.box] * DAY; }
   prog.items[id] = r; prog.updated = now;
@@ -195,7 +210,7 @@ function viewHome() {
   var now = Date.now();
   var due = items(function (it) { return isDue(it.id, now) && typeOK(it); });
   var newCov = items(function (it) { return !rec(it.id) && isCovered(it) && typeOK(it); });
-  var ahead = items(function (it) { return !rec(it.id) && it.status === 'next' && typeOK(it); });
+  var lessonsLeft = DATA.lessons.filter(function (L) { return !lessonDone(L.id); }).length;
   var seen = Object.keys(prog.items).filter(function (k) { return DATA.items[k]; }).length;
   var asOf = DATA.course ? DATA.course.asOf : '';
   var types = [['all', 'All types'], ['flashcard', 'Flashcards'], ['tf', 'Prove or disprove'], ['flaw', 'Find the flaw'], ['proof', 'Proofs'], ['counterexample', 'Counterexamples']];
@@ -212,7 +227,7 @@ function viewHome() {
     '<div class="modes">' +
       '<button class="mode" data-start="due"' + (due.length ? '' : ' disabled') + '><strong>Review what\'s due</strong><span>Items you\'ve seen, back on schedule</span><em>' + due.length + '</em></button>' +
       '<button class="mode" data-start="covered"' + (newCov.length ? '' : ' disabled') + '><strong>Learn what class covered</strong><span>New items from lectures so far' + (asOf ? ' (through ' + esc(asOf) + ')' : '') + '</span><em>' + newCov.length + '</em></button>' +
-      '<button class="mode" data-start="ahead"' + (ahead.length ? '' : ' disabled') + '><strong>Get ahead</strong><span>What the class is likely to cover next</span><em>' + ahead.length + '</em></button>' +
+      '<button class="mode" data-go="#learn"><strong>Get ahead</strong><span>Short lessons on what\'s coming next, then a quiz</span><em>' + lessonsLeft + '</em></button>' +
     '</div>' +
     '<h3>Practice</h3><div class="chips" role="group" aria-label="Question types">' + types.map(function (t) {
       return '<button class="chip' + (settings.types === t[0] ? ' on' : '') + '" data-types="' + t[0] + '">' + t[1] + '</button>';
@@ -224,7 +239,7 @@ function startSession(kind, chapter) {
   var now = Date.now(), pool;
   if (kind === 'due') pool = items(function (it) { return isDue(it.id, now) && typeOK(it); }).sort(function (a, b) { return rec(a.id).due - rec(b.id).due; });
   else if (kind === 'covered') pool = items(function (it) { return !rec(it.id) && isCovered(it) && typeOK(it); });
-  else if (kind === 'ahead') pool = items(function (it) { return !rec(it.id) && it.status === 'next' && typeOK(it); });
+  else if (kind === 'ahead') pool = aheadPool();
   else if (kind === 'chapter') pool = items(function (it) { return it.chapter === chapter && typeOK(it) && (!rec(it.id) || isDue(it.id, now)); });
   else pool = [];
   if (kind !== 'due') pool = interleave(pool);
@@ -241,15 +256,16 @@ function interleave(arr) { // keep chapter order but mix types so sessions aren'
 
 var S = null; // current session
 function runSession(ids, kind) {
-  S = {queue: ids.slice(), done: 0, total: ids.length, tally: {good: 0, shaky: 0, miss: 0}, requeued: {}, kind: kind};
+  S = {queue: ids.slice(), done: 0, total: ids.length, tally: {good: 0, shaky: 0, miss: 0, seen: 0}, requeued: {}, kind: kind};
   document.body.classList.add('insession');
   showCard();
 }
 function endSession() {
   var t = S.tally;
   document.body.classList.add('insession');
-  h('<div class="sess"><div class="fin"><p class="eyebrow">Session done</p><div class="big">' + (t.good + t.shaky + t.miss) + '</div><p class="muted">answers</p>' +
+  h('<div class="sess"><div class="fin"><p class="eyebrow">Session done</p><div class="big">' + (t.good + t.shaky + t.miss + t.seen) + '</div><p class="muted">items</p>' +
     '<div class="tally"><div class="g"><b>' + t.good + '</b>Got it</div><div class="s"><b>' + t.shaky + '</b>Shaky</div><div class="m"><b>' + t.miss + '</b>Missed</div></div>' +
+    (t.seen ? '<p class="muted">You read ' + t.seen + ' new ' + (t.seen === 1 ? 'topic' : 'topics') + '; ' + (t.seen === 1 ? 'it comes' : 'they come') + ' back as a quiz tomorrow.</p>' : '') +
     '<p class="muted">Missed items come back in about 10 minutes, shaky ones tomorrow.</p>' +
     '<div class="stack"><button class="btn primary full" data-go="#home">Back to home</button></div></div></div>');
   S = null;
@@ -283,7 +299,8 @@ function showCard() {
   var it = DATA.items[S.queue[0]];
   var pct = Math.round(100 * S.done / S.total);
   var body = '';
-  if (it.type === 'flashcard') {
+  if (firstLook(it)) body = firstLookHTML(it);
+  else if (it.type === 'flashcard') {
     body = '<p class="front">' + M(it.front) + '</p><p class="instr">' + (it.kind === 'definition' ? 'State the definition precisely. Watch the order of the quantifiers.' : 'State it precisely, with every hypothesis.') + '</p>' +
       '<div id="rv"><button class="btn primary full" data-act="reveal">Reveal</button></div>';
   } else if (it.type === 'counterexample') {
@@ -302,10 +319,25 @@ function showCard() {
   h('<div class="sess"><div class="sesstop"><button class="iconbtn" data-act="quit" aria-label="End session">✕</button><div class="meter"><i style="width:' + pct + '%"></i></div><span class="count">' + (S.done + 1) + ' / ' + S.total + '</span></div>' +
     '<div class="qcard">' + tagsHTML(it) + body + '</div></div>');
 }
+function firstLookHTML(it) {
+  var L = lessonFor(it), b = '<p class="newtopic"><b>New topic.</b> Not taught in class yet, so read it first. It comes back as a quiz tomorrow.</p>';
+  if (it.type === 'flashcard') b += '<p class="front">' + M(it.front) + '</p><div class="stmt">' + M(it.back) + '</div>' + extrasHTML(it);
+  else if (it.type === 'counterexample') b += '<p class="front">' + M(it.name) + '</p><div class="stmt">' + M(it.details) + '</div>';
+  else if (it.type === 'tf') b += '<p class="prompt">' + M(it.prompt) + '</p><p><span class="verdict ' + (it.answer ? 'good' : 'bad') + '">' + (it.answer ? 'True' : 'False') + '</span></p><div class="stmt">' + M(it.explanation) + '</div>';
+  else if (it.type === 'flaw') b += '<p class="instr">Claim</p><p class="claim">' + M(it.claim) + '</p><ol class="lines">' + it.lines.map(function (l, i) {
+      return '<li><button disabled class="' + (it.bad.indexOf(i) >= 0 ? 'isbad' : '') + '"><span class="ln">' + (i + 1) + '</span><span>' + M(l) + '</span></button></li>'; }).join('') +
+      '</ol><div class="stmt" style="margin-top:10px"><b>The broken step:</b> ' + M(it.explanation) + '</div>';
+  else if (it.type === 'proof') b += '<p class="prompt">' + M(it.prompt) + '</p>' + (it.hint ? '<p class="note">Hint: ' + M(it.hint) + '</p>' : '') + '<p class="instr" style="margin-top:10px">Model ' + (it.kind === 'practice' ? 'solution' : 'proof') + '</p><div class="stmt">' + M(it.modelProof) + '</div>';
+  b += '<div class="stack" style="margin-top:16px">' + (L && !lessonDone(L.id) ? '<button class="btn" data-lesson="' + esc(L.id) + '">Read the full lesson first</button>' : '') +
+    '<button class="btn primary full" data-g="seen">Got it, quiz me tomorrow</button></div>';
+  return b;
+}
 function reveal(html) { var rv = document.getElementById('rv'); rv.innerHTML = '<div class="reveal">' + html + '</div>'; }
 function onSessionClick(t) {
   var it = DATA.items[S.queue[0]];
   var act = t.getAttribute('data-act');
+  var lz = t.getAttribute('data-lesson');
+  if (lz) { S = null; location.hash = '#lesson/' + lz; route(); return true; }
   if (act === 'quit') { if (S.done) endSession(); else { S = null; location.hash = '#home'; route(); } return true; }
   if (act === 'reveal') {
     reveal('<div class="stmt">' + M(it.type === 'counterexample' ? it.details : it.back) + '</div>' + extrasHTML(it) + GRADE3); return true;
@@ -386,6 +418,10 @@ function viewBrowse(n) {
     '<div class="chips" role="group" aria-label="Filter">' + [['all', 'Everything'], ['covered', 'Covered in class'], ['todo', 'Not covered yet']].map(function (f) {
       return '<button class="chip' + (browseFilter === f[0] ? ' on' : '') + '" data-bf="' + f[0] + '">' + f[1] + '</button>';
     }).join('') + '</div>';
+  var chLessons = DATA.lessons.filter(function (L) { return L.chapter === n; });
+  if (chLessons.length && browseFilter !== 'covered') html += '<p class="grouph">Lessons · ' + chLessons.length + '</p><ul class="list">' + chLessons.map(function (L) {
+    return '<li><button data-go="#lesson/' + esc(L.id) + '"><span class="rn">' + M(L.rudin) + '</span><span class="lbl">' + M(L.title) + '</span><span class="lsdone' + (lessonDone(L.id) ? ' ok' : '') + '">' + (lessonDone(L.id) ? '✓ read' : L.steps.length + ' screens') + '</span></button></li>';
+  }).join('') + '</ul>';
   groups.forEach(function (g) {
     var its = list.filter(function (it) { return it.type === g[0]; }); if (!its.length) return;
     html += '<p class="grouph">' + g[1] + ' · ' + its.length + '</p><ul class="list">' + its.map(function (it) {
@@ -399,6 +435,50 @@ function viewBrowse(n) {
   shell('browse', '<a href="#browse" style="text-decoration:none">Browse</a>', html);
 }
 
+/* ---------------- lessons ---------------- */
+function viewLearn() {
+  var ready = aheadPool().length, rows = '', lastCh = 0;
+  DATA.lessons.forEach(function (L) {
+    if (L.chapter !== lastCh) { rows += (lastCh ? '</ul>' : '') + '<p class="grouph">Chapter ' + L.chapter + ' · ' + M(chTitle(L.chapter)) + '</p><ul class="list">'; lastCh = L.chapter; }
+    var d = lessonDone(L.id);
+    rows += '<li><button data-go="#lesson/' + esc(L.id) + '"><span class="rn">' + M(L.rudin) + '</span><span class="lbl">' + M(L.title) + '</span><span class="lsdone' + (d ? ' ok' : '') + '">' + (d ? '✓ read' : L.steps.length + ' screens') + '</span></button></li>';
+  });
+  if (lastCh) rows += '</ul>';
+  shell('home', '<a href="#home" style="text-decoration:none">Home</a>',
+    '<p class="eyebrow">Get ahead</p><h2>Lessons on what\'s next</h2><p class="lede">In the order the class will probably reach them. Each lesson is a few short screens, then a quiz on just that topic.</p>' +
+    '<button class="mode" data-start="ahead"' + (ready ? '' : ' disabled') + '><strong>Quiz me on lessons I\'ve read</strong><span>' + (ready ? 'New questions from the lessons you finished' : 'Finish a lesson to unlock its questions') + '</span><em>' + ready + '</em></button>' +
+    (rows || '<p class="muted" style="margin-top:16px">No lessons yet. They arrive with new packs.</p>'));
+}
+var LS = null;
+function viewLesson(id, step) {
+  var L = DATA.lessons.filter(function (x) { return x.id === id; })[0];
+  if (!L) { location.hash = '#learn'; return; }
+  if (!LS || LS.id !== id) LS = {id: id, step: 0};
+  if (step != null) LS.step = step;
+  var k = LS.step, n = L.steps.length, st = L.steps[k], last = k === n - 1;
+  if (last) { prog.lessons[id] = {done: Date.now()}; save(KEY_PROG, prog); }
+  var qn = (L.items || []).filter(function (i) { return DATA.items[i]; }).length;
+  document.body.classList.add('insession');
+  h('<div class="sess"><div class="sesstop"><button class="iconbtn" data-ls="close" aria-label="Close lesson">✕</button><div class="meter"><i style="width:' + Math.round(100 * (k + 1) / n) + '%"></i></div><span class="count">' + (k + 1) + ' / ' + n + '</span></div>' +
+    '<div class="qcard lesson"><p class="eyebrow">Lesson · Rudin ' + M(L.rudin) + '</p><p class="ltitle">' + M(L.title) + '</p><h2>' + M(st.h) + '</h2><div class="stmt">' + M(st.body) + '</div></div>' +
+    '<div class="lnav">' + (k > 0 ? '<button class="btn" data-ls="back">Back</button>' : '') +
+    (last ? '<button class="btn primary" data-ls="quiz"' + (qn ? '' : ' disabled') + '>Quiz me on this (' + qn + ')</button>' : '<button class="btn primary" data-ls="next">Next</button>') + '</div>' +
+    (last ? '<p class="muted" style="text-align:center;margin-top:10px"><a href="#learn">Done for now</a>. The questions wait under Get ahead.</p>' : '') + '</div>');
+}
+function onLessonClick(t) {
+  var a = t.getAttribute('data-ls'); if (!a || !LS) return false;
+  var L = DATA.lessons.filter(function (x) { return x.id === LS.id; })[0];
+  if (a === 'close') { LS = null; location.hash = '#learn'; route(); }
+  else if (a === 'next') viewLesson(LS.id, LS.step + 1);
+  else if (a === 'back') viewLesson(LS.id, LS.step - 1);
+  else if (a === 'quiz') {
+    var now = Date.now(), ids = (L.items || []).filter(function (i) { return DATA.items[i] && (!rec(i) || isDue(i, now)); });
+    if (!ids.length) ids = (L.items || []).filter(function (i) { return DATA.items[i]; });
+    LS = null; runSession(ids, 'lesson');
+  }
+  return true;
+}
+
 /* ---------------- class ---------------- */
 function viewClass() {
   var c = DATA.course;
@@ -407,7 +487,7 @@ function viewClass() {
     '<div class="chips" style="margin:12px 0">' + c.chapters.map(function (x) { return '<a class="state ' + x.state + '" href="#browse/' + x.n + '" style="text-decoration:none;padding:4px 9px">Ch ' + x.n + '</a>'; }).join('') + '</div>' +
     '<h3>Next topics</h3><p class="muted">In Rudin order, which the lectures follow.</p><ul class="nextl">' + c.next.map(function (x) {
       return '<li><span class="rn">' + M(x.rudin) + '</span><div><b>' + M(x.title) + '</b>' + (x.why ? '<p>' + M(x.why) + '</p>' : '') + '</div></li>';
-    }).join('') + '</ul><div class="row" style="margin-top:12px"><button class="btn primary" data-start="ahead">Practice next topics</button></div>' +
+    }).join('') + '</ul><div class="row" style="margin-top:12px"><button class="btn primary" data-go="#learn">Open the lessons</button></div>' +
     '<h3>Covered, lecture by lecture</h3><ul class="lecs">' + c.lectures.slice().reverse().map(function (l) {
       return '<li><span class="id">' + esc(l.id) + '</span><div><p>' + M(l.title) + '</p><p class="tp">' + l.topics.map(M).join(' · ') + '</p></div></li>';
     }).join('') + '</ul>' +
@@ -480,7 +560,10 @@ function route() {
   if (!DATA.loaded) return;
   if (S) return; // session owns the screen
   var hsh = (location.hash || '#home').slice(1).split('/');
-  if (hsh[0] === 'browse') viewBrowse(hsh[1]);
+  if (hsh[0] !== 'lesson') LS = null;
+  if (hsh[0] === 'lesson') viewLesson(decodeURIComponent(hsh[1] || ''), null);
+  else if (hsh[0] === 'learn') viewLearn();
+  else if (hsh[0] === 'browse') viewBrowse(hsh[1]);
   else if (hsh[0] === 'class') viewClass();
   else if (hsh[0] === 'more') viewMore();
   else viewHome();
@@ -490,6 +573,7 @@ document.addEventListener('click', function (e) {
   var t = e.target.closest('button, [data-go]'); if (!t) return;
   if (t.getAttribute('data-go')) { location.hash = t.getAttribute('data-go'); route(); return; }
   if (S && onSessionClick(t)) return;
+  if (LS && onLessonClick(t)) return;
   var st = t.getAttribute('data-start'); if (st) { startSession(st); return; }
   var ch = t.getAttribute('data-chapter'); if (ch) { startSession('chapter', +ch); return; }
   var one = t.getAttribute('data-one'); if (one) { runSession([one], 'one'); return; }
